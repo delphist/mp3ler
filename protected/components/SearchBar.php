@@ -6,6 +6,8 @@ class SearchBar extends CWidget
 
     public function run()
     {
-        $this->render('searchBar');
+        $this->render('searchBar', array(
+            'query' => $this->query,
+        ));
     }
 }

@@ -5,15 +5,15 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>css/jquery.mobile-1.4.2.min.css" />
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>js/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery.mobile-1.4.2.min.css" />
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).bind("mobileinit", function () {
             $.mobile.ajaxEnabled = false;
         });
     </script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>js/jquery.mobile-1.4.2.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>css/application.css" />
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile-1.4.2.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/application.css" />
 </head>
 <body class="ui-mobile-viewport ui-overlay-a">
 <div data-role="page" class="page" data-quicklinks="true">
@@ -23,11 +23,11 @@
 
     <div data-role="navbar" class="lang-select">
         <ul>
-            <li><a href="<?=$this->createUrl('language/change', array('language' => 'ru'))?>"><img src="images/lang_ru.png"></a></li>
-            <li><a href="<?=$this->createUrl('language/change', array('language' => 'en'))?>"><img src="images/lang_en.png"></a></li>
-            <li><a href="<?=$this->createUrl('language/change', array('language' => 'az'))?>"><img src="images/lang_az.png"></a></li>
-            <li><a href="<?=$this->createUrl('language/change', array('language' => 'tr'))?>"><img src="images/lang_tr.png"></a></li>
-            <li><a href="<?=$this->createUrl('language/change', array('language' => 'ge'))?>"><img src="images/lang_ge.png"></a></li>
+            <li><a href="<?=$this->createUrl('language/change', array('language' => 'ru'))?>"><img src="/images/lang_ru.png"></a></li>
+            <li><a href="<?=$this->createUrl('language/change', array('language' => 'en'))?>"><img src="/images/lang_en.png"></a></li>
+            <li><a href="<?=$this->createUrl('language/change', array('language' => 'az'))?>"><img src="/images/lang_az.png"></a></li>
+            <li><a href="<?=$this->createUrl('language/change', array('language' => 'tr'))?>"><img src="/images/lang_tr.png"></a></li>
+            <li><a href="<?=$this->createUrl('language/change', array('language' => 'ge'))?>"><img src="/images/lang_ge.png"></a></li>
         </ul>
     </div>
 
@@ -35,7 +35,9 @@
         <h1 class="ui-title"><?=Yii::t('app', 'Global search mp3 MP3 Download')?></h1>
     </div>
 
-    <?php $this->widget('application.components.SearchBar'); ?>
+    <?php $this->widget('application.components.SearchBar', array(
+        'query' => $this->search_query,
+    )); ?>
 
     <div role="main" class="ui-content">
         <?php echo $content; ?>
@@ -49,13 +51,15 @@
         <?php $this->widget('application.components.SocialBar'); ?>
     </div>
 
-    <?php $this->widget('application.components.SearchBar'); ?>
+    <?php $this->widget('application.components.SearchBar', array(
+        'query' => $this->search_query,
+    )); ?>
 
     <div data-role="footer">
         <h1>© mp3ler.biz</h1>
     </div>
 
-    <p>
+    <div class="counters">
         <a href="http://toplog.biz/in.php?uid=1509"><img src="http://toplog.biz/count.php?uid=1509/" title="Top Rating" alt="TopLog.Biz" height="10" width="60" /></a>
         <a href="http://mywap.az/in.php?id=64551"><img src="http://mywap.az/counter.php?id=64551" title="Top Rating" alt="myWAP" height="10" width="60" /></a>
         <a href="http://waplog.net/c.shtml?480007"><img src="http://c.waplog.net/480008.cnt" title="Top Rating" alt="waplog" height="10" width="60" /></a>
@@ -99,7 +103,7 @@
             })(document, window, "yandex_metrika_callbacks");
         </script>
         <noscript><div><img src="//mc.yandex.ru/watch/24313723" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    </p>
+    </div>
 </div>
 </body>
 </html>

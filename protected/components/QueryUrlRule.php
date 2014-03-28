@@ -20,6 +20,8 @@ class QueryUrlRule extends CBaseUrlRule
     {
         if ($request->getQuery('query') != NULL)
         {
+            $_GET['text'] = $request->getQuery('query');
+
             return 'query/view';
         }
 

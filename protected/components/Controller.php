@@ -4,6 +4,8 @@ class Controller extends CController
 {
     public $layout = '//layouts/main';
 
+    public $search_query = '';
+
     function init()
     {
         parent::init();

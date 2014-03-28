@@ -57,18 +57,25 @@
     border: 0px;
 }
 
+.lang-select li a img {
+    height: 35px;
+    width: auto;
+}
+
 .page-header {
     border: 0px;
     background-color: #ddd !important;
+    margin: 0 0;
 }
 
 .page-header h1 {
     font-weight: 400;
-    font-size: 24px !important;
+    font-size: 20px !important;
 }
 
 .social-bar {
     margin: 0;
+    width: 100%;
     padding: 0;
     list-style-type: none;
     text-align: center;
@@ -81,4 +88,18 @@
 .social-bar li a {
     display: inline-block;
     width: 100%;
+}
+
+.social-bar li a img {
+    height: 35px;
+    width: auto;
+}
+
+.counters {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.counters a {
+    margin: 0px 10px;
 }
