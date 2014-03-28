@@ -24,7 +24,15 @@ class LanguageUrlRule extends CBaseUrlRule
         if ($route === 'language/change')
         {
             $uri = parse_url(Yii::app()->request->getRequestUri());
-            parse_str($uri['query'], $query);
+            
+            if(isset($uri['query']))
+            {
+                parse_str($uri['query'], $query);
+            }
+            else
+            {
+                $query = array();
+            }
 
             return ltrim($uri['path'].'?'.http_build_query(array_merge($query, array('lang' => $params['language']))), '/');
         }
