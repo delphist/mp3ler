@@ -2,14 +2,21 @@
 
 date_default_timezone_set('Europe/Moscow');
 
-// change the following paths if necessary
-$yii=dirname(__FILE__).'/../framework/yii.php';
-$config=dirname(__FILE__).'/protected/config/main.php';
-
-// remove the following lines when in production mode
-defined('YII_DEBUG') or define('YII_DEBUG',true);
-// specify how many levels of call stack should be shown in each log message
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
 
-require_once($yii);
-Yii::createWebApplication($config)->run();
+$webRoot=dirname(__FILE__);
+
+if($_SERVER['HTTP_HOST'] == 'localhost')
+{
+    define('YII_DEBUG', true);
+    require_once(dirname($webRoot).'/../framework/yii.php');
+    $configFile = $webRoot.'/../app/config/development.php';
+}
+else
+{
+    define('YII_DEBUG', false);
+    require_once(dirname($webRoot).'/../framework/yiilite.php');
+    $configFile = $webRoot.'/../app/config/production.php';
+}
+
+Yii::createWebApplication($configFile)->run();
