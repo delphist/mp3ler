@@ -13,13 +13,20 @@ class LanguageUrlRule extends CBaseUrlRule
      * Для роута language/change создает относительный адрес,
      * содержащий в себе GET-параметр lang
      *
+     * Пример:
+     *  - Находимся на http://mp3ler.biz/ , создаст адрес http://mp3ler.biz/?lang=en
+     *  - Находимся на http://mp3ler.biz/download/test?prev_query=eminem , создаст адрес http://mp3ler.biz/download/test?prev_query=eminem&lang=en
+     *
      * В дальнейшем, все такие адреса роутятся обратно (см. след метод)
      */
     public function createUrl($manager, $route, $params, $ampersand)
     {
         if ($route === 'language/change')
         {
-            return '?lang='.$params['language'];
+            $uri = parse_url(Yii::app()->request->getRequestUri());
+            parse_str($uri['query'], $query);
+
+            return ltrim($uri['path'].'?'.http_build_query(array_merge($query, array('lang' => $params['language']))), '/');
         }
 
         return false;

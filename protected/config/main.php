@@ -19,11 +19,15 @@ return array(
 		),
 	),
 	'components'=>array(
+        'request' => array(
+            'baseUrl' => 'http://'.$_SERVER['HTTP_HOST'],
+        ),
 		'user'=>array(
 			'allowAutoLogin'=>true,
 		),
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+            'showScriptName'=>false,
 			'rules'=>array(
                 /**
                  * Часть адресов пришлось роутить через кастомные правила,

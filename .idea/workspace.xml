@@ -26,81 +26,72 @@
       <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="14" selection-start="2161" selection-end="2166" vertical-scroll-proportion="-12.458333" vertical-offset="271" max-vertical-offset="1710">
+            <state line="45" column="137" selection-start="3195" selection-end="3195" vertical-scroll-proportion="-11.833333" vertical-offset="391" max-vertical-offset="1980">
               <folding>
-                <marker date="1395981629000" expanded="true" signature="2323:2634" placeholder="..." />
+                <marker date="1395990707000" expanded="true" signature="3652:3963" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchBar.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/views/searchBar.php">
+      <file leaf-file-name="socialBar.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/components/views/socialBar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="73" selection-start="133" selection-end="133" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="150">
+            <state line="5" column="0" selection-start="271" selection-end="271" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchBar.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/SearchBar.php">
+      <file leaf-file-name="SiteController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="36" selection-start="171" selection-end="171" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="270">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="435">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/application.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="102" column="10" selection-start="1565" selection-end="1565" vertical-scroll-proportion="0.9078341" vertical-offset="939" max-vertical-offset="1635">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/query/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="5" selection-start="696" selection-end="696" vertical-scroll-proportion="0.19543974" vertical-offset="0" max-vertical-offset="614">
+            <state line="3" column="76" selection-start="224" selection-end="224" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="285">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/messages/ru/app.php">
+      <file leaf-file-name="LanguageUrlRule.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/components/LanguageUrlRule.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="85" selection-start="460" selection-end="460" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="225">
+            <state line="32" column="5" selection-start="1093" selection-end="1093" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="915">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/QueryController.php">
+      <file leaf-file-name="development.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/config/development.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="9" selection-start="224" selection-end="224" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="420">
+            <state line="5" column="24" selection-start="139" selection-end="139" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="480">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryUrlRule.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/QueryUrlRule.php">
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/config/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="39" selection-start="101" selection-end="101" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="525">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Query.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/Query.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="5" selection-start="872" selection-end="872" vertical-scroll-proportion="-19.25" vertical-offset="213" max-vertical-offset="870">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="24" selection-start="97" selection-end="110" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="405">
+            <state line="24" column="22" selection-start="487" selection-end="487" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="990">
               <folding />
             </state>
           </provider>
@@ -109,7 +100,16 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="58" selection-start="237" selection-end="237" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="165">
+            <state line="3" column="2" selection-start="169" selection-end="169" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="225">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/site/error.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="2" selection-start="56" selection-end="56" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="210">
               <folding />
             </state>
           </provider>
@@ -125,22 +125,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/config/production.php" />
-        <option value="$PROJECT_DIR$/protected/config/main.php" />
-        <option value="$PROJECT_DIR$/protected/config/development.php" />
         <option value="$PROJECT_DIR$/protected/yiic.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/css/application.css" />
         <option value="$PROJECT_DIR$/protected/components/QueryUrlRule.php" />
-        <option value="$PROJECT_DIR$/protected/views/site/index.php" />
         <option value="$PROJECT_DIR$/protected/messages/ru/app.php" />
         <option value="$PROJECT_DIR$/protected/models/Query.php" />
-        <option value="$PROJECT_DIR$/protected/components/Controller.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/QueryController.php" />
-        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/components/views/searchBar.php" />
         <option value="$PROJECT_DIR$/protected/components/SearchBar.php" />
+        <option value="$PROJECT_DIR$/protected/components/Controller.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/QueryController.php" />
+        <option value="$PROJECT_DIR$/protected/views/site/index.php" />
         <option value="$PROJECT_DIR$/protected/views/query/view.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/components/LanguageUrlRule.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/components/views/socialBar.php" />
+        <option value="$PROJECT_DIR$/css/application.css" />
       </list>
     </option>
   </component>
@@ -599,7 +599,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25364667" sideWeight="0.67094016" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25364667" sideWeight="0.66951567" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -626,61 +626,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/config/console.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="21" selection-start="543" selection-end="543" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="510" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="44" selection-start="783" selection-end="783" vertical-scroll-proportion="-8.0" vertical-offset="303" max-vertical-offset="930" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="22" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1650">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/LanguageUrlRule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="32" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/yiic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/messages/ru/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="85" selection-start="460" selection-end="460" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/QueryUrlRule.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="39" selection-start="101" selection-end="101" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="58" selection-start="237" selection-end="237" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="165">
           <folding />
         </state>
       </provider>
@@ -692,32 +640,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/views/searchBar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="158" selection-end="158" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="24" selection-start="97" selection-end="110" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="405">
+        <state line="6" column="23" selection-start="97" selection-end="109" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="420">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/QueryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="9" selection-start="224" selection-end="224" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="14" selection-start="2161" selection-end="2166" vertical-scroll-proportion="-12.458333" vertical-offset="271" max-vertical-offset="1710">
-          <folding>
-            <marker date="1395981629000" expanded="true" signature="2323:2634" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/views/searchBar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="73" selection-start="133" selection-end="133" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="150">
+        <state line="14" column="9" selection-start="300" selection-end="300" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
@@ -731,7 +670,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/query/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="5" selection-start="696" selection-end="696" vertical-scroll-proportion="0.19543974" vertical-offset="0" max-vertical-offset="614">
+        <state line="3" column="76" selection-start="224" selection-end="224" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="22" selection-start="487" selection-end="487" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="2" selection-start="169" selection-end="169" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="2" selection-start="56" selection-end="56" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/development.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="24" selection-start="139" selection-end="139" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="480">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="651">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="137" selection-start="3195" selection-end="3195" vertical-scroll-proportion="-11.833333" vertical-offset="391" max-vertical-offset="1980">
+          <folding>
+            <marker date="1395990707000" expanded="true" signature="3652:3963" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/views/socialBar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="271" selection-end="271" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/LanguageUrlRule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="5" selection-start="1093" selection-end="1093" vertical-scroll-proportion="-20.0" vertical-offset="0" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="10" selection-start="1565" selection-end="1565" vertical-scroll-proportion="0.9078341" vertical-offset="939" max-vertical-offset="1635">
           <folding />
         </state>
       </provider>

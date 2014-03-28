@@ -58,19 +58,19 @@
 }
 
 .lang-select li a img {
-    height: 35px;
+    height: 25px;
     width: auto;
 }
 
 .page-header {
     border: 0px;
     background-color: #ddd !important;
-    margin: 0 0;
 }
 
 .page-header h1 {
     font-weight: 400;
-    font-size: 20px !important;
+    font-size: 18px !important;
+    margin: 0 0 !important;
 }
 
 .social-bar {
@@ -97,9 +97,8 @@
 
 .counters {
     text-align: center;
-    padding: 10px 0;
 }
 
 .counters a {
-    margin: 0px 10px;
+    margin: 10px;
 }

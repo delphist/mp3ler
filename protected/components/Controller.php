@@ -4,7 +4,8 @@ class Controller extends CController
 {
     public $layout = '//layouts/main';
 
-    public $search_query = '';
+    public $searchQuery;
+    public $headerTitle;
 
     function init()
     {

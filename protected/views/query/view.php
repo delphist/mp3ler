@@ -1,3 +1,8 @@
+<?php
+$this->searchQuery = $query->text;
+$this->headerTitle = Yii::t('app', '{text} MP3 Download', array('{text}' => CHtml::encode($query->text)));
+$this->pageTitle = Yii::t('app', '{text}-bedava dinle indir,download,скачать', array('{text}' => CHtml::encode($query->text)));
+?>
 <ul class="list" data-role="listview" itemscope itemtype="http://schema.org/MusicGroup">
     <li class="divider" data-role="list-divider"><?=Yii::t('app', 'On request: {text} Found: {found}', array(
             '{text}' => '<b>'.CHtml::encode($query->text).'</b>',

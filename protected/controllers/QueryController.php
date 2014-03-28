@@ -14,8 +14,6 @@ class QueryController extends Controller
             $query->text = $text;
         }
 
-        $this->search_query = $query->text;
-
         $this->render('view', array(
             'query' => $query,
         ));
