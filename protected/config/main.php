@@ -28,7 +28,7 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		'urlManager'=>array(
-			'urlFormat'=>'path',
+			'urlFormat'=>'query',
             'showScriptName'=>false,
 			'rules'=>array(
                 /**
