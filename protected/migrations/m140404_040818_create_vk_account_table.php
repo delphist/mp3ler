@@ -14,7 +14,7 @@ class m140404_040818_create_vk_account_table extends CDbMigration
             `captcha_request` text,
 	        `captcha_response` varchar(20) DEFAULT NULL,
             PRIMARY KEY (`id`),
-            UNIQUE  (vk_id, api_id)
+            UNIQUE  (vk_id, app_id)
         );");
     }
 
