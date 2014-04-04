@@ -8,7 +8,9 @@ return array(
 
 	'import'=>array(
 		'application.models.*',
+        'application.models.vk.*',
 		'application.components.*',
+        'application.vendors.*'
 	),
 
 	'modules'=>array(

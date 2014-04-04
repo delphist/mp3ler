@@ -6,6 +6,7 @@
  * @property string $id
  * @property string $text текст запроса
  * @property string $results_count количество найденных результатов
+ * @property SearchResults $results модель найденных результатов
  */
 class Query extends CActiveRecord
 {
@@ -30,8 +31,24 @@ class Query extends CActiveRecord
 			'id' => 'ID',
 			'text' => 'Text',
 			'results_count' => 'Results Count',
+            'results' => 'Results',
 		);
 	}
+
+    public function setResults($value)
+    {
+        $this->setAttribute('results', $value);
+    }
+
+    public function getResults()
+    {
+        if($this->getAttribute('results') == '')
+        {
+            $this->setAttribute('results', new SearchResults);
+        }
+
+        return $this->getAttribute('results');
+    }
 
 	public function search()
 	{
@@ -41,11 +58,11 @@ class Query extends CActiveRecord
 		$criteria->compare('text',$this->text,true);
 
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
+			'criteria' => $criteria,
 		));
 	}
 
-	public static function model($className=__CLASS__)
+	public static function model($className = __CLASS__)
 	{
 		return parent::model($className);
 	}
