@@ -8,6 +8,7 @@ class SiteController extends Controller
             ->selectDistinct('query_id')
             ->from('query_queue')
             ->order('id DESC')
+            ->limit(10)
             ->queryColumn();
 
         $queries = Query::model()->findAll(array(

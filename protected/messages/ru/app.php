@@ -7,4 +7,7 @@ return array(
     'Top downloads for mp3' => 'Топ скачиваний мп3',
     'On request: {text} Found: {found}' => 'По запросу: {text} Найдено: {found}',
     '{n} audio file|{n} audio files' => '{n} аудиофайл|{n} аудиофайла|{n} аудиофайлов',
+    'Enter song or singer name' => 'Введите название песни',
+    'Listen' => 'Слушать',
+    'Download' => 'Загрузить',
 );

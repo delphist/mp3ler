@@ -1,7 +1,7 @@
 <?php
 $this->searchQuery = $query->text;
-$this->headerTitle = Yii::t('app', '{text} MP3 Download', array('{text}' => CHtml::encode($query->text)));
-$this->pageTitle = Yii::t('app', '{text}-bedava dinle indir,download,скачать', array('{text}' => CHtml::encode($query->text)));
+$this->headerTitle = Yii::t('app', '{text} MP3 Download', array('{text}' => CHtml::encode($query->title)));
+$this->pageTitle = Yii::t('app', '{text}-bedava dinle indir,download,скачать', array('{text}' => CHtml::encode($query->title)));
 ?>
 <?php
 if($track !== NULL)
@@ -10,8 +10,8 @@ if($track !== NULL)
     <h2 style="margin-top: 0px; padding-top: 0px;"><b><?=$track->artist_title.'</b> — '.$track->title?></h2>
 
     <fieldset class="ui-grid-a">
-        <div class="ui-block-a"><a href="<?=$this->createTrackDownloadUrl($track)?>" data-role="button" class="button" data-corners="false">Слушать</a></div>
-        <div class="ui-block-b"><a href="<?=$this->createTrackDownloadUrl($track)?>" data-role="button" class="button" data-corners="false">Загрузить</a></div>
+        <div class="ui-block-a"><a href="<?=$this->createTrackDownloadUrl($track)?>" data-role="button" class="button" data-corners="false"><?=Yii::t('app', 'Listen')?></a></div>
+        <div class="ui-block-b"><a href="<?=$this->createTrackDownloadUrl($track)?>" data-role="button" class="button" data-corners="false"><?=Yii::t('app', 'Download')?></a></div>
     </fieldset>
 
     <br />

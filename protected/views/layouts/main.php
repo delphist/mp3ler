@@ -73,6 +73,8 @@
         'query' => $this->searchQuery,
     )); ?>
 
+    <?php $this->widget('application.components.TagBar'); ?>
+
     <div data-role="footer">
         <h1>© mp3ler.biz</h1>
     </div>
