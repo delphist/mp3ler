@@ -32,15 +32,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/query/view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="16" selection-start="962" selection-end="962" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="675">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/console/login.php">
+      <file leaf-file-name="AntigateCommand.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/commands/AntigateCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="6" selection-start="0" selection-end="418" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225">
+            <state line="26" column="31" selection-start="751" selection-end="751" vertical-scroll-proportion="0.50992364" vertical-offset="56" max-vertical-offset="735">
               <folding />
             </state>
           </provider>
@@ -104,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="26" selection-start="8405" selection-end="8405" vertical-scroll-proportion="0.6728972" vertical-offset="1938" max-vertical-offset="2685">
+            <state line="142" column="28" selection-start="7745" selection-end="7745" vertical-scroll-proportion="-8.0" vertical-offset="1938" max-vertical-offset="2685">
               <folding>
                 <marker date="1396946493000" expanded="true" signature="2282:2337" placeholder="..." />
                 <marker date="1396946493000" expanded="true" signature="2387:3265" placeholder="..." />
@@ -127,6 +118,15 @@
                 <marker date="1396946493000" expanded="true" signature="6913:7002" placeholder="{...}" />
                 <marker date="1396946493000" expanded="false" signature="7168:7200" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yiic.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/yiic.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="315">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -169,7 +169,6 @@
         <option value="$PROJECT_DIR$/protected/models/Query.php" />
         <option value="$PROJECT_DIR$/protected/models/VkAccount.php" />
         <option value="$PROJECT_DIR$/protected/commands/VkCommand.php" />
-        <option value="$PROJECT_DIR$/protected/commands/AntigateCommand.php" />
         <option value="$PROJECT_DIR$/protected/components/Mp3lerAudio.php" />
         <option value="$PROJECT_DIR$/protected/components/VkApi.php" />
         <option value="$PROJECT_DIR$/protected/components/VkAudio.php" />
@@ -192,6 +191,7 @@
         <option value="$PROJECT_DIR$/protected/controllers/ConsoleController.php" />
         <option value="$PROJECT_DIR$/protected/views/console/index.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/commands/AntigateCommand.php" />
       </list>
     </option>
   </component>
@@ -872,13 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/yiic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/yiic">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="71" selection-end="71" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
@@ -917,13 +910,6 @@
     <entry file="file://$PROJECT_DIR$/protected/commands/VkCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="31" selection-start="228" selection-end="228" vertical-scroll-proportion="-5.0" vertical-offset="15" max-vertical-offset="465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/commands/AntigateCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="26" selection-start="1172" selection-end="1172" vertical-scroll-proportion="-21.666666" vertical-offset="80" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
@@ -1142,7 +1128,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="26" selection-start="8405" selection-end="8405" vertical-scroll-proportion="0.6728972" vertical-offset="1938" max-vertical-offset="2685">
+        <state line="142" column="28" selection-start="7745" selection-end="7745" vertical-scroll-proportion="-8.0" vertical-offset="1938" max-vertical-offset="2685">
           <folding>
             <marker date="1396946493000" expanded="true" signature="2282:2337" placeholder="..." />
             <marker date="1396946493000" expanded="true" signature="2387:3265" placeholder="..." />
@@ -1162,6 +1148,20 @@
             <marker date="1396946493000" expanded="true" signature="6913:7002" placeholder="{...}" />
             <marker date="1396946493000" expanded="false" signature="7168:7200" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/yiic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/commands/AntigateCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="31" selection-start="751" selection-end="751" vertical-scroll-proportion="0.50992364" vertical-offset="56" max-vertical-offset="735">
+          <folding />
         </state>
       </provider>
     </entry>

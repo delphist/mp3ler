@@ -17,7 +17,7 @@ class AntigateCommand extends CConsoleCommand
 
         while(TRUE)
         {
-            $accounts = VKAccount::model()->findAllByAttributes(array(
+            $accounts = VkAccount::model()->findAllByAttributes(array(
                 'is_captcha_request' => 1,
                 'is_captcha_response' => 0,
             ));
