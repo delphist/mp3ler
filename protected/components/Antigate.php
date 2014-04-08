@@ -107,7 +107,7 @@ class Antigate extends CApplicationComponent
 
     /**
      * Проверяет и возвращает решение каптчи либо false
-     * в случае, если произошла ошибка
+     * в случае, если произошла ошибка, либо true в случае если нужно еще подождать
      *
      * @param $captcha_id идентификатор каптчи
      */
@@ -136,19 +136,10 @@ class Antigate extends CApplicationComponent
             if($result == 'CAPCHA_NOT_READY')
             {
                 /**
-                 * Каптча еще не решена, пробуем снова
+                 * Каптча еще не решена
                  */
 
-                $time += $this->request_timeout;
-
-                if ($time > $this->timeout)
-                {
-                    Yii::log('Max timeout reached ('.$this->timeout.') for captcha '.$captcha_id, 'error', 'antigate');
-
-                    return FALSE;
-                }
-
-                sleep($this->request_timeout);
+                return TRUE;
             }
             else
             {

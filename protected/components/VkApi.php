@@ -226,15 +226,19 @@ class VkApi extends CComponent
              */
             $response = Yii::app()->captchaSolver->response($account->captcha_request['solve_id']);
 
-            if($response !== FALSE)
+            if($response === TRUE)
             {
-                $account->captcha_response = $response;
+                return FALSE;
+            }
+            elseif($response === FALSE)
+            {
+                $account->captcha_response = NULL;
+                $account->captcha_request = NULL;
                 $account->save();
             }
             else
             {
-                $account->captcha_response = NULL;
-                $account->captcha_request = NULL;
+                $account->captcha_response = $response;
                 $account->save();
             }
 

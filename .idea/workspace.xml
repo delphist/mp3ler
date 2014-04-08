@@ -23,20 +23,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="searchBar.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/views/searchBar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="34" selection-start="59" selection-end="59" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="150">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="720">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VkApi.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/components/VkApi.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="243" column="12" selection-start="7138" selection-end="7138" vertical-scroll-proportion="0.8831776" vertical-offset="3078" max-vertical-offset="3795">
+              <folding>
+                <marker date="1396947895000" expanded="true" signature="7007:7125" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,7 +64,7 @@
       <file leaf-file-name="AntigateCommand.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/commands/AntigateCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="15" selection-start="661" selection-end="661" vertical-scroll-proportion="-11.416667" vertical-offset="56" max-vertical-offset="735">
+            <state line="35" column="30" selection-start="1091" selection-end="1091" vertical-scroll-proportion="-19.541666" vertical-offset="56" max-vertical-offset="735">
               <folding />
             </state>
           </provider>
@@ -77,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Antigate.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Antigate.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/Antigate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="32" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.7242991" vertical-offset="615" max-vertical-offset="2565">
+            <state line="134" column="13" selection-start="3615" selection-end="3615" vertical-scroll-proportion="-16.041666" vertical-offset="1625" max-vertical-offset="2430">
               <folding />
             </state>
           </provider>
@@ -169,7 +171,6 @@
         <option value="$PROJECT_DIR$/protected/models/VkAccount.php" />
         <option value="$PROJECT_DIR$/protected/commands/VkCommand.php" />
         <option value="$PROJECT_DIR$/protected/components/Mp3lerAudio.php" />
-        <option value="$PROJECT_DIR$/protected/components/VkApi.php" />
         <option value="$PROJECT_DIR$/protected/components/VkAudio.php" />
         <option value="$PROJECT_DIR$/protected/controllers/QueryController.php" />
         <option value="$PROJECT_DIR$/protected/views/site/index.php" />
@@ -192,6 +193,7 @@
         <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/commands/AntigateCommand.php" />
         <option value="$PROJECT_DIR$/protected/components/Antigate.php" />
+        <option value="$PROJECT_DIR$/protected/components/VkApi.php" />
       </list>
     </option>
   </component>
@@ -949,13 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/VkApi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="7" selection-start="365" selection-end="365" vertical-scroll-proportion="38.125" vertical-offset="1155" max-vertical-offset="3735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="47" selection-start="1037" selection-end="1037" vertical-scroll-proportion="-16.0" vertical-offset="171" max-vertical-offset="870">
@@ -1151,17 +1146,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/commands/AntigateCommand.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/Antigate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="15" selection-start="661" selection-end="661" vertical-scroll-proportion="-11.416667" vertical-offset="56" max-vertical-offset="735">
+        <state line="134" column="13" selection-start="3615" selection-end="3615" vertical-scroll-proportion="-16.041666" vertical-offset="1625" max-vertical-offset="2430">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Antigate.php">
+    <entry file="file://$PROJECT_DIR$/protected/commands/AntigateCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="32" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.7242991" vertical-offset="615" max-vertical-offset="2565">
+        <state line="35" column="30" selection-start="1091" selection-end="1091" vertical-scroll-proportion="-19.541666" vertical-offset="56" max-vertical-offset="735">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/VkApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="243" column="12" selection-start="7138" selection-end="7138" vertical-scroll-proportion="0.8831776" vertical-offset="3078" max-vertical-offset="3795">
+          <folding>
+            <marker date="1396947895000" expanded="true" signature="7007:7125" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
