@@ -58,10 +58,19 @@ class Antigate extends CApplicationComponent
 
         fclose($temp_file);
 
+        if ( ! function_exists('curl_file_create'))
+        {
+            $curl_file = '@'.$temp_filename;
+        }
+        else
+        {
+            $curl_file = curl_file_create($temp_filename);
+        }
+
         $postdata = array_merge($this->default_params, array(
             'method' => 'post',
             'key' => $this->apikey,
-            'file' => '@'.$temp_filename,
+            'file' => $curl_file,
         ));
 
         $curl = curl_init();

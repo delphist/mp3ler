@@ -59,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AntigateCommand.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AntigateCommand.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/commands/AntigateCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="31" selection-start="751" selection-end="751" vertical-scroll-proportion="0.50992364" vertical-offset="56" max-vertical-offset="735">
+            <state line="22" column="15" selection-start="661" selection-end="661" vertical-scroll-proportion="-11.416667" vertical-offset="56" max-vertical-offset="735">
               <folding />
             </state>
           </provider>
@@ -77,19 +77,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/layouts/console.php">
+      <file leaf-file-name="Antigate.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/components/Antigate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="693" selection-end="693" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="465">
+            <state line="72" column="32" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.7242991" vertical-offset="615" max-vertical-offset="2565">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/console.css">
+      <file leaf-file-name="console.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/layouts/console.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="37" selection-start="1594" selection-end="1594" vertical-scroll-proportion="0.0" vertical-offset="1046" max-vertical-offset="1785">
+            <state line="20" column="0" selection-start="693" selection-end="693" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
@@ -155,7 +155,6 @@
         <option value="$PROJECT_DIR$/protected/config/development.example.php" />
         <option value="$PROJECT_DIR$/protected/components/Audio.php" />
         <option value="$PROJECT_DIR$/protected/config/console.php" />
-        <option value="$PROJECT_DIR$/protected/components/Antigate.php" />
         <option value="$PROJECT_DIR$/protected/models/Results.php" />
         <option value="$PROJECT_DIR$/protected/migrations/m140404_040818_create_vk_account_table.php" />
         <option value="$PROJECT_DIR$/protected/controllers/TrackController.php" />
@@ -192,6 +191,7 @@
         <option value="$PROJECT_DIR$/protected/views/console/index.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/commands/AntigateCommand.php" />
+        <option value="$PROJECT_DIR$/protected/components/Antigate.php" />
       </list>
     </option>
   </component>
@@ -914,13 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Antigate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="46" selection-start="3857" selection-end="3857" vertical-scroll-proportion="-14.875" vertical-offset="1758" max-vertical-offset="2430">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="26" selection-start="429" selection-end="429" vertical-scroll-proportion="-10.0" vertical-offset="75" max-vertical-offset="570">
@@ -1160,7 +1153,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/commands/AntigateCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="31" selection-start="751" selection-end="751" vertical-scroll-proportion="0.50992364" vertical-offset="56" max-vertical-offset="735">
+        <state line="22" column="15" selection-start="661" selection-end="661" vertical-scroll-proportion="-11.416667" vertical-offset="56" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/Antigate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="32" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.7242991" vertical-offset="615" max-vertical-offset="2565">
           <folding />
         </state>
       </provider>
