@@ -26,7 +26,7 @@ class VkCommand extends CConsoleCommand
 
     public function actionCheck($account_id, $query = NULL)
     {
-        $account = VkAcount::model()->findByPk($account_id);
+        $account = VkAccount::model()->findByPk($account_id);
 
         if($query === NULL)
         {
