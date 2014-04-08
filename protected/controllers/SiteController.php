@@ -4,10 +4,19 @@ class SiteController extends Controller
 {
 	public function actionIndex()
 	{
-        $dataProvider = new CActiveDataProvider('Query');
+        $queue_ids = Yii::app()->db->createCommand()
+            ->selectDistinct('query_id')
+            ->from('query_queue')
+            ->order('id DESC')
+            ->queryColumn();
 
-        $this->render('index',array(
-            'dataProvider' => $dataProvider,
+        $queries = Query::model()->findAll(array(
+            'condition' => 'id IN ('.implode($queue_ids, ', ').')',
+            'order' => 'FIELD(id, '.implode($queue_ids, ', ').') ASC',
+        ));
+
+        $this->render('index', array(
+            'queries' => $queries,
         ));
 	}
 

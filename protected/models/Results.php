@@ -3,12 +3,7 @@
 /**
  * Модель результатов поискового запроса
  */
-class SearchResults
+class Results extends ArrayObject
 {
-    protected $_results;
-
-    public static function model($className = __CLASS__)
-    {
-        return parent::model($className);
-    }
+    public $count;
 }

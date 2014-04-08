@@ -9,6 +9,9 @@ class m140404_064130_create_track_table extends CDbMigration
             `artist_title` varchar(255) NOT NULL,
             `title` varchar(255) NOT NULL,
             `file` varchar(255) DEFAULT NULL,
+            `external_type` varchar(10) NOT NULL,
+            `external_id` varchar(30) NOT NULL,
+            `external_data` text,
             PRIMARY KEY (`id`)
         );");
     }

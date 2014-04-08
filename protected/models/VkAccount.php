@@ -7,8 +7,6 @@
  */
 class VkAccount extends CActiveRecord
 {
-    const API_URL = 'http://api.vk.com/api.php';
-
     public function tableName()
     {
         return 'vk_account';
@@ -17,7 +15,7 @@ class VkAccount extends CActiveRecord
     public function rules()
     {
         return array(
-
+            array('app_id, vk_id', 'unique')
         );
     }
 
@@ -39,44 +37,77 @@ class VkAccount extends CActiveRecord
         ));
     }
 
-    public function execute_api($method, $params)
+    public function getCaptcha_Response()
     {
-        if ($params === FALSE)
+        return $this->captcha_response_data;
+    }
+
+    public function setCaptcha_Response($value)
+    {
+        $this->captcha_response_data = $value;
+
+        return TRUE;
+    }
+
+    public function getCaptcha_Request()
+    {
+        if($this->captcha_request_data)
         {
-            $params = array();
+            if( ! is_array($this->captcha_request_data))
+            {
+                $this->captcha_request_data = (array) json_decode($this->captcha_request_data);
+            }
+
+            return $this->captcha_request_data;
         }
-
-        $params = array_merge($params, array(
-            'api_id' => $this->app_id,
-            'v' => '3.0',
-            'test_mode' => 1,
-            'method' => $method,
-        ));
-        ksort($params);
-
-        $signature = $this->vk_id;
-        foreach($params as $k => $v)
+        else
         {
-            $signature .= $k.'='.$v;
+            return NULL;
         }
+    }
 
-        $params['sig'] = md5($signature);
+    public function setCaptcha_Request($value)
+    {
+        $this->captcha_request_data = $value;
 
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, self::API_URL);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_REFERER, $this->app_url());
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 15);
-        curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17');
+        return TRUE;
+    }
 
-        $data = curl_exec($ch);
-        curl_close($ch);
+    public function beforeSave()
+    {
+        if(parent::beforeSave())
+        {
+            if($this->captcha_request_data)
+            {
+                if(is_array($this->captcha_request_data))
+                {
+                    $this->captcha_request_data = json_encode($this->captcha_request_data);
+                }
 
-        $result = simplexml_load_string($data);
+                $this->is_captcha_request = TRUE;
+            }
+            else
+            {
+                $this->captcha_request_data = NULL;
+                $this->is_captcha_request = FALSE;
+            }
 
-        return $result;
+            if($this->captcha_response_data)
+            {
+                $this->is_captcha_response = TRUE;
+            }
+            else
+            {
+                $this->captcha_response_data = NULL;
+                $this->is_captcha_response = FALSE;
+            }
+
+            return TRUE;
+        }
+        else
+        {
+            return FALSE;
+        }
     }
 
     public function app_url()

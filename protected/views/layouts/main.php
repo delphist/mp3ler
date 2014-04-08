@@ -34,7 +34,7 @@
 <body class="ui-mobile-viewport ui-overlay-a">
 <div data-role="page" class="page" data-quicklinks="true">
     <div data-role="header" class="ui-header header">
-        <h1>mp3ler.biz</h1>
+        <h1><a href="/">mp3ler.biz</a></h1>
     </div>
 
     <div data-role="navbar" class="lang-select">

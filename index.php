@@ -1,6 +1,16 @@
 <?php
 
+if (php_sapi_name() == 'cli-server')
+{
+    if (is_file($_SERVER['DOCUMENT_ROOT'].$_SERVER['REQUEST_URI']))
+    {
+        return false;
+    }
+}
+
 date_default_timezone_set('Europe/Moscow');
+
+mb_internal_encoding('UTF-8');
 
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
 

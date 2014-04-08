@@ -1,1 +1,3 @@
 .DS_Store
+protected/config/development.php
+protected/config/production.php

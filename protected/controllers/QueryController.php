@@ -2,54 +2,82 @@
 
 class QueryController extends Controller
 {
+    /**
+     * Страница поиска по текстовому запросу
+     *
+     * @param $text
+     */
     public function actionView($text)
     {
+        $text = trim($text);
+        $text = preg_replace('/\s+/su', ' ', $text);
+        $text = str_replace(chr(0), '', $text);
+
+        /**
+         * Ищем запрос либо создаем новый
+         */
         $query = Query::model()->findByAttributes(array(
             'text' => $text,
         ));
-
         if( ! $query)
         {
             $query = new Query;
             $query->text = $text;
         }
 
-        $api = new VkApi();
-        $query->results = $api->execute('audio.search', array(
-            'q' => $query->text,
-            'auto_complete' => 1,
-            'sort' => 2,
-            'count' => 20
-        ));
-
-        $query->results_count = 0;
-        if(isset($query->results->count) && $query->results->count > 0)
+        /**
+         * Сначала пытаемся найти результаты среди файлов
+         * старой версии сайта
+         */
+        if(count($query->results) === 0)
         {
-            $query->results_count = $query->results->count;
+            $query->results = new Mp3lerAudio($query->text);
         }
 
-        $track_url = NULL;
-        $track = NULL;
-        if($query->results_count)
+        /**
+         * Если результатов на старом сайте нет то ищем вконтакте
+         */
+        if(count($query->results) === 0)
         {
-            foreach($query->results->audio as $result)
-            {
-                if($result->artist.' - '.$result->title == $query->text)
-                {
-                    $track = new Track;
-                    $track->artist_title = $result->artist;
-                    $track->title = $result->title;
+            $query->results = new VkAudio($query->text);
+        }
 
-                    $track_url = $this->createUrl('/track/download', array(
-                        'data' => base64_encode(json_encode($result)),
-                    ));
-                }
+        /**
+         * Сверяем найденные результаты с текстовым запросом,
+         * при точном совпадении создаем трек
+         */
+        $track = NULL;
+        foreach($query->results as $result)
+        {
+            if($query->text == $result['artist_title'].' - '.$result['title'])
+            {
+                $track = new Track;
+                $track->artist_title = $result['artist_title'];
+                $track->title = $result['title'];
+                $track->data = $result;
             }
+        }
+
+        /**
+         * Сохраняем запрос, т.к. он может быть новый, либо
+         * в нем изменилось количество найденных результатов
+         */
+        $check = preg_match('/^[\w\d\s\.\(\)\-\!\;\%\&\*\+\_\/\[\]\<\>]+$/isu', $query->text);
+        if($check)
+        {
+            /**
+             * Сохраняем запрос в том случае если он состоит из слов, цифр
+             * и некоторых знаков
+             */
+            $query->save();
+
+            $queue = new QueryQueue;
+            $queue->query_id = $query->id;
+            $queue->save();
         }
 
         $this->render('view', array(
             'track' => $track,
-            'track_url' => $track_url,
             'query' => $query,
         ));
     }

@@ -22,14 +22,18 @@ return array(
 	),
 	'components'=>array(
         'request' => array(
-            'baseUrl' => 'http://'.$_SERVER['HTTP_HOST'],
+            //'baseUrl' => 'http://'.$_SERVER['HTTP_HOST'],
         ),
 		'user'=>array(
 			'allowAutoLogin'=>true,
 		),
+        'captchaSolver'=>array(
+            'class' => 'application.components.Antigate',
+            'apikey' => '7c3f691ed6aa723bd018d2896c39608b',
+        ),
 		'urlManager'=>array(
-			'urlFormat'=>'query',
-            'showScriptName'=>false,
+			'urlFormat'=>'path',
+            'showScriptName' => false,
 			'rules'=>array(
                 /**
                  * Часть адресов пришлось роутить через кастомные правила,
@@ -44,9 +48,7 @@ return array(
                     /** Поисковые запросы */
                     'class' => 'application.components.QueryUrlRule',
                 ),
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'download/<filename:.*?\.mp3>' => 'track/download',
 			),
 		),
 		'db'=>array(

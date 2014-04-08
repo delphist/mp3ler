@@ -11,8 +11,8 @@ class m140404_040818_create_vk_account_table extends CDbMigration
             `is_alive` tinyint(1) UNSIGNED NOT NULL DEFAULT '1',
             `is_captcha_request` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
             `is_captcha_response` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
-            `captcha_request` text,
-	        `captcha_response` varchar(20) DEFAULT NULL,
+            `captcha_request_data` text,
+	        `captcha_response_data` varchar(20) DEFAULT NULL,
             PRIMARY KEY (`id`),
             UNIQUE  (vk_id, app_id)
         );");

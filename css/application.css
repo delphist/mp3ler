@@ -1,3 +1,12 @@
+html { background-color: #eee; }
+@media only screen and (min-width: 600px){
+    .ui-page {
+        width: 600px !important;
+        margin: 0 auto !important;
+        position: relative !important;
+    }
+}
+
 .page, a, p, h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -7,9 +16,10 @@
     background-color: #3B3D3C !important;
 }
 
-.header > h1 {
-    color: #FDFDFD;
+.header > h1 > a {
+    color: #FDFDFD !important;
     outline-color: #444444;
+    text-decoration: none;
     text-shadow: #111111 0px 1px 0px;
     font-size: 24px !important;
     font-weight: 400;
@@ -101,4 +111,11 @@
 
 .counters a {
     margin: 10px;
+}
+
+.button {
+    background-color: #09A8A1 !important;
+    color: white !important;
+    outline-color: #444444 !important;
+    text-shadow: #111111 0px 1px 0px !important;
 }

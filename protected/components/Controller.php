@@ -4,10 +4,30 @@ class Controller extends CController
 {
     public $layout = '//layouts/main';
 
+    /**
+     * @var string поисковой запрос в лейауте
+     */
     public $searchQuery;
+
+    /**
+     * @var string заголовок в лейауте
+     */
     public $headerTitle;
 
-    function init()
+    /**
+     * Создает ссылку для скачивания трека
+     *
+     * @param Track $track
+     */
+    protected function createTrackDownloadUrl(Track $track)
+    {
+        return $this->createUrl('track/download', array(
+            'filename' => $track->filename,
+            'data' => base64_encode(json_encode($track->data))
+        ));
+    }
+
+    public function init()
     {
         parent::init();
 

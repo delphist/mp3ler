@@ -6,10 +6,11 @@
  * @property string $id
  * @property string $text текст запроса
  * @property string $results_count количество найденных результатов
- * @property SearchResults $results модель найденных результатов
  */
 class Query extends CActiveRecord
 {
+    protected $results_data;
+
 	public function tableName()
 	{
 		return 'query';
@@ -19,9 +20,9 @@ class Query extends CActiveRecord
 	{
 		return array(
 			array('text, results_count', 'required'),
-			array('text', 'length', 'max'=>255),
-			array('results_count', 'length', 'max'=>11),
-			array('id, text', 'safe', 'on'=>'search'),
+			array('text', 'length', 'max' => 255, 'min' => 2),
+			array('results_count', 'length', 'max' => 11),
+			array('id, text', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -31,23 +32,77 @@ class Query extends CActiveRecord
 			'id' => 'ID',
 			'text' => 'Text',
 			'results_count' => 'Results Count',
-            'results' => 'Results',
+            'results_data' => 'Results',
 		);
 	}
 
     public function setResults($value)
     {
-        $this->setAttribute('results', $value);
+        if($value instanceof Audio)
+        {
+            $this->results_data = $value->results();
+        }
+        elseif($value instanceof Results)
+        {
+            $this->results_data = $value;
+        }
+
+        return TRUE;
     }
 
     public function getResults()
     {
-        if($this->getAttribute('results') == '')
+        if($this->results_data == '')
         {
-            $this->setAttribute('results', new SearchResults);
+            $this->results_data = new Results;
         }
 
-        return $this->getAttribute('results');
+        return $this->results_data;
+    }
+
+    public function beforeValidate()
+    {
+        if(parent::beforeValidate())
+        {
+            $this->results_count = $this->results->count;
+
+            if($this->results_count == 0)
+            {
+                return FALSE;
+            }
+
+            return TRUE;
+        }
+        else
+        {
+            return FALSE;
+        }
+    }
+
+    public function beforeSave()
+    {
+        if(parent::beforeSave())
+        {
+            $this->text = mb_strtolower($this->text);
+
+            return TRUE;
+        }
+        else
+        {
+            return FALSE;
+        }
+    }
+
+    public function getTitle()
+    {
+        $title = explode(" ", $this->text);
+
+        foreach($title as &$part)
+        {
+            $part = mb_strtoupper(mb_substr($part, 0, 1)).mb_strtolower(mb_substr($part, 1));
+        }
+
+        return implode($title, ' ');
     }
 
 	public function search()
