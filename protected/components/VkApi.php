@@ -45,9 +45,10 @@ class VkApi extends CComponent
              * Сначала ищем аккаунты, у которых уже решена, но еще не введена
              * каптча
              */
-            $account = VkAccount::model()->find(array(
-                'condition' => 'is_alive=1 AND is_captcha_response=1' . $not_account_condition
-            ));
+            $account = NULL;
+            //$account = VkAccount::model()->find(array(
+            //    'condition' => 'is_alive=1 AND is_captcha_response=1' . $not_account_condition
+            //));
 
             if($account === NULL)
             {

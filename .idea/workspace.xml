@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/config/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="720">
+            <state line="27" column="35" selection-start="583" selection-end="583" vertical-scroll-proportion="-8.916667" vertical-offset="191" max-vertical-offset="1035">
               <folding />
             </state>
           </provider>
@@ -35,18 +35,29 @@
       <file leaf-file-name="VkApi.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/components/VkApi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="243" column="12" selection-start="7138" selection-end="7138" vertical-scroll-proportion="0.8831776" vertical-offset="3078" max-vertical-offset="3795">
+            <state line="56" column="29" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.5607477" vertical-offset="480" max-vertical-offset="3810">
               <folding>
-                <marker date="1396947895000" expanded="true" signature="7007:7125" placeholder="{...}" />
+                <marker date="1396948931000" expanded="true" signature="1322:1441" placeholder="..." />
+                <marker date="1396948931000" expanded="true" signature="1328:1438" placeholder="..." />
+                <marker date="1396948931000" expanded="true" signature="7042:7160" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsoleController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
+      <file leaf-file-name="console.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/config/console.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="37" selection-start="337" selection-end="337" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="450">
+            <state line="18" column="10" selection-start="435" selection-end="435" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="630">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/QueryController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="36" selection-start="999" selection-end="999" vertical-scroll-proportion="-16.25" vertical-offset="225" max-vertical-offset="1335">
               <folding />
             </state>
           </provider>
@@ -70,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/QueryController.php">
+      <file leaf-file-name="VkAudio.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="44" selection-start="102" selection-end="102" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="1335">
+            <state line="20" column="20" selection-start="497" selection-end="497" vertical-scroll-proportion="-9.375" vertical-offset="75" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
@@ -83,15 +94,6 @@
         <entry file="file://$PROJECT_DIR$/protected/components/Antigate.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="134" column="13" selection-start="3615" selection-end="3615" vertical-scroll-proportion="-16.041666" vertical-offset="1625" max-vertical-offset="2430">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/layouts/console.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="693" selection-end="693" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
@@ -156,7 +158,6 @@
         <option value="$PROJECT_DIR$/protected/config/production.example.php" />
         <option value="$PROJECT_DIR$/protected/config/development.example.php" />
         <option value="$PROJECT_DIR$/protected/components/Audio.php" />
-        <option value="$PROJECT_DIR$/protected/config/console.php" />
         <option value="$PROJECT_DIR$/protected/models/Results.php" />
         <option value="$PROJECT_DIR$/protected/migrations/m140404_040818_create_vk_account_table.php" />
         <option value="$PROJECT_DIR$/protected/controllers/TrackController.php" />
@@ -165,7 +166,6 @@
         <option value="$PROJECT_DIR$/protected/models/QueryQueue.php" />
         <option value="$PROJECT_DIR$/protected/messages/ge/app.php" />
         <option value="$PROJECT_DIR$/protected/messages/tr/app.php" />
-        <option value="$PROJECT_DIR$/protected/config/main.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/protected/models/Query.php" />
         <option value="$PROJECT_DIR$/protected/models/VkAccount.php" />
@@ -193,6 +193,8 @@
         <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/commands/AntigateCommand.php" />
         <option value="$PROJECT_DIR$/protected/components/Antigate.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/config/console.php" />
         <option value="$PROJECT_DIR$/protected/components/VkApi.php" />
       </list>
     </option>
@@ -802,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/console.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="35" selection-start="266" selection-end="266" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_0.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="83" column="18" selection-start="2029" selection-end="2029" vertical-scroll-proportion="-0.059850372" vertical-offset="1269" max-vertical-offset="20880">
@@ -951,20 +946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="47" selection-start="1037" selection-end="1037" vertical-scroll-proportion="-16.0" vertical-offset="171" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="18" selection-start="1398" selection-end="1398" vertical-scroll-proportion="-14.166667" vertical-offset="395" max-vertical-offset="1050">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/production.example.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="49" selection-start="556" selection-end="556" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="435">
@@ -1086,13 +1067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/QueryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="44" selection-start="102" selection-end="102" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="1335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/console.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="693" selection-end="693" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="465">
@@ -1160,11 +1134,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="35" selection-start="583" selection-end="583" vertical-scroll-proportion="-8.916667" vertical-offset="191" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/console.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="10" selection-start="435" selection-end="435" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/QueryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="36" selection-start="999" selection-end="999" vertical-scroll-proportion="-16.25" vertical-offset="225" max-vertical-offset="1335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="20" selection-start="497" selection-end="497" vertical-scroll-proportion="-9.375" vertical-offset="75" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/VkApi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="12" selection-start="7138" selection-end="7138" vertical-scroll-proportion="0.8831776" vertical-offset="3078" max-vertical-offset="3795">
+        <state line="56" column="29" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.5607477" vertical-offset="480" max-vertical-offset="3810">
           <folding>
-            <marker date="1396947895000" expanded="true" signature="7007:7125" placeholder="{...}" />
+            <marker date="1396948931000" expanded="true" signature="1322:1441" placeholder="..." />
+            <marker date="1396948931000" expanded="true" signature="1328:1438" placeholder="..." />
+            <marker date="1396948931000" expanded="true" signature="7042:7160" placeholder="{...}" />
           </folding>
         </state>
       </provider>

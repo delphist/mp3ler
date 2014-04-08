@@ -29,7 +29,6 @@ return array(
 		),
         'captchaSolver'=>array(
             'class' => 'application.components.Antigate',
-            'apikey' => '7c3f691ed6aa723bd018d2896c39608b',
         ),
 		'urlManager'=>array(
 			'urlFormat'=>'path',
