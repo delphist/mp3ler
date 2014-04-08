@@ -58,7 +58,7 @@ class VkApi extends CComponent
                  */
 
                 $account = VkAccount::model()->find(array(
-                    'condition' => 'is_alive=1 AND is_captcha_request=0' . $not_account_condition,
+                    'condition' => 'is_alive=1 AND (is_captcha_request=0 OR is_captcha_response=1)' . $not_account_condition,
                     'order' => 'RAND()'
                 ));
             }
