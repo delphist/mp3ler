@@ -59,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/console/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="14" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.625" vertical-offset="0" max-vertical-offset="600">
+            <state line="27" column="6" selection-start="1183" selection-end="1183" vertical-scroll-proportion="-5.126582" vertical-offset="0" max-vertical-offset="495">
               <folding />
             </state>
           </provider>
@@ -104,11 +104,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="44" selection-start="889" selection-end="889" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="2010">
-              <folding />
+            <state line="158" column="26" selection-start="8405" selection-end="8405" vertical-scroll-proportion="0.6728972" vertical-offset="1938" max-vertical-offset="2685">
+              <folding>
+                <marker date="1396946493000" expanded="true" signature="2282:2337" placeholder="..." />
+                <marker date="1396946493000" expanded="true" signature="2387:3265" placeholder="..." />
+                <marker date="1396946493000" expanded="true" signature="2400:3254" placeholder="..." />
+                <marker date="1396946493000" expanded="true" signature="3344:3413" placeholder="..." />
+                <marker date="1396946493000" expanded="true" signature="3588:4059" placeholder="..." />
+                <marker date="1396946493000" expanded="true" signature="3668:3979" placeholder="..." />
+                <marker date="1396946493000" expanded="true" signature="4269:4310" placeholder="..." />
+                <marker date="1396946493000" expanded="true" signature="4338:7238" placeholder="..." />
+                <marker date="1396946493000" expanded="false" signature="5177:5186" placeholder="..." />
+                <marker date="1396946493000" expanded="true" signature="5330:5950" placeholder="..." />
+                <marker date="1396946493000" expanded="true" signature="6051:7095" placeholder="..." />
+                <marker date="1396946493000" expanded="true" signature="6085:7030" placeholder="{...}" />
+                <marker date="1396946493000" expanded="true" signature="6139:6481" placeholder="{...}" />
+                <marker date="1396946493000" expanded="true" signature="6165:6450" placeholder="{...}" />
+                <marker date="1396946493000" expanded="true" signature="6228:6426" placeholder="{&quot;id&quot;: 24313723...}" />
+                <marker date="1396946493000" expanded="true" signature="6913:7002" placeholder="{...}" />
+                <marker date="1396946493000" expanded="false" signature="7168:7200" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,7 +177,6 @@
         <option value="$PROJECT_DIR$/protected/views/site/index.php" />
         <option value="$PROJECT_DIR$/protected/components/SocialBar.php" />
         <option value="$PROJECT_DIR$/protected/components/views/socialBar.php" />
-        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/components/TagBar.php" />
         <option value="$PROJECT_DIR$/protected/config/development.php" />
         <option value="$PROJECT_DIR$/css/application.css" />
@@ -174,6 +191,7 @@
         <option value="$PROJECT_DIR$/css/console.css" />
         <option value="$PROJECT_DIR$/protected/controllers/ConsoleController.php" />
         <option value="$PROJECT_DIR$/protected/views/console/index.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
       </list>
     </option>
   </component>
@@ -1108,13 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="44" selection-start="889" selection-end="889" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="2010">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="37" selection-start="337" selection-end="337" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="450">
@@ -1124,8 +1135,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/console/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="14" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.625" vertical-offset="0" max-vertical-offset="600">
+        <state line="27" column="6" selection-start="1183" selection-end="1183" vertical-scroll-proportion="-5.126582" vertical-offset="0" max-vertical-offset="495">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="26" selection-start="8405" selection-end="8405" vertical-scroll-proportion="0.6728972" vertical-offset="1938" max-vertical-offset="2685">
+          <folding>
+            <marker date="1396946493000" expanded="true" signature="2282:2337" placeholder="..." />
+            <marker date="1396946493000" expanded="true" signature="2387:3265" placeholder="..." />
+            <marker date="1396946493000" expanded="true" signature="2400:3254" placeholder="..." />
+            <marker date="1396946493000" expanded="true" signature="3344:3413" placeholder="..." />
+            <marker date="1396946493000" expanded="true" signature="3588:4059" placeholder="..." />
+            <marker date="1396946493000" expanded="true" signature="3668:3979" placeholder="..." />
+            <marker date="1396946493000" expanded="true" signature="4269:4310" placeholder="..." />
+            <marker date="1396946493000" expanded="true" signature="4338:7238" placeholder="..." />
+            <marker date="1396946493000" expanded="false" signature="5177:5186" placeholder="..." />
+            <marker date="1396946493000" expanded="true" signature="5330:5950" placeholder="..." />
+            <marker date="1396946493000" expanded="true" signature="6051:7095" placeholder="..." />
+            <marker date="1396946493000" expanded="true" signature="6085:7030" placeholder="{...}" />
+            <marker date="1396946493000" expanded="true" signature="6139:6481" placeholder="{...}" />
+            <marker date="1396946493000" expanded="true" signature="6165:6450" placeholder="{...}" />
+            <marker date="1396946493000" expanded="true" signature="6228:6426" placeholder="{&quot;id&quot;: 24313723...}" />
+            <marker date="1396946493000" expanded="true" signature="6913:7002" placeholder="{...}" />
+            <marker date="1396946493000" expanded="false" signature="7168:7200" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
