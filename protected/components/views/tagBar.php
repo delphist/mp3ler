@@ -6,7 +6,7 @@
     {
         $i++;
         ?>
-        <a href="<?=$this->getController()->createUrl('query/view', array('text' => $query->text)) ?>"><?=$query->title?></a>
+        <a href="<?=$this->getController()->createUrl('query/view', array('text' => $query->text)) ?>" title="<?=$query->title?>"><?=$query->title?></a>
         <?php
         if($i < count($queries))
         {

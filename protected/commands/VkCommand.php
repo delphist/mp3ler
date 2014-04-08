@@ -23,4 +23,26 @@ class VkCommand extends CConsoleCommand
             $account->save();
         }
     }
+
+    public function actionCheck($account_id, $query = NULL)
+    {
+        $account = VkAcount::model()->findByPk($account_id);
+
+        if($query === NULL)
+        {
+            $query = 'eminem';
+        }
+
+        $api = new VkApi;
+        $response = $api->execute_account($account, 'audio.search', array(
+            'q' => $query,
+            'auto_complete' => 1,
+            'sort' => 2,
+            'count' => 10
+        ));
+
+        print_r($response);
+
+        print_r($account);
+    }
 }
