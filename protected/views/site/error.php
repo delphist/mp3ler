@@ -9,3 +9,4 @@ $this->pageTitle='Error '.$code.' - '.Yii::app()->name;
 <p>
     <?php echo CHtml::encode($message); ?>
 </p>
+<br />
