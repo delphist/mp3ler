@@ -49,7 +49,7 @@ class QueryController extends Controller
         $track = NULL;
         foreach($query->results as $result)
         {
-            if($query->text == $result['artist_title'].' - '.$result['title'])
+            if(mb_strtolower($query->text) == mb_strtolower($result['artist_title'].' - '.$result['title']))
             {
                 $track = new Track;
                 $track->artist_title = $result['artist_title'];

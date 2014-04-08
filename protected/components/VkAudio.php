@@ -33,7 +33,7 @@ class VkAudio extends Audio
          */
         if($response != NULL && isset($response->count) && $response->count > 0 && isset($response->audio))
         {
-            $results->count = $response->count;
+            $results->count = (int) $response->count;
 
             foreach($response->audio as $audio)
             {
