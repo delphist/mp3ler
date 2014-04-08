@@ -36,7 +36,7 @@ class VkApi extends CComponent
             $attempt++;
 
             $not_account_condition = '';
-            if(count($acount_ids))
+            if(count($account_ids))
             {
                 $not_account_condition = ' AND id NOT IN ('.implode($account_ids, ', ').')';
             }

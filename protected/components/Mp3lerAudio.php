@@ -5,25 +5,12 @@
  */
 class Mp3lerAudio extends Audio
 {
-    /**
-     * @var string путь до папки старой версии сайта
-     */
-    public $mp3ler_path;
-
     public function results()
     {
         /**
          * Составляем имя файла
          */
-        if($this->mp3ler_path === NULL)
-        {
-            $mp3ler_path = Yii::app()->params['mp3ler_path'];
-        }
-        else
-        {
-            $mp3ler_path = $this->mp3ler_path;
-        }
-        $filename = $mp3ler_path.'/data4/'.md5($this->query).'_10.dat';
+        $filename = Yii::app()->params['mp3ler_path'].'/data4/'.md5($this->query).'_10.dat';
 
         $results = new Results;
 
