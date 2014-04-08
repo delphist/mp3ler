@@ -1,9 +1,11 @@
 <?php
-$this->pageTitle=Yii::app()->name . ' - Error';
+$this->pageTitle='Error '.$code.' - '.Yii::app()->name;
 ?>
 
-<h2>Error <?php echo $code; ?></h2>
+<ul class="list" data-role="listview">
+    <li class="divider" data-role="list-divider">Error <?php echo $code; ?></li>
+</ul>
 
-<div class="error">
-<?php echo CHtml::encode($message); ?>
-</div>
+<p>
+    <?php echo CHtml::encode($message); ?>
+</p>

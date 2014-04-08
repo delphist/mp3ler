@@ -24,6 +24,13 @@ class VkCommand extends CConsoleCommand
         }
     }
 
+    /**
+     * Проверяет аккаунт, совершая поиск музыки
+     * и печатая результат в stdout
+     *
+     * @param $account_id id аккаунта вк
+     * @param $query текст запроса
+     */
     public function actionCheck($account_id, $query = NULL)
     {
         $account = VkAccount::model()->findByPk($account_id);

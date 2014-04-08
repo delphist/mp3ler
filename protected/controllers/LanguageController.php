@@ -8,10 +8,21 @@ class LanguageController extends Controller
      */
     public function actionChange($language)
     {
-        $cookie = new CHttpCookie('dil', $language);
-        $cookie->expire = time()+60*60*24*180;
+        if($language == 'geo')
+        {
+            /**
+             * Алиас со старого сайта
+             */
+            $language = 'ge';
+        }
 
-        Yii::app()->request->cookies['dil'] = $cookie;
+        if(in_array($language, array('ru', 'en', 'az', 'ge', 'tr')))
+        {
+            $cookie = new CHttpCookie('dil', $language);
+            $cookie->expire = time()+60*60*24*180;
+
+            Yii::app()->request->cookies['dil'] = $cookie;
+        }
 
         $this->redirect(Yii::app()->request->urlReferrer);
     }
