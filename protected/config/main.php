@@ -1,6 +1,6 @@
 <?php
 
-return array(
+$result = array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Mp3ler.biz',
 
@@ -68,3 +68,23 @@ return array(
 		),
 	),
 );
+
+if(isset($_GET['weblog']))
+{
+    $result =CMap::mergeArray(
+        $result,
+        array(
+            'components'=>array(
+                'log'=>array(
+                    'routes'=>array(
+                        array(
+                            'class'=>'CWebLogRoute',
+                        ),
+                    ),
+                ),
+            ),
+        )
+    );
+}
+
+return $result;
