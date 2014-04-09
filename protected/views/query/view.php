@@ -30,7 +30,7 @@ if($track !== NULL)
         ))?></li>
     <?php if(count($query->results) > 0) { ?>
         <?php foreach($query->results as $result) { ?>
-            <li data-icon="false"><a title="<?=$result['artist_title'].' - '.$result['title']?>" href="<?=$this->createUrl('query/view', array('text' => $result['artist_title'].' - '.$result['title']))?>"><?='<b>'.CHtml::encode($result['artist_title']).'</b> — '.CHtml::encode($result['title'])?></a></li>
+            <li data-icon="false"><a href="<?=$this->createUrl('query/view', array('text' => $result['artist_title'].' - '.$result['title']))?>" title="<?=addslashes($result['artist_title'].' - '.$result['title'])?> mp3"><?='<b>'.CHtml::encode($result['artist_title']).'</b> — '.CHtml::encode($result['title'])?></a></li>
         <?php } ?>
     <?php } ?>
 </ul>

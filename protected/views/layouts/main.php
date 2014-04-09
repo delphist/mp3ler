@@ -73,7 +73,9 @@
         'query' => $this->searchQuery,
     )); ?>
 
-    <?php $this->widget('application.components.TagBar'); ?>
+    <?php if($this->beginCache('tagbar', array('duration' => 5))) { ?>
+        <?php $this->widget('application.components.TagBar'); ?>
+        <?php $this->endCache(); } ?>
 
     <div data-role="footer">
         <h1>© mp3ler.biz</h1>

@@ -6,6 +6,7 @@
  * @property string $id
  * @property string $text текст запроса
  * @property string $results_count количество найденных результатов
+ * @property string $hash md5-хеш, используемый для быстрого поиска
  */
 class Query extends CActiveRecord
 {
@@ -84,6 +85,7 @@ class Query extends CActiveRecord
         if(parent::beforeSave())
         {
             $this->text = mb_strtolower($this->text);
+            $this->hash = $this->generateHash($this->text);
 
             return TRUE;
         }
@@ -105,6 +107,15 @@ class Query extends CActiveRecord
         return implode($title, ' ');
     }
 
+    public function hash($query)
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'hash' => $this->generateHash($query)
+        ));
+
+        return $this;
+    }
+
 	public function search()
 	{
 		$criteria=new CDbCriteria;
@@ -121,4 +132,9 @@ class Query extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    protected function generateHash($string)
+    {
+        return md5($string);
+    }
 }

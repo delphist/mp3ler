@@ -15,17 +15,30 @@ class VkAudio extends Audio
      */
     public function results()
     {
-        //if($)
-        /**
-         * Ищем музыку через API Vkontakte
-         */
         $api = new VkApi;
-        $response = $api->execute('audio.search', array(
-            'q' => $this->query,
-            'auto_complete' => 1,
-            'sort' => 2,
-            'count' => 10
-        ));
+        $cache = VkCache::model()->findByQuery($this->query);
+
+        if($cache === NULL)
+        {
+            /**
+             * Ищем музыку через API Vkontakte
+             */
+            $response = $api->execute('audio.search', array(
+                'q' => $this->query,
+                'auto_complete' => 1,
+                'sort' => 2,
+                'count' => 10
+            ));
+
+            $cache = new VkCache;
+            $cache->query = $this->query;
+            $cache->response = $response;
+            $cache->save();
+        }
+        else
+        {
+            $response = $cache->response;
+        }
 
         $results = new Results;
 
