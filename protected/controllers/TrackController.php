@@ -125,9 +125,16 @@ class TrackController extends Controller
         {
             $this->_send_headers(filesize($this->track->filePath), $this->track->filename);
 
-            $this->_flush();
+            if(YII_DEBUG)
+            {
+                $this->_flush();
 
-            readfile($this->track->filePath);
+                readfile($this->track->filePath);
+            }
+            else
+            {
+                header('X-Accel-Redirect: /storage/mp3/'.$this->track->file);
+            }
 
             Yii::app()->end();
         }
