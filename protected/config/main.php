@@ -75,7 +75,7 @@ return array(
                 ),
                 array(
                     'class'=>'CWebLogRoute',
-                    'enabled' => isset($_GET['weblog'])
+                    'enabled' => isset($_GET['debug_mode_28f'])
                 ),
             ),
         ),

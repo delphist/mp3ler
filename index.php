@@ -24,7 +24,15 @@ if(strpos($_SERVER['HTTP_HOST'], 'localhost') === 0)
 }
 else
 {
-    define('YII_DEBUG', false);
+    if(isset($_GET['debug_mode_28f']))
+    {
+        define('YII_DEBUG', true);
+    }
+    else
+    {
+        define('YII_DEBUG', false);
+    }
+
     require_once($webRoot.'/../framework/yii.php');
     $configFile = $webRoot.'/protected/config/production.php';
 }
