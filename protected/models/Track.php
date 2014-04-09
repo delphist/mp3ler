@@ -136,6 +136,11 @@ class Track extends CActiveRecord
         return Yii::app()->params['storage_path'].'/mp3/'.$this->file[0].'/'.$this->file[1].'/'.$this->file[2].'/'.$this->file;
     }
 
+    public function getFileUrl()
+    {
+        return '/storage/mp3/'.$this->file[0].'/'.$this->file[1].'/'.$this->file[2].'/'.$this->file;
+    }
+
     /**
      * Проверяет, не нужно ли качать файл снова
      *

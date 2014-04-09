@@ -133,7 +133,7 @@ class TrackController extends Controller
             }
             else
             {
-                header('X-Accel-Redirect: /storage/mp3/'.$this->track->file);
+                header('X-Accel-Redirect: '.$this->track->fileUrl);
             }
 
             Yii::app()->end();
