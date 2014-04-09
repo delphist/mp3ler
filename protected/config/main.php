@@ -50,6 +50,12 @@ return array(
 				'download/<filename:.*?\.mp3>' => 'track/download',
 			),
 		),
+        'cache'=>array(
+            'class'=>'system.caching.CMemCache',
+            'servers'=>array(
+                array('host'=>'localhost', 'port'=>11211, 'weight'=>60),
+            ),
+        ),
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=mp3ler',
 			'emulatePrepare' => true,
