@@ -44,7 +44,7 @@ a, p, h1, span {
     margin-bottom: 15px !important;
 }
 
-.list li a {
+.list li a, a {
     color: #0EA3A1 !important;
     font-weight: 300;
 }
