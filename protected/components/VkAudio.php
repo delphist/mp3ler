@@ -31,10 +31,10 @@ class VkAudio extends Audio
                 'count' => 10
             ));
 
-            $cache = new VkCache;
+            /*$cache = new VkCache;
             $cache->query = $this->query;
             $cache->response = $response;
-            $cache->save();
+            $cache->save();*/
         }
         else
         {
