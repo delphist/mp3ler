@@ -1,6 +1,7 @@
 <?php
 return array(
     'Global search mp3 MP3 Download' => 'Глобальный поиск mp3 MP3 Скачать',
+    '{text} MP3 Download' => '{text} MP3 Скачать',
     'Other Services:' => 'Другие услуги:',
     'Last queries:' => 'Последние запросы:',
     'List of all queries' => 'Список всех запросов',

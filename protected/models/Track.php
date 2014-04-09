@@ -189,7 +189,7 @@ class Track extends CActiveRecord
 
     public function getSearchTitle()
     {
-        return $this->artist_title.' - '.$this->title;
+        return mb_strtolower($this->artist_title.' - '.$this->title);
     }
 
     /**

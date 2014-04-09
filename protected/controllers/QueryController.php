@@ -88,4 +88,19 @@ class QueryController extends Controller
             'query' => $query,
         ));
     }
+
+    /**
+     * Страница последних поисковых запросов
+     */
+    public function actionTop()
+    {
+        $queries = Query::model()->findAll(array(
+            'order' => 'id DESC',
+            'limit' => 10,
+        ));
+
+        $this->render('top', array(
+            'queries' => $queries,
+        ));
+    }
 }

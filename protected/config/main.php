@@ -47,6 +47,8 @@ return array(
                 ),
 				'download/<filename:.*?\.mp3>' => 'track/download',
                 'top.php' => 'track/top',
+                'search.php' => 'query/top',
+                'x.php' => 'site/partner',
 			),
 		),
         'cache' => array(

@@ -27,14 +27,14 @@
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile-1.4.2.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="<?=Yii::app()->request->baseUrl?>/css/application.css" />
     <?php foreach(array('en', 'ru', 'az', 'tr', 'ge') as $language) { ?>
-        <link rel="alternate" href="<?=$this->createUrl('language/change', array('language' => $language))?>" hreflang="<?=$language?>" />
+        <link rel="alternate" href="http://mp3ler.biz<?=$this->createLanguageUrl($language)?>" hreflang="<?=$language?>" />
     <?php } ?>
     <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" />
 </head>
 <body class="ui-mobile-viewport ui-overlay-a">
 <div data-role="page" class="page" data-quicklinks="true">
     <div class="ui-header header ui-bar-inherit">
-        <span class="ui-title"><a href="/">mp3ler.biz</a></span>
+        <span class="ui-title"><a href="/"><?=Yii::app()->request->cookies->contains('dilxs') ? Yii::app()->request->cookies['dilxs'] : 'mp3ler.biz'?></a></span>
     </div>
 
     <div data-role="navbar" class="lang-select">
@@ -66,7 +66,7 @@
 
         <ul class="list" data-role="listview" >
             <li class="divider" data-role="list-divider"><?=Yii::t('app', 'Other Services:')?></li>
-            <li data-icon="false"><a href="#"><?=Yii::t('app', 'List of all queries')?></a></li>
+            <li data-icon="false"><a href="<?=$this->createUrl('query/top')?>"><?=Yii::t('app', 'List of all queries')?></a></li>
             <li data-icon="false"><a href="<?=$this->createUrl('track/top')?>"><?=Yii::t('app', 'Top downloads for mp3')?></a></li>
         </ul>
 

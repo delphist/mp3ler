@@ -1,6 +1,7 @@
 <?php
 return array(
     'Global search mp3 MP3 Download' => 'MP3 Müzik Şarkı Arama MP3 İndir',
+    '{text} MP3 Download' => '{text} MP3 İndir',
     'Other Services:' => 'Diğer Hizmetler:',
     'Last queries:' => 'Son Aramalar:',
     'List of all queries' => 'Tüm Aramalar',

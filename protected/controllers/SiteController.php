@@ -28,6 +28,16 @@ class SiteController extends Controller
         ));
 	}
 
+    public function actionPartner($x)
+    {
+        $cookie = new CHttpCookie('dilxs', $x);
+        $cookie->expire = time()+60*60*24*180;
+
+        Yii::app()->request->cookies['dilxs'] = $cookie;
+
+        $this->redirect('/', TRUE, 301);
+    }
+
 	public function actionError()
 	{
 		if($error=Yii::app()->errorHandler->error)
