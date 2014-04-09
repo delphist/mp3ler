@@ -38,6 +38,11 @@ class SiteController extends Controller
         $this->redirect('/', TRUE, 301);
     }
 
+    public function actionPartnerInfo()
+    {
+        $this->render('partnerInfo');
+    }
+
 	public function actionError()
 	{
 		if($error=Yii::app()->errorHandler->error)

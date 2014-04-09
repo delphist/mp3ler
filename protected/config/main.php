@@ -49,6 +49,7 @@ return array(
                 'top.php' => 'track/top',
                 'search.php' => 'query/top',
                 'x.php' => 'site/partner',
+                'wmall.php' => 'site/partnerInfo',
 			),
 		),
         'cache' => array(

@@ -34,7 +34,7 @@
 <body class="ui-mobile-viewport ui-overlay-a">
 <div data-role="page" class="page" data-quicklinks="true">
     <div class="ui-header header ui-bar-inherit">
-        <span class="ui-title"><a href="/"><?=Yii::app()->request->cookies->contains('dilxs') ? Yii::app()->request->cookies['dilxs'] : 'mp3ler.biz'?></a></span>
+        <span class="ui-title"><a href="/"><?=Yii::app()->request->cookies->contains('dilxs') ? Chtml::encode(Yii::app()->request->cookies['dilxs']) : 'mp3ler.biz'?></a></span>
     </div>
 
     <div data-role="navbar" class="lang-select">
