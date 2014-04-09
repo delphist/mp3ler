@@ -2,6 +2,13 @@
 
 class SiteController extends Controller
 {
+    public function filters()
+    {
+        return array(
+            'languageControl',
+        );
+    }
+
 	public function actionIndex()
 	{
         $queue_ids = Yii::app()->db->createCommand()

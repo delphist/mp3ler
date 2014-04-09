@@ -33,23 +33,27 @@
 </head>
 <body class="ui-mobile-viewport ui-overlay-a">
 <div data-role="page" class="page" data-quicklinks="true">
-    <div data-role="header" class="ui-header header">
-        <h1><a href="/">mp3ler.biz</a></h1>
+    <div class="ui-header header ui-bar-inherit">
+        <span class="ui-title"><a href="/">mp3ler.biz</a></span>
     </div>
 
     <div data-role="navbar" class="lang-select">
         <ul>
-            <li><a href="<?=$this->createUrl('language/change', array('language' => 'en'))?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_en.png"></a></li>
-            <li><a href="<?=$this->createUrl('language/change', array('language' => 'ru'))?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_ru.png"></a></li>
-            <li><a href="<?=$this->createUrl('language/change', array('language' => 'az'))?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_az.png"></a></li>
-            <li><a href="<?=$this->createUrl('language/change', array('language' => 'tr'))?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_tr.png"></a></li>
-            <li><a href="<?=$this->createUrl('language/change', array('language' => 'ge'))?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_ge.png"></a></li>
+            <li><a href="<?=$this->createLanguageUrl('en')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_en.png"></a></li>
+            <li><a href="<?=$this->createLanguageUrl('ru')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_ru.png"></a></li>
+            <li><a href="<?=$this->createLanguageUrl('az')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_az.png"></a></li>
+            <li><a href="<?=$this->createLanguageUrl('tr')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_tr.png"></a></li>
+            <li><a href="<?=$this->createLanguageUrl('ge')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_ge.png"></a></li>
         </ul>
     </div>
 
     <?php if($this->headerTitle) { ?>
     <div class="ui-header page-header">
-        <h1 class="ui-title"><?=$this->headerTitle?></h1>
+        <?php if($this->isH1) { ?>
+            <h1 class="ui-title"><?=$this->headerTitle?></h1>
+        <?php } else { ?>
+            <span class="ui-title span-h1"><?=$this->headerTitle?></span>
+        <?php } ?>
     </div>
     <?php } ?>
 

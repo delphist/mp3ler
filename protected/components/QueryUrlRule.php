@@ -10,7 +10,14 @@ class QueryUrlRule extends CBaseUrlRule
     {
         if ($route === 'query/view')
         {
-            return '?'.http_build_query(array('query' => $params['text']));
+            $query = $params['text'];
+
+            unset($params['text'], $params['query']);
+
+            return '?'.http_build_query(array_merge(
+                array('query' => $query),
+                $params
+            ));
         }
 
         return false;

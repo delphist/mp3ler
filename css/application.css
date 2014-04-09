@@ -6,16 +6,17 @@
     }
 }
 
-.page, a, p, h1 {
+a, p, h1, span {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
 
 .header {
     background-color: #3B3D3C !important;
+    border: 0px;
 }
 
-.header > h1 > a {
+.header > span > a {
     color: #FDFDFD !important;
     outline-color: #444444;
     text-decoration: none;
@@ -26,11 +27,17 @@
 
 .list .divider {
     background-color: #09A8A1;
-    font-weight: 300;
+    font-weight: bold;
     font-size: 18px;
     color: white;
     outline-color: #444444;
-    text-shadow: #111111 0px 1px 0px;
+    text-shadow: none !important;
+    outline-color: none !important;
+}
+
+.span-h1 {
+    font-size: 18px;
+    font-weight: normal;
 }
 
 .list {
@@ -76,7 +83,7 @@
     background-color: #ddd !important;
 }
 
-.page-header h1 {
+.page-header h1, .page-header .span-h1 {
     font-weight: 400;
     font-size: 18px !important;
     margin: 0 0 !important;

@@ -2,6 +2,13 @@
 
 class QueryController extends Controller
 {
+    public function filters()
+    {
+        return array(
+            'languageControl',
+        );
+    }
+
     /**
      * Страница поиска по текстовому запросу
      *

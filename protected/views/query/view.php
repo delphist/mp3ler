@@ -6,8 +6,9 @@ $this->pageTitle = Yii::t('app', '{text}-bedava dinle indir,download,скача�
 <?php
 if($track !== NULL)
 {
+    $this->isH1 = FALSE;
     ?>
-    <h2 style="margin-top: 0px; padding-top: 0px;"><b><?=$track->artist_title.'</b> — '.$track->title?></h2>
+    <h1 style="margin-top: 0px; padding-top: 0px; font-size: 24px;"><b><?=$track->artist_title.'</b> — '.$track->title?></h1>
 
     <fieldset class="ui-grid-a">
         <div class="ui-block-a"><a href="<?=$this->createTrackDownloadUrl($track)?>" data-role="button" class="button" data-corners="false"><?=Yii::t('app', 'Listen')?></a></div>

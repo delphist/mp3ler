@@ -15,6 +15,16 @@ class Controller extends CController
     public $headerTitle;
 
     /**
+     * @var boolean Использовать ли h1 для заголовка
+     */
+    public $isH1 = TRUE;
+
+    /**
+     * @var array Список доступных языков
+     */
+    public $possible_languages = array('en', 'ru', 'az', 'tr', 'ge');
+
+    /**
      * Создает ссылку для скачивания трека
      *
      * @param Track $track
@@ -27,17 +37,99 @@ class Controller extends CController
         ));
     }
 
-    public function init()
+    /**
+     * Создает ссылку для смены языка
+     *
+     * @param Track $track
+     */
+    protected function createLanguageUrl($language)
     {
-        parent::init();
+        $uri = parse_url(Yii::app()->request->getRequestUri());
 
-        $possible_values = array(
-            'en', 'ru', 'az', 'tr', 'ge'
-        );
-
-        if(Yii::app()->request->cookies->contains('dil') && in_array(Yii::app()->request->cookies['dil']->value, $possible_values))
+        if(isset($uri['query']))
         {
-            Yii::app()->setLanguage(Yii::app()->request->cookies['dil']->value);
+            parse_str($uri['query'], $query);
         }
+        else
+        {
+            $query = array();
+        }
+
+        $language_uri = http_build_query(array_merge($query, array('lang' => $language)));
+
+        if($language_uri)
+        {
+            $language_uri = $uri['path'].'?'.$language_uri;
+        }
+        else
+        {
+            $language_uri = $uri['path'];
+        }
+
+        return $language_uri;
+    }
+
+    /**
+     * Проверяет и устанавливает язык приложения
+     *
+     * @param $language идентификатор языка
+     */
+    protected function setLanguage($language, $set_cookie = FALSE)
+    {
+        if(in_array($language, $this->possible_languages))
+        {
+            Yii::app()->setLanguage($language);
+
+            if($set_cookie)
+            {
+                $cookie = new CHttpCookie('dil', $language);
+                $cookie->expire = time()+60*60*24*180;
+
+                Yii::app()->request->cookies['dil'] = $cookie;
+            }
+
+            return TRUE;
+        }
+
+        return FALSE;
+    }
+
+    public function createUrl($route, $params = array(), $ampersand = '&')
+    {
+        if(Yii::app()->language != Yii::app()->params['default_language'])
+        {
+            $params['lang'] = Yii::app()->language;
+        }
+
+        return parent::createUrl($route, $params, $ampersand);
+    }
+
+    /**
+     *
+     * @param $filterChain
+     */
+    public function filterLanguageControl($filterChain)
+    {
+        $this->setLanguage(Yii::app()->params['default_language']);
+
+        if(isset($_GET['lang']))
+        {
+            $this->setLanguage($_GET['lang'], TRUE);
+        }
+        elseif(Yii::app()->request->cookies->contains('dil'))
+        {
+            $this->setLanguage(Yii::app()->request->cookies['dil']->value);
+        }
+
+        if(isset($_GET['lang']) && $_GET['lang'] == Yii::app()->params['default_language'])
+        {
+            $this->redirect($this->createLanguageUrl(NULL));
+        }
+        elseif( ! isset($_GET['lang']) && Yii::app()->language != Yii::app()->params['default_language'])
+        {
+            $this->redirect($this->createLanguageUrl(Yii::app()->language));
+        }
+
+        $filterChain->run();
     }
 }

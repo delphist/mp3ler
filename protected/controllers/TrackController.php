@@ -2,6 +2,13 @@
 
 class TrackController extends Controller
 {
+    public function filters()
+    {
+        return array(
+            'languageControl',
+        );
+    }
+
     /**
      * @var Track обьект трека
      */
