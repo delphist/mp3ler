@@ -155,6 +155,8 @@ class TrackController extends Controller
         if( ! headers_sent())
         {
             $this->_send_headers(curl_getinfo($curl, CURLINFO_CONTENT_LENGTH_DOWNLOAD), $this->track->filename);
+
+            ob_start();
         }
 
         /**
