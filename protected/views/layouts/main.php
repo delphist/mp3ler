@@ -63,7 +63,7 @@
         <ul class="list" data-role="listview" >
             <li class="divider" data-role="list-divider"><?=Yii::t('app', 'Other Services:')?></li>
             <li data-icon="false"><a href="#"><?=Yii::t('app', 'List of all queries')?></a></li>
-            <li data-icon="false"><a href="#"><?=Yii::t('app', 'Top downloads for mp3')?></a></li>
+            <li data-icon="false"><a href="<?=$this->createUrl('track/top')?>"><?=Yii::t('app', 'Top downloads for mp3')?></a></li>
         </ul>
 
         <?php $this->widget('application.components.SocialBar'); ?>

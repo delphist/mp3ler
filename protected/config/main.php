@@ -48,6 +48,7 @@ return array(
                     'class' => 'application.components.QueryUrlRule',
                 ),
 				'download/<filename:.*?\.mp3>' => 'track/download',
+                'top.php' => 'track/top',
 			),
 		),
         'cache'=>array(

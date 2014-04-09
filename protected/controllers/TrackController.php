@@ -141,6 +141,21 @@ class TrackController extends Controller
     }
 
     /**
+     * Страница самых загружаемых треков
+     */
+    public function actionTop()
+    {
+        $tracks = Track::model()->findAll(array(
+            'order' => 'id DESC',
+            'limit' => 10,
+        ));
+
+        $this->render('top', array(
+            'tracks' => $tracks,
+        ));
+    }
+
+    /**
      * Коллбек, срабатывающий при чтении каждой части файла CURL'ом
      *
      * @param $curl

@@ -182,6 +182,16 @@ class Track extends CActiveRecord
         return $this->artist_title.' - '.$this->title.'.mp3';
     }
 
+    public function getFullTitle()
+    {
+        return $this->artist_title.' — '.$this->title;
+    }
+
+    public function getSearchTitle()
+    {
+        return $this->artist_title.' - '.$this->title;
+    }
+
     /**
      * Генерирует название файла для хранения в файлохранилище
      *

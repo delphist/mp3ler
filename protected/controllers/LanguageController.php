@@ -24,6 +24,27 @@ class LanguageController extends Controller
             Yii::app()->request->cookies['dil'] = $cookie;
         }
 
-        $this->redirect(Yii::app()->request->urlReferrer);
+        $uri = parse_url(Yii::app()->request->getRequestUri());
+
+        if(isset($uri['query']))
+        {
+            parse_str($uri['query'], $query);
+        }
+        else
+        {
+            $query = array();
+        }
+
+        $redirect_uri = http_build_query(array_merge($query, array('lang' => NULL)));
+        if($redirect_uri)
+        {
+            $redirect_uri = $uri['path'].'?'.$redirect_uri;
+        }
+        else
+        {
+            $redirect_uri = $uri['path'];
+        }
+
+        $this->redirect($redirect_uri);
     }
 }
