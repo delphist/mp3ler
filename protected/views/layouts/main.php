@@ -5,7 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="<?=Yii::t('app', 'Bedava MP3 Ara , MP3 Indir ,youtube mp3 , download mp3 , free mp3 , pulsuz mp3 yukle , free music 2013, music lyrics , mp3 yukle')?>"/>
     <meta name="description" content="<?=Yii::t('app', 'Global search mp3 mp3ler.biz - bedava mp3 indir, bedava şarkı , en son muzikler,free mp3 download,mp3 скачать')?>"/>
-    <meta http-equiv="content-language" content="tr"/>
+    <meta http-equiv="content-language" content="<?=Yii::app()->language?>"/>
     <meta name="author" content="Global search mp3 - mp3ler.biz "/>
     <meta name="distribution" content="Global"/>
     <meta name="rating" content="General"/>

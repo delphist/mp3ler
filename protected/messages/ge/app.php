@@ -1,5 +1,6 @@
 <?php
 return array(
+    'Global search mp3-bedava dinle indir,download,скачать' => 'გლობალური ძიება mp3-bedava dinle indir,download,скачать',
     'Global search mp3 MP3 Download' => 'გლობალური ძიება mp3 MP3 ჩამოტვირთვა',
     '{text} MP3 Download' => '{text} MP3 ჩამოტვირთვა',
     'Other Services:' => 'სხვა მომსახურება:',
