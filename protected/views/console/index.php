@@ -29,7 +29,7 @@
             {
                 ?>
                 <p>
-                <h5>Ошибка <?=$error['code']?> <small>(<?=Yii::t('console', '{n} аккаунт|{n} аккаунта|{n} аккаунтов', $error['count'])?>)</small></h5>
+                <h5>Ошибка <?=$error['code']?> <small>(Аккаунтов: <?= $error['count']?>)</small></h5>
                 <code><?=$error['msg']?></code><br />
                 </p>
             <?php

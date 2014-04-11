@@ -128,6 +128,28 @@ class Query extends CActiveRecord
 		));
 	}
 
+    /**
+     * Производит поиск запроса по его тексту
+     *
+     * @param $text текст запроса
+     * @return Query|null
+     */
+    public function findByText($text)
+    {
+        $result = self::model()->findByAttributes(array(
+            'hash' => $this->generateHash($text),
+        ));
+
+        if($result !== NULL)
+        {
+            return $result;
+        }
+
+        return self::model()->findByAttributes(array(
+            'text' => $text,
+        ));
+    }
+
 	public static function model($className = __CLASS__)
 	{
 		return parent::model($className);

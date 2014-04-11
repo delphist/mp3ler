@@ -27,7 +27,8 @@ class TrackController extends Controller
          * докачаться и сохраниться в базу
          */
         ignore_user_abort(TRUE);
-        set_time_limit(60 * 5);
+        set_time_limit(60 * 2);
+        ini_set('memory_limit', '256M');
 
         /**
          * Достаем информацию
@@ -38,10 +39,8 @@ class TrackController extends Controller
          * Ищем трек по внешнему id в нашей базе, если
          * он уже был хоть раз скачан, иначе создаем новый
          */
-        $this->track = Track::model()->findByAttributes(array(
-            'external_id' => $data['id'],
-            'external_type' => $data['type'],
-        ));
+        $this->track = Track::model()->findByData($data);
+
         if($this->track === NULL)
         {
             $this->track = new Track;
@@ -68,6 +67,9 @@ class TrackController extends Controller
             {
                 if($e->getMessage() == 'Http code 404')
                 {
+                    /**
+                     * Если у вк на файл 404 то дальше будем пробовать найти другой трек
+                     */
                     $result = FALSE;
                 }
                 else
@@ -118,13 +120,29 @@ class TrackController extends Controller
                     $found_result = current($results);
                 }
 
-                /**
-                 * @todo проверить, есть ли найденный трек уже в нашей базе
-                 *       если есть, то выдать его
-                 *       если нет, то попробовать скачать и создать новый
-                 */
-                echo '404';
-                exit;
+                $found_track = Track::model()->findByData($found_result);
+                if($found_track !== NULL)
+                {
+                    /**
+                     * Если такой трек уже есть в базе, то редиректим на него
+                     */
+                    $this->redirect($this->createTrackDownloadUrl($found_track));
+                }
+                else
+                {
+                    /**
+                     * Если же такого трека нет в базе, то качаем прямо в этом процессе
+                     */
+                    $this->track = new Track;
+                    $this->track->data = $data;
+
+                    $this->track->download(
+                        NULL,
+                        array($this, '_callback_body')
+                    );
+
+                    $this->track->save();
+                }
             }
 
         }
@@ -132,14 +150,27 @@ class TrackController extends Controller
         {
             $this->_send_headers(filesize($this->track->filePath), $this->track->filename);
 
+            /**
+             * Увеличиваем счетчик скачиваний
+             */
+            $this->track->saveCounters(array(
+                'downloads_count' => 1
+            ));
+
             if(YII_DEBUG)
             {
+                /**
+                 * Локально читаем файл и отдаем через php
+                 */
                 $this->_flush();
 
                 readfile($this->track->filePath);
             }
             else
             {
+                /**
+                 * На продакшене посылаем заголовок чтобы файлом занимался nginx
+                 */
                 header('X-Accel-Redirect: '.$this->track->fileUrl);
             }
 

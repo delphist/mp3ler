@@ -4,6 +4,21 @@
  * Модель аккаунта вконтакте
  *
  * @property string $id
+ * @property int $vk_id id аккаунта вконтакте
+ * @property int $app_id id приложения вконтакте
+ * @property int $is_alive статус аккаунта (1 - живой, 0 - мертвый)
+ * @property int $is_captcha_request требует ли аккаунт каптчу
+ * @property int $is_captcha_response статус решения каптчи
+ * @property string $captcha_request_data данные о запросе каптчи
+ *           представляют из себя json-обьект, при распаковке
+ *           который содержит следующие поля:
+ *            - string url: адрес изображения каптчи
+ *            - string id: идентификатор каптчи вконтакте (captcha_sig)
+ *            - int solve_id: id каптчи в сервисе распознавания каптчи
+ * @property string $captcha_response_data решение каптчи
+ * @property string $error_response json-обьект ответа последней ошибки api
+ * @property int $captcha_count количество запросов каптчи с этого аккаунта
+ * @property int $request_count количество запросов api этого аккаунта
  */
 class VkAccount extends CActiveRecord
 {
@@ -37,6 +52,12 @@ class VkAccount extends CActiveRecord
         ));
     }
 
+    /**
+     * Возвращает обьект с последней ошибкой API если она есть и
+     * NULL в случае если ошибок не было
+     *
+     * @return null|stdClass
+     */
     public function getVkError()
     {
         if($this->error_response)
@@ -52,11 +73,21 @@ class VkAccount extends CActiveRecord
         return NULL;
     }
 
+    /**
+     * Возвращает решение каптчи
+     *
+     * @return string
+     */
     public function getCaptcha_Response()
     {
         return $this->captcha_response_data;
     }
 
+    /**
+     * Устанавливает решение каптчи
+     *
+     * @param $value
+     */
     public function setCaptcha_Response($value)
     {
         $this->captcha_response_data = $value;
@@ -64,6 +95,12 @@ class VkAccount extends CActiveRecord
         return TRUE;
     }
 
+    /**
+     * Возвращает данные о запросе каптчи, если оно есть
+     * и NULL в случае если запроса не было
+     *
+     * @return array|null
+     */
     public function getCaptcha_Request()
     {
         if($this->captcha_request_data)
@@ -79,6 +116,11 @@ class VkAccount extends CActiveRecord
         return NULL;
     }
 
+    /**
+     * Устанавливает данные о запросе каптчи
+     *
+     * @param $value
+     */
     public function setCaptcha_Request($value)
     {
         $this->captcha_request_data = $value;
@@ -86,6 +128,11 @@ class VkAccount extends CActiveRecord
         return TRUE;
     }
 
+    /**
+     * Сериализует некоторые поля перед сохранением
+     *
+     * @return bool
+     */
     public function beforeSave()
     {
         if(parent::beforeSave())
@@ -123,6 +170,11 @@ class VkAccount extends CActiveRecord
         }
     }
 
+    /**
+     * Генерирует URL приложения
+     *
+     * @return string
+     */
     public function app_url()
     {
         return 'http://vk.com/app'.$this->app_id.'_'.$this->app_id;

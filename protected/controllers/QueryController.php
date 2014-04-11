@@ -23,9 +23,7 @@ class QueryController extends Controller
         /**
          * Ищем запрос либо создаем новый
          */
-        $query = Query::model()->findByAttributes(array(
-            'text' => $text,
-        ));
+        $query = Query::model()->findByText($text);
         if( ! $query)
         {
             $query = new Query;

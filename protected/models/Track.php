@@ -2,6 +2,14 @@
 
 /**
  * Модель трека
+ *
+ * @property $id id трека
+ * @property $artist_title название исполнителя
+ * @property $title название трека
+ * @property $file имя файла
+ * @property $external_type тип источника трека (сейчас доступен только vk)
+ * @property $external_id идентификатор трека в источнике
+ * @property $external_data данные о треке из источника
  */
 class Track extends CActiveRecord
 {
@@ -16,25 +24,27 @@ class Track extends CActiveRecord
 
     public function rules()
     {
-        return array();
+        return array(
+            array('artist_title, title, file', 'required'),
+            array('artist_title, title, file', 'length', 'max' => 255),
+
+            /**
+             * Проверяем уникальность полей artist_title + title
+             * @url http://stackoverflow.com/questions/9670992/yii-how-to-make-a-unique-rule-for-two-attributes
+             */
+            array('artist_title', 'unique', 'criteria' => array(
+                    'condition'=>'`title`=:title',
+                    'params' => array(
+                        ':title' => $this->title
+                    )
+                )
+            ),
+        );
     }
 
     public function attributeLabels()
     {
         return array();
-    }
-
-    public function search()
-    {
-        $criteria=new CDbCriteria;
-
-        $criteria->compare('id', $this->id, true);
-        $criteria->compare('artist_title', $this->artist_title, true);
-        $criteria->compare('title', $this->title, true);
-
-        return new CActiveDataProvider($this, array(
-            'criteria' => $criteria,
-        ));
     }
 
     /**
@@ -49,17 +59,22 @@ class Track extends CActiveRecord
     {
         $this->file = $this->storageFileName;
 
+        $this->_filepointer = NULL;
+        $this->_header_callback = $header_callback;
+        $this->_body_callback = $body_callback;
+
         try
         {
-            $this->_header_callback = $header_callback;
-            $this->_body_callback = $body_callback;
-
             $filedir = pathinfo($this->filePath, PATHINFO_DIRNAME);
             if( ! is_dir($filedir))
             {
                 mkdir($filedir, 0755, TRUE);
             }
-            $this->_filepointer = fopen($this->filePath, 'wb+');
+
+            if( ! file_exists($this->filePath))
+            {
+                $this->_filepointer = fopen($this->filePath, 'wb+');
+            }
 
             $curl = curl_init();
             curl_setopt_array($curl, array(
@@ -73,8 +88,11 @@ class Track extends CActiveRecord
             ));
 
             $result = curl_exec($curl);
-            fclose($this->_filepointer);
-            chmod($this->filePath, 0755);
+            if($this->_filepointer != NULL)
+            {
+                fclose($this->_filepointer);
+                chmod($this->filePath, 0755);
+            }
 
             $code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
@@ -122,7 +140,10 @@ class Track extends CActiveRecord
                 call_user_func($this->_body_callback, $curl, $string);
             }
 
-            fwrite($this->_filepointer, $string);
+            if($this->_filepointer != NULL)
+            {
+                fwrite($this->_filepointer, $string);
+            }
 
             return strlen($string);
         }
@@ -136,6 +157,11 @@ class Track extends CActiveRecord
         return Yii::app()->params['storage_path'].'/mp3/'.$this->file[0].'/'.$this->file[1].'/'.$this->file[2].'/'.$this->file;
     }
 
+    /**
+     * Возвращает полный URL на прямую скачку файла
+     *
+     * @return string
+     */
     public function getFileUrl()
     {
         return '/storage/mp3/'.$this->file[0].'/'.$this->file[1].'/'.$this->file[2].'/'.$this->file;
@@ -179,14 +205,27 @@ class Track extends CActiveRecord
      */
     public function getFilename()
     {
-        return $this->artist_title.' - '.$this->title.'.mp3';
+        $name = $this->artist_title.' - '.$this->title;
+        $name = str_replace('/', ' ', $name);
+
+        return $name.'.mp3';
     }
 
+    /**
+     * Возвращает полное название трека
+     *
+     * @return string
+     */
     public function getFullTitle()
     {
         return $this->artist_title.' — '.$this->title;
     }
 
+    /**
+     * Возвращает полное название трека которое идет в поисковой запрос
+     *
+     * @return string
+     */
     public function getSearchTitle()
     {
         return mb_strtolower($this->artist_title.' - '.$this->title);
@@ -253,5 +292,26 @@ class Track extends CActiveRecord
     public static function model($className = __CLASS__)
     {
         return parent::model($className);
+    }
+
+    public function findByData($data)
+    {
+        return self::model()->findByAttributes(array(
+            'external_id' => $data['id'],
+            'external_type' => $data['type'],
+        ));
+    }
+
+    public function search()
+    {
+        $criteria=new CDbCriteria;
+
+        $criteria->compare('id', $this->id, true);
+        $criteria->compare('artist_title', $this->artist_title, true);
+        $criteria->compare('title', $this->title, true);
+
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
     }
 }
