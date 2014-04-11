@@ -81,7 +81,7 @@ class VkCache extends CActiveRecord
         {
             if( ! is_string($this->response_data))
             {
-                $this->response_data = json_encode((array)$this->response_data);
+                $this->response_data = json_encode($this->response_data);
             }
 
             return TRUE;
