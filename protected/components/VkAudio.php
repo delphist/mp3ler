@@ -18,10 +18,7 @@ class VkAudio extends Audio
         $api = new VkApi;
         $cache = NULL;
 
-        if(YII_DEBUG)
-        {
-            $cache = VkCache::model()->findByQuery($this->query);
-        }
+        $cache = VkCache::model()->findByQuery($this->query);
 
         if($cache === NULL)
         {
@@ -35,44 +32,41 @@ class VkAudio extends Audio
                 'count' => 10
             ));
 
+            $results = new Results;
+
+            /**
+             * В случае какой-либо ошибки результат поиска остается пустым
+             */
+            if($response != NULL && isset($response->count) && $response->count > 0 && isset($response->audio))
+            {
+                $results->count = (int) $response->count;
+
+                foreach($response->audio as $audio)
+                {
+                    $results[] = array(
+                        'id' => (int) $audio->aid,
+                        'type' => 'vk',
+                        'artist_title' => $this->decode_string((string) $audio->artist),
+                        'title' => $this->decode_string((string) $audio->title),
+                        'duration' => (int) $audio->duration,
+                        'url' => (string) $audio->url,
+                    );
+                }
+            }
+
             $cache = new VkCache;
             $cache->query = $this->query;
-            $cache->response = $response;
+            $cache->response = $results;
 
             try
             {
-                if(YII_DEBUG)
-                {
-                    $cache->save();
-                }
+                $cache->save();
             }
-            catch(Exception $e) {}
+            catch(Exception $e) { }
         }
         else
         {
-            $response = $cache->response;
-        }
-
-        $results = new Results;
-
-        /**
-         * В случае какой-то ошибки результат поиска остается пустым
-         */
-        if($response != NULL && isset($response->count) && $response->count > 0 && isset($response->audio))
-        {
-            $results->count = (int) $response->count;
-
-            foreach($response->audio as $audio)
-            {
-                $results[] = array(
-                    'id' => (int) $audio->aid,
-                    'type' => 'vk',
-                    'artist_title' => $this->decode_string((string) $audio->artist),
-                    'title' => $this->decode_string((string) $audio->title),
-                    'duration' => (int) $audio->duration,
-                    'url' => (string) $audio->url,
-                );
-            }
+            $results = $cache->response;
         }
 
         return $results;

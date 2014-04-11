@@ -35,7 +35,16 @@
       <file leaf-file-name="VkApi.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/VkApi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="38" selection-start="4603" selection-end="4603" vertical-scroll-proportion="-16.791666" vertical-offset="1892" max-vertical-offset="3900">
+            <state line="14" column="53" selection-start="328" selection-end="328" vertical-scroll-proportion="-4.375" vertical-offset="105" max-vertical-offset="3900">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VkCache.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/VkCache.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="48" selection-start="824" selection-end="824" vertical-scroll-proportion="-25.625" vertical-offset="0" max-vertical-offset="1575">
               <folding />
             </state>
           </provider>
@@ -44,36 +53,18 @@
       <file leaf-file-name="VkAudio.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="17" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.9541985" vertical-offset="65" max-vertical-offset="1275">
+            <state line="63" column="13" selection-start="1918" selection-end="1918" vertical-scroll-proportion="0.6335878" vertical-offset="530" max-vertical-offset="1185">
               <folding>
-                <marker date="1397212347000" expanded="true" signature="910:1162" placeholder="..." />
+                <marker date="1397214102000" expanded="true" signature="1737:1918" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VkCache.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/VkCache.php">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="22" selection-start="1577" selection-end="1577" vertical-scroll-proportion="-50.625" vertical-offset="0" max-vertical-offset="1575">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="45" selection-start="453" selection-end="453" vertical-scroll-proportion="-4.7083335" vertical-offset="247" max-vertical-offset="2100">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Query.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/Query.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="9" selection-start="1855" selection-end="1855" vertical-scroll-proportion="-10.375" vertical-offset="1101" max-vertical-offset="2520">
+            <state line="27" column="5" selection-start="572" selection-end="572" vertical-scroll-proportion="-15.416667" vertical-offset="35" max-vertical-offset="690">
               <folding />
             </state>
           </provider>
@@ -165,7 +156,6 @@
         <option value="$PROJECT_DIR$/protected/views/query/view.php" />
         <option value="$PROJECT_DIR$/protected/migrations/m140411_065052_add_error_response_to_vk_account.php" />
         <option value="$PROJECT_DIR$/protected/migrations/m140411_073927_add_captcha_status_to_vk_accounts.php" />
-        <option value="$PROJECT_DIR$/protected/components/VkApi.php" />
         <option value="$PROJECT_DIR$/protected/views/console/accounts.php" />
         <option value="$PROJECT_DIR$/protected/controllers/ConsoleController.php" />
         <option value="$PROJECT_DIR$/protected/views/console/index.php" />
@@ -176,6 +166,7 @@
         <option value="$PROJECT_DIR$/protected/migrations/m140411_085526_add_downloads_count_to_tracks.php" />
         <option value="$PROJECT_DIR$/protected/controllers/TrackController.php" />
         <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/protected/components/VkApi.php" />
         <option value="$PROJECT_DIR$/protected/models/VkCache.php" />
         <option value="$PROJECT_DIR$/protected/components/VkAudio.php" />
       </list>
@@ -800,11 +791,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/views/console/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="6" selection-start="418" selection-end="418" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/views/tagBar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="360" />
@@ -1019,13 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="690">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/console/accounts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="39" selection-start="934" selection-end="934" vertical-scroll-proportion="-13.75" vertical-offset="45" max-vertical-offset="735">
@@ -1082,6 +1061,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="400" selection-end="400" vertical-scroll-proportion="-5.7916665" vertical-offset="116" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/QueryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="30" selection-start="747" selection-end="747" vertical-scroll-proportion="12.5" vertical-offset="810" max-vertical-offset="1635">
@@ -1091,9 +1077,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/SimpleXML.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="400" selection-end="400" vertical-scroll-proportion="-5.7916665" vertical-offset="116" max-vertical-offset="990">
+        <state line="346" column="9" selection-start="12025" selection-end="12025" vertical-scroll-proportion="0.8364486" vertical-offset="4653" max-vertical-offset="5595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="5" selection-start="572" selection-end="572" vertical-scroll-proportion="-15.416667" vertical-offset="35" max-vertical-offset="690">
           <folding />
         </state>
       </provider>
@@ -1105,25 +1098,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/VkApi.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/VkCache.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="38" selection-start="4603" selection-end="4603" vertical-scroll-proportion="-16.791666" vertical-offset="1892" max-vertical-offset="3900">
+        <state line="41" column="48" selection-start="824" selection-end="824" vertical-scroll-proportion="-25.625" vertical-offset="0" max-vertical-offset="1575">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/VkCache.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/VkApi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="22" selection-start="1577" selection-end="1577" vertical-scroll-proportion="-50.625" vertical-offset="0" max-vertical-offset="1575">
+        <state line="14" column="53" selection-start="328" selection-end="328" vertical-scroll-proportion="-4.375" vertical-offset="105" max-vertical-offset="3900">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="17" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.9541985" vertical-offset="65" max-vertical-offset="1275">
+        <state line="63" column="13" selection-start="1918" selection-end="1918" vertical-scroll-proportion="0.6335878" vertical-offset="530" max-vertical-offset="1185">
           <folding>
-            <marker date="1397212347000" expanded="true" signature="910:1162" placeholder="..." />
+            <marker date="1397214102000" expanded="true" signature="1737:1918" placeholder="..." />
           </folding>
         </state>
       </provider>
