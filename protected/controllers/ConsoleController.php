@@ -21,7 +21,7 @@ class ConsoleController extends Controller
 
         foreach($accounts as $account)
         {
-            if($account->vkError->error_code)
+            if($account->vkError != NULL && $account->vkError->error_code)
             {
                 if( ! isset($errors[$account->vkError->error_code]))
                 {
