@@ -41,25 +41,12 @@ class VkAccount extends CActiveRecord
     {
         if($this->error_response)
         {
-            if( ! is_array($this->error_response))
+            if(is_string($this->error_response))
             {
-                $this->error_response = (array) json_decode($this->error_response);
+                $this->error_response = json_decode($this->error_response);
             }
 
             return $this->error_response;
-        }
-
-        return NULL;
-    }
-
-    public function getVkErrorCode()
-    {
-        if($this->vkError !== NULL)
-        {
-            if($this->vkError->error_code)
-            {
-                return $this->vkError->error_code;
-            }
         }
 
         return NULL;

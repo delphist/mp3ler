@@ -16,10 +16,31 @@ class ConsoleController extends Controller
             'is_alive'=> 1
         ));
 
+        $accounts = VkAccount::model()->findAll();
+        $errors = array();
+
+        foreach($accounts as $account)
+        {
+            if($account->vkError->error_code)
+            {
+                if( ! isset($errors[$account->vkError->error_code]))
+                {
+                    $errors[$account->vkError->error_code] = array(
+                        'code' => $account->vkError->error_code,
+                        'msg' => $account->vkError->error_msg,
+                        'count' => 0,
+                    );
+                }
+
+                $errors[$account->vkError->error_code]['count']++;
+            }
+        }
+
         $this->render('index', array(
             'all_accounts' => $all_accounts,
             'alive_accounts' => $alive_accounts,
             'tracks_count' => $tracks_count,
+            'errors' => $errors,
             'queries_count' => $queries_count,
         ));
     }
@@ -27,27 +48,9 @@ class ConsoleController extends Controller
     public function actionAccounts()
     {
         $accounts = VkAccount::model()->findAll();
-        $errors = array();
-
-        foreach($accounts as $account)
-        {
-            if($account->vkErrorCode)
-            {
-                if( ! isset($errors[$account->vkErrorCode]))
-                {
-                    $errors[$account->vkErrorCode] = array(
-                        'code' => $account->vkError->error_code,
-                        'msg' => $account->vkError->error_msg,
-                        'count' => 0,
-                    );
-                }
-
-                $errors[$account->error_code]['count']++;
-            }
-        }
 
         $this->render('accounts', array(
-            'errors' => $errors,
+            'accounts' => $accounts,
         ));
     }
 

@@ -24,15 +24,30 @@
                     <span class="sr-only">Мертвые аккаунты: <?=$dead_progress?>%</span>
                 </div>
             </div>
+            <?php
+            foreach($errors as $error)
+            {
+                ?>
+                <p>
+                <h5>Ошибка <?=$error['code']?> <small>(<?=Yii::t('console', '{n} аккаунт|{n} аккаунта|{n} аккаунтов', $error['count'])?>)</small></h5>
+                <code><?=$error['msg']?></code><br />
+                </p>
+            <?php
+            }
+            ?>
         </div>
 
         <div class="col-lg-12">
+            <hr />
             <h4>Треки</h4>
+
             <p class="text-success">Количество: <?=$tracks_count?></p>
         </div>
 
         <div class="col-lg-12">
+            <hr />
             <h4>Запросы</h4>
+
             <p class="text-success">Количество: <?=$queries_count?></p>
         </div>
     </div>

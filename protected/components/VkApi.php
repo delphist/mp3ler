@@ -85,6 +85,7 @@ class VkApi extends CComponent
                         'url' => (string) $result->captcha_img,
                     );
                     $account->captcha_response = NULL;
+                    $account->captcha_count++;
                     $account->save();
 
                     Yii::log('Got captcha ('.$account->id.')', 'info', 'vkapi');
@@ -183,6 +184,10 @@ class VkApi extends CComponent
         curl_close($ch);
 
         $result = simplexml_load_string($data);
+
+        $account->saveCounters(array(
+            'request_count' => 1,
+        ));
 
         return $result;
     }
