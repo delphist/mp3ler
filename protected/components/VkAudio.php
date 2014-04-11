@@ -16,7 +16,8 @@ class VkAudio extends Audio
     public function results()
     {
         $api = new VkApi;
-        $cache = VkCache::model()->findByQuery($this->query);
+        $cache = NULL;
+        //$cache = VkCache::model()->findByQuery($this->query);
 
         if($cache === NULL)
         {
@@ -36,7 +37,7 @@ class VkAudio extends Audio
 
             try
             {
-                $cache->save();
+                //$cache->save();
             }
             catch(Exception $e) {}
         }

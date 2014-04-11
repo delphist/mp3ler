@@ -44,9 +44,9 @@
       <file leaf-file-name="VkAudio.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="13" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.5954198" vertical-offset="195" max-vertical-offset="1155">
+            <state line="39" column="18" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.64122134" vertical-offset="165" max-vertical-offset="1170">
               <folding>
-                <marker date="1397211686000" expanded="true" signature="840:1022" placeholder="..." />
+                <marker date="1397211891000" expanded="true" signature="865:1049" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1119,9 +1119,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.5954198" vertical-offset="195" max-vertical-offset="1155">
+        <state line="39" column="18" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.64122134" vertical-offset="165" max-vertical-offset="1170">
           <folding>
-            <marker date="1397211686000" expanded="true" signature="840:1022" placeholder="..." />
+            <marker date="1397211891000" expanded="true" signature="865:1049" placeholder="..." />
           </folding>
         </state>
       </provider>
