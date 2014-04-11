@@ -37,6 +37,34 @@ class VkAccount extends CActiveRecord
         ));
     }
 
+    public function getError()
+    {
+        if($this->error_response)
+        {
+            if( ! is_array($this->error_response))
+            {
+                $this->error_response = (array) json_decode($this->error_response);
+            }
+
+            return $this->error_response;
+        }
+
+        return NULL;
+    }
+
+    public function getErrorCode()
+    {
+        if($this->error !== NULL)
+        {
+            if($this->error->error_code)
+            {
+                return $this->error->error_code;
+            }
+        }
+
+        return NULL;
+    }
+
     public function getCaptcha_Response()
     {
         return $this->captcha_response_data;
@@ -60,10 +88,8 @@ class VkAccount extends CActiveRecord
 
             return $this->captcha_request_data;
         }
-        else
-        {
-            return NULL;
-        }
+
+        return NULL;
     }
 
     public function setCaptcha_Request($value)
