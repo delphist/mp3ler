@@ -31,13 +31,13 @@ class ConsoleController extends Controller
 
         foreach($accounts as $account)
         {
-            if($account->errorCode)
+            if($account->vkErrorCode)
             {
-                if( ! isset($errors[$account->errorCode]))
+                if( ! isset($errors[$account->vkErrorCode]))
                 {
-                    $errors[$account->errorCode] = array(
-                        'code' => $account->error->error_code,
-                        'msg' => $account->error->error_msg,
+                    $errors[$account->vkErrorCode] = array(
+                        'code' => $account->vkError->error_code,
+                        'msg' => $account->vkError->error_msg,
                         'count' => 0,
                     );
                 }

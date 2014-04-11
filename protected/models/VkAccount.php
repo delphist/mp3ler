@@ -37,7 +37,7 @@ class VkAccount extends CActiveRecord
         ));
     }
 
-    public function getError()
+    public function getVkError()
     {
         if($this->error_response)
         {
@@ -52,13 +52,13 @@ class VkAccount extends CActiveRecord
         return NULL;
     }
 
-    public function getErrorCode()
+    public function getVkErrorCode()
     {
-        if($this->error !== NULL)
+        if($this->vkError !== NULL)
         {
-            if($this->error->error_code)
+            if($this->vkError->error_code)
             {
-                return $this->error->error_code;
+                return $this->vkError->error_code;
             }
         }
 
