@@ -107,6 +107,7 @@ class VkApi extends CComponent
 
                     Yii::log($error_message, 'error', 'vkapi');
 
+                    $account->error_response = json_encode($result);
                     $account->is_alive = FALSE;
                     $account->save();
 
