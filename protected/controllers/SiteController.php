@@ -11,7 +11,8 @@ class SiteController extends Controller
 
 	public function actionIndex()
 	{
-        $queue_ids = Yii::app()->db->createCommand()
+        $queue_ids = Yii::app()->db->cache(3, NULL, 2)
+            ->createCommand()
             ->selectDistinct('query_id')
             ->from('query_queue')
             ->order('id DESC')

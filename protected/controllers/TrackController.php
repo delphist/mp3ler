@@ -183,8 +183,8 @@ class TrackController extends Controller
      */
     public function actionTop()
     {
-        $tracks = Track::model()->findAll(array(
-            'order' => 'id DESC',
+        $tracks = Track::model()->cache(60)->findAll(array(
+            'order' => 'downloads_count DESC',
             'limit' => 10,
         ));
 
