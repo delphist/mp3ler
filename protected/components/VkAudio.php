@@ -59,7 +59,7 @@ class VkAudio extends Audio
              */
             if(YII_DEBUG)
             {
-                var_dump($this->cache->response);
+                var_dump($this->cache);
             }
             if($this->cache->response === NULL || ! ($this->cache->response instanceof Results))
             {
