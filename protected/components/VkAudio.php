@@ -90,6 +90,11 @@ class VkAudio extends Audio
             $this->cache->query = $this->query;
             $this->cache->response = $this->results;
 
+            if(YII_DEBUG)
+            {
+                var_dump(serialize($this->cache));
+            }
+
             try
             {
                 /**
