@@ -59,10 +59,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VkAudio.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="VkAudio.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="37" selection-start="1482" selection-end="1482" vertical-scroll-proportion="0.4768786" vertical-offset="750" max-vertical-offset="3015">
+            <state line="178" column="65" selection-start="4996" selection-end="4996" vertical-scroll-proportion="-54.791668" vertical-offset="1355" max-vertical-offset="2970">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Audio.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/components/Audio.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="49" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.79389316" vertical-offset="290" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
@@ -109,15 +118,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/query/view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="66" selection-start="674" selection-end="674" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="1410">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -158,7 +158,6 @@
         <option value="$PROJECT_DIR$/protected/messages/en/app.php" />
         <option value="$PROJECT_DIR$/protected/components/Controller.php" />
         <option value="$PROJECT_DIR$/protected/components/VkApi.php" />
-        <option value="$PROJECT_DIR$/protected/components/Audio.php" />
         <option value="$PROJECT_DIR$/protected/migrations/m140412_041615_add_vk_offset_to_vk_cache.php" />
         <option value="$PROJECT_DIR$/protected/migrations/m140412_051231_change_vk_cache_response_length.php" />
         <option value="$PROJECT_DIR$/protected/models/Results.php" />
@@ -179,6 +178,7 @@
         <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/models/VkCache.php" />
         <option value="$PROJECT_DIR$/protected/components/VkAudio.php" />
+        <option value="$PROJECT_DIR$/protected/components/Audio.php" />
       </list>
     </option>
   </component>
@@ -784,7 +784,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42328766" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42328766" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -938,13 +938,6 @@
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/SPL.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1637" column="48" selection-start="51679" selection-end="51679" vertical-scroll-proportion="2.82243" vertical-offset="22743" max-vertical-offset="31020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Audio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="15" selection-start="53" selection-end="53" vertical-scroll-proportion="0.12315271" vertical-offset="0" max-vertical-offset="945">
           <folding />
         </state>
       </provider>
@@ -1138,7 +1131,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="37" selection-start="1482" selection-end="1482" vertical-scroll-proportion="0.4768786" vertical-offset="750" max-vertical-offset="3015">
+        <state line="178" column="65" selection-start="4996" selection-end="4996" vertical-scroll-proportion="-54.791668" vertical-offset="1355" max-vertical-offset="2970">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/Audio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="49" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.79389316" vertical-offset="290" max-vertical-offset="960">
           <folding />
         </state>
       </provider>
