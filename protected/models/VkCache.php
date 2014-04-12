@@ -64,9 +64,14 @@ class VkCache extends CActiveRecord
         {
             try
             {
-                $this->response_data = unserialize($this->response_data);
+                $this->response_data = @unserialize($this->response_data);
             }
             catch(Exception $e)
+            {
+                $this->response_data = array();
+            }
+
+            if( ! is_array($this->response_data))
             {
                 $this->response_data = array();
             }
