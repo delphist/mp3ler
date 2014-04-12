@@ -43,7 +43,7 @@ class VkAudio extends Audio
         $this->api = new VkApi;
         $this->cache = VkCache::model()->findByQuery($this->query);
 
-        if($this->cache === NULL || $this->cache->response === NULL || ! ($this->cache->response instanceof Results))
+        if($this->cache === NULL)
         {
             /**
              * Если запись не найдена в кеше то создаем новый обьект кеша
@@ -57,6 +57,12 @@ class VkAudio extends Audio
             /**
              * Иначе используем результаты из кеша
              */
+
+            if($this->cache->response === NULL || ! ($this->cache->response instanceof Results))
+            {
+                $this->cache->response = new Results;
+            }
+
             $this->results = $this->cache->response;
         }
 
@@ -89,11 +95,6 @@ class VkAudio extends Audio
              */
             $this->cache->query = $this->query;
             $this->cache->response = $this->results;
-
-            if(YII_DEBUG)
-            {
-                var_dump($this->cache);
-            }
 
             try
             {

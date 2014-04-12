@@ -84,11 +84,6 @@ class VkCache extends CActiveRecord
     {
         $this->response_data = $value;
 
-        if(YII_DEBUG && $this->id == '0ff7eef89c99a0c1daef2e3a6a32f15a')
-        {
-            var_dump($this->response_data);
-        }
-
         return TRUE;
     }
 
