@@ -50,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VkCache.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="VkCache.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/models/VkCache.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="31" selection-start="1383" selection-end="1383" vertical-scroll-proportion="1.416185" vertical-offset="530" max-vertical-offset="1680">
+            <state line="60" column="33" selection-start="1171" selection-end="1171" vertical-scroll-proportion="5.2083335" vertical-offset="1025" max-vertical-offset="1680">
               <folding />
             </state>
           </provider>
@@ -86,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AntigateCommand.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AntigateCommand.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/commands/AntigateCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="19" selection-start="477" selection-end="477" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="720">
+            <state line="37" column="21" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.84732825" vertical-offset="0" max-vertical-offset="690">
               <folding />
             </state>
           </provider>
@@ -127,7 +127,6 @@
         <option value="$PROJECT_DIR$/css/console.css" />
         <option value="$PROJECT_DIR$/protected/components/Antigate.php" />
         <option value="$PROJECT_DIR$/protected/config/console.php" />
-        <option value="$PROJECT_DIR$/protected/commands/AntigateCommand.php" />
         <option value="$PROJECT_DIR$/protected/components/views/tagBar.php" />
         <option value="$PROJECT_DIR$/protected/views/site/error.php" />
         <option value="$PROJECT_DIR$/protected/migrations/m140409_020253_add_hash_to_query.php" />
@@ -174,6 +173,7 @@
         <option value="$PROJECT_DIR$/protected/commands/VkCommand.php" />
         <option value="$PROJECT_DIR$/protected/components/VkAudio.php" />
         <option value="$PROJECT_DIR$/protected/models/VkCache.php" />
+        <option value="$PROJECT_DIR$/protected/commands/AntigateCommand.php" />
       </list>
     </option>
   </component>
@@ -776,10 +776,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42328766" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42328766" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1100,13 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/commands/AntigateCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="19" selection-start="477" selection-end="477" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/commands/VkCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="46" selection-start="645" selection-end="645" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="1020">
@@ -1130,7 +1123,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/VkCache.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="31" selection-start="1383" selection-end="1383" vertical-scroll-proportion="1.416185" vertical-offset="530" max-vertical-offset="1680">
+        <state line="60" column="33" selection-start="1171" selection-end="1171" vertical-scroll-proportion="5.2083335" vertical-offset="1025" max-vertical-offset="1680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/commands/AntigateCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="21" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.84732825" vertical-offset="0" max-vertical-offset="690">
           <folding />
         </state>
       </provider>

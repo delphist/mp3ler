@@ -36,8 +36,6 @@ class AntigateCommand extends CConsoleCommand
             }
 
             sleep(5);
-
-            echo "tick\n";
         }
     }
 }
