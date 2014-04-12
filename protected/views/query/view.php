@@ -9,6 +9,39 @@ $this->metaAuthor = Yii::t('app', '{text} - mp3ler.biz', array('{text}' => $quer
 <?php
 if($track !== NULL)
 {
+    Yii::app()->clientScript->registerScriptFile('js/jquery.jplayer.min.js', CClientScript::POS_END);
+    Yii::app()->clientScript->registerScript('jplayer', "
+            var player = $('.jplayer');
+            var button = $('.jplayer-toggle');
+
+            player.jPlayer({
+                play: function(event) {
+                    button.text('".Yii::t('app', 'Pause')."');
+                },
+                pause: function(event) {
+                    button.text('".Yii::t('app', 'Listen')."');
+                },
+                ended: function(event) {
+                    button.text('".Yii::t('app', 'Listen')."');
+                },
+                swfPath: '/js',
+                supplied: 'mp3',
+                wmode: 'window'
+            });
+
+            player.jPlayer('setMedia', {
+                mp3: button.attr('href')
+            });
+
+            button.click(function(e) {
+                if (player.data().jPlayer.status.paused == false) {
+                    player.jPlayer('pause');
+                } else {
+                    player.jPlayer('play');
+                }
+                e.preventDefault();
+            });
+", CClientScript::POS_READY);
     ?>
     <span style="margin-top: 0px; padding-top: 0px; font-size: 24px;"><b><?=$track->artist_title.'</b> — '.$track->title?></span>
 
@@ -20,41 +53,6 @@ if($track !== NULL)
     </fieldset>
 
     <div class="jplayer"></div>
-
-    <script type="text/javascript">
-        $(function() {
-            var player = $('.jplayer');
-            var button = $('.jplayer-toggle');
-
-            player.jPlayer({
-                play: function(event) {
-                    button.text('<?=Yii::t('app', 'Pause')?>');
-                },
-                pause: function(event) {
-                    button.text('<?=Yii::t('app', 'Listen')?>');
-                },
-                ended: function(event) {
-                    button.text('<?=Yii::t('app', 'Listen')?>');
-                },
-                swfPath: "/js",
-                supplied: "mp3",
-                wmode: "window"
-            });
-
-            player.jPlayer("setMedia", {
-                mp3: button.attr("href")
-            });
-
-            button.click(function(e) {
-                if (player.data().jPlayer.status.paused == false) {
-                    player.jPlayer('pause');
-                } else {
-                    player.jPlayer('play');
-                }
-                e.preventDefault();
-            });
-        });
-    </script>
 
     <br />
 

@@ -50,6 +50,23 @@
     </div>
     <?php } ?>
 
+
+    <br />
+
+    <div id="smaatoad" style="padding: 0px"></div>
+    <script id="smaatoAdDisplay" language="javascript" type="text/javascript"
+            src="http://soma.smaato.net/oapi/js/smaatoAdDisplay.js">
+    </script>
+    <script>
+        (function() {
+            var request = new SomaRequest();
+            request.adSpaceID = 65830787;
+            request.publisherID = 923878150;
+            /*insert additional targeting data here */
+            SomaTag.requestAd(request);
+        })();
+    </script>
+
     <?php $this->widget('application.components.SearchBar', array(
         'query' => $this->searchQuery,
     )); ?>
@@ -79,14 +96,13 @@
         <h1>© mp3ler.biz</h1>
     </div>
 
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js" type="text/javascript"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).bind("mobileinit", function () {
             $.mobile.ajaxEnabled = false;
         });
     </script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile-1.4.2.min.js" type="text/javascript"></script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.jplayer.min.js" type="text/javascript"></script>
 
     <div class="counters">
         <a href="http://toplog.biz/in.php?uid=1509"><img src="http://toplog.biz/count.php?uid=1509/" title="Top Rating" alt="TopLog.Biz" height="10" width="60" /></a>

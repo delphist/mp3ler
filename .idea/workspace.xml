@@ -33,15 +33,6 @@
         </entry>
       </file>
       <file leaf-file-name="app.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/messages/tr/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="4" selection-start="24" selection-end="255" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="345">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/messages/ru/app.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="3" column="54" selection-start="309" selection-end="309" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="360">
@@ -59,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VkAudio.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="VkAudio.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="17" selection-start="2924" selection-end="2924" vertical-scroll-proportion="0.67919075" vertical-offset="1385" max-vertical-offset="3030">
+            <state line="108" column="17" selection-start="2924" selection-end="2924" vertical-scroll-proportion="-67.5" vertical-offset="0" max-vertical-offset="3030">
               <folding />
             </state>
           </provider>
@@ -82,6 +73,20 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="2" column="4" selection-start="24" selection-end="253" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="330">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/query/view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="38" selection-start="769" selection-end="769" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="1380">
+              <folding>
+                <marker date="1397306118000" expanded="false" signature="1936:1987" placeholder="..." />
+                <marker date="1397306118000" expanded="true" signature="2099:2490" placeholder="..." />
+                <marker date="1397306118000" expanded="true" signature="2723:3589" placeholder="..." />
+                <marker date="1397306118000" expanded="true" signature="2773:3123" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,13 +111,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="11" selection-start="4460" selection-end="4460" vertical-scroll-proportion="-7.75" vertical-offset="1089" max-vertical-offset="2820">
+            <state line="58" column="13" selection-start="3235" selection-end="3235" vertical-scroll-proportion="0.7747748" vertical-offset="612" max-vertical-offset="3060">
               <folding>
-                <marker date="1397302629000" expanded="true" signature="1982:2676" placeholder="..." />
-                <marker date="1397302629000" expanded="true" signature="3248:3763" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="21:9764" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="28:1575" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="1622:9756" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="1681:8060" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="1731:1919" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="1969:2687" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="1982:2676" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="2766:2993" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="3684:4359" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="3764:4279" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="4682:4723" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="5153:8053" placeholder="..." />
+                <marker date="1397307073000" expanded="false" signature="5992:6001" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="6145:6765" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="6866:7910" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="6900:7845" placeholder="{...}" />
+                <marker date="1397307073000" expanded="true" signature="6954:7296" placeholder="{...}" />
+                <marker date="1397307073000" expanded="true" signature="6980:7265" placeholder="{...}" />
+                <marker date="1397307073000" expanded="true" signature="7043:7241" placeholder="{&quot;id&quot;: 24313723...}" />
+                <marker date="1397307073000" expanded="true" signature="7728:7817" placeholder="{...}" />
+                <marker date="1397307073000" expanded="false" signature="7983:8015" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="8125:9001" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="8151:8944" placeholder="{...}" />
+                <marker date="1397307073000" expanded="true" signature="8197:8475" placeholder="{...}" />
+                <marker date="1397307073000" expanded="true" signature="8215:8452" placeholder="{...}" />
+                <marker date="1397307073000" expanded="true" signature="8270:8436" placeholder="{&quot;id&quot;: 24313723...}" />
+                <marker date="1397307073000" expanded="true" signature="8851:8924" placeholder="{...}" />
+                <marker date="1397307073000" expanded="false" signature="9066:9098" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="9191:9747" placeholder="..." />
+                <marker date="1397307073000" expanded="true" signature="9413:9733" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -170,15 +203,15 @@
         <option value="$PROJECT_DIR$/protected/views/site/index.php" />
         <option value="$PROJECT_DIR$/protected/commands/VkCommand.php" />
         <option value="$PROJECT_DIR$/protected/commands/AntigateCommand.php" />
-        <option value="$PROJECT_DIR$/protected/views/query/view.php" />
         <option value="$PROJECT_DIR$/protected/messages/tr/app.php" />
         <option value="$PROJECT_DIR$/protected/messages/ru/app.php" />
         <option value="$PROJECT_DIR$/protected/messages/ge/app.php" />
         <option value="$PROJECT_DIR$/protected/messages/az/app.php" />
         <option value="$PROJECT_DIR$/protected/models/VkCache.php" />
-        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/components/Audio.php" />
         <option value="$PROJECT_DIR$/protected/components/VkAudio.php" />
+        <option value="$PROJECT_DIR$/protected/views/query/view.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
       </list>
     </option>
   </component>
@@ -1063,13 +1096,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/query/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="66" selection-start="674" selection-end="674" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="1410">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/messages/tr/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="4" selection-start="24" selection-end="255" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="345">
@@ -1080,13 +1106,6 @@
     <entry file="file://$PROJECT_DIR$/protected/messages/ge/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="4" selection-start="24" selection-end="253" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/messages/az/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="47" selection-start="407" selection-end="407" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="330">
           <folding />
         </state>
       </provider>
@@ -1112,13 +1131,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/Audio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="11" selection-start="4460" selection-end="4460" vertical-scroll-proportion="-7.75" vertical-offset="1089" max-vertical-offset="2820">
-          <folding>
-            <marker date="1397302629000" expanded="true" signature="1982:2676" placeholder="..." />
-            <marker date="1397302629000" expanded="true" signature="3248:3763" placeholder="..." />
-          </folding>
+        <state line="51" column="30" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-8.166667" vertical-offset="569" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="17" selection-start="2924" selection-end="2924" vertical-scroll-proportion="-67.5" vertical-offset="0" max-vertical-offset="3030">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/messages/az/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="47" selection-start="407" selection-end="407" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="330">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,17 +1161,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Audio.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/query/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="30" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-8.166667" vertical-offset="569" max-vertical-offset="975">
-          <folding />
+        <state line="11" column="38" selection-start="769" selection-end="769" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="1380">
+          <folding>
+            <marker date="1397306118000" expanded="false" signature="1936:1987" placeholder="..." />
+            <marker date="1397306118000" expanded="true" signature="2099:2490" placeholder="..." />
+            <marker date="1397306118000" expanded="true" signature="2723:3589" placeholder="..." />
+            <marker date="1397306118000" expanded="true" signature="2773:3123" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="17" selection-start="2924" selection-end="2924" vertical-scroll-proportion="0.67919075" vertical-offset="1385" max-vertical-offset="3030">
-          <folding />
+        <state line="58" column="13" selection-start="3235" selection-end="3235" vertical-scroll-proportion="0.7747748" vertical-offset="612" max-vertical-offset="3060">
+          <folding>
+            <marker date="1397307073000" expanded="true" signature="21:9764" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="28:1575" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="1622:9756" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="1681:8060" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="1731:1919" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="1969:2687" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="1982:2676" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="2766:2993" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="3684:4359" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="3764:4279" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="4682:4723" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="5153:8053" placeholder="..." />
+            <marker date="1397307073000" expanded="false" signature="5992:6001" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="6145:6765" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="6866:7910" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="6900:7845" placeholder="{...}" />
+            <marker date="1397307073000" expanded="true" signature="6954:7296" placeholder="{...}" />
+            <marker date="1397307073000" expanded="true" signature="6980:7265" placeholder="{...}" />
+            <marker date="1397307073000" expanded="true" signature="7043:7241" placeholder="{&quot;id&quot;: 24313723...}" />
+            <marker date="1397307073000" expanded="true" signature="7728:7817" placeholder="{...}" />
+            <marker date="1397307073000" expanded="false" signature="7983:8015" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="8125:9001" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="8151:8944" placeholder="{...}" />
+            <marker date="1397307073000" expanded="true" signature="8197:8475" placeholder="{...}" />
+            <marker date="1397307073000" expanded="true" signature="8215:8452" placeholder="{...}" />
+            <marker date="1397307073000" expanded="true" signature="8270:8436" placeholder="{&quot;id&quot;: 24313723...}" />
+            <marker date="1397307073000" expanded="true" signature="8851:8924" placeholder="{...}" />
+            <marker date="1397307073000" expanded="false" signature="9066:9098" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="9191:9747" placeholder="..." />
+            <marker date="1397307073000" expanded="true" signature="9413:9733" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
