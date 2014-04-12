@@ -13,4 +13,6 @@ return array(
     'Listen' => 'Слушать',
     'Download' => 'Загрузить',
     'Pause' => 'Пауза',
+    'Next page' => 'Следующая страница',
+    'Previous page' => 'Предыдущая страница',
 );

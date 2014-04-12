@@ -97,7 +97,7 @@ class VkAudio extends Audio
                  */
                 $this->cache->save();
             }
-            catch(Exception $e) { throw $e; }
+            catch(Exception $e) { }
         }
 
         /**
