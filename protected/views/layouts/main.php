@@ -18,11 +18,6 @@
     <title><?php echo CHtml::encode($this->pageTitle) ?></title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" type="text/css" href="<?=Yii::app()->request->baseUrl?>/css/jquery.mobile-1.4.2.min.css" />
-    <script type="text/javascript">
-        $(document).bind("mobileinit", function () {
-            $.mobile.ajaxEnabled = false;
-        });
-    </script>
     <link rel="stylesheet" type="text/css" href="<?=Yii::app()->request->baseUrl?>/css/application.css" />
     <?php foreach(array('en', 'ru', 'az', 'tr', 'ge') as $language) { ?>
         <link rel="alternate" href="http://mp3ler.biz<?=$this->createLanguageUrl($language)?>" hreflang="<?=$language?>" />
@@ -84,9 +79,14 @@
         <h1>© mp3ler.biz</h1>
     </div>
 
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js" type="text/javascript"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile-1.4.2.min.js" type="text/javascript"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.jplayer.min.js" type="text/javascript"></script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+            $.mobile.ajaxEnabled = false;
+        });
+    </script>
 
     <div class="counters">
         <a href="http://toplog.biz/in.php?uid=1509"><img src="http://toplog.biz/count.php?uid=1509/" title="Top Rating" alt="TopLog.Biz" height="10" width="60" /></a>
