@@ -89,6 +89,12 @@ class VkCache extends CActiveRecord
 
     public function beforeSave()
     {
+
+        if(YII_DEBUG && $this->id == '0ff7eef89c99a0c1daef2e3a6a32f15a')
+        {
+            var_dump(serialize($this->response));
+        }
+
         if(parent::beforeSave())
         {
             if( ! is_string($this->response_data))
