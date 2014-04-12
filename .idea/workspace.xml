@@ -109,7 +109,7 @@
       <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="119" selection-start="4719" selection-end="4719" vertical-scroll-proportion="0.8598131" vertical-offset="768" max-vertical-offset="2820">
+            <state line="88" column="64" selection-start="4664" selection-end="4664" vertical-scroll-proportion="0.3598131" vertical-offset="1089" max-vertical-offset="2820">
               <folding>
                 <marker date="1397302629000" expanded="true" signature="1982:2676" placeholder="..." />
                 <marker date="1397302629000" expanded="true" signature="3248:3763" placeholder="..." />
@@ -1137,7 +1137,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="119" selection-start="4719" selection-end="4719" vertical-scroll-proportion="0.8598131" vertical-offset="768" max-vertical-offset="2820">
+        <state line="88" column="64" selection-start="4664" selection-end="4664" vertical-scroll-proportion="0.3598131" vertical-offset="1089" max-vertical-offset="2820">
           <folding>
             <marker date="1397302629000" expanded="true" signature="1982:2676" placeholder="..." />
             <marker date="1397302629000" expanded="true" signature="3248:3763" placeholder="..." />
