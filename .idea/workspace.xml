@@ -59,19 +59,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VkAudio.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="VkAudio.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="0" selection-start="3051" selection-end="3051" vertical-scroll-proportion="-12.291667" vertical-offset="1400" max-vertical-offset="3105">
+            <state line="108" column="17" selection-start="2924" selection-end="2924" vertical-scroll-proportion="0.67919075" vertical-offset="1385" max-vertical-offset="3030">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Audio.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Audio.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/Audio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="0" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.783237" vertical-offset="569" max-vertical-offset="975">
+            <state line="51" column="30" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-8.166667" vertical-offset="569" max-vertical-offset="975">
               <folding />
             </state>
           </provider>
@@ -176,9 +176,9 @@
         <option value="$PROJECT_DIR$/protected/messages/ge/app.php" />
         <option value="$PROJECT_DIR$/protected/messages/az/app.php" />
         <option value="$PROJECT_DIR$/protected/models/VkCache.php" />
-        <option value="$PROJECT_DIR$/protected/components/VkAudio.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/components/Audio.php" />
+        <option value="$PROJECT_DIR$/protected/components/VkAudio.php" />
       </list>
     </option>
   </component>
@@ -1131,16 +1131,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/Audio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="0" selection-start="3051" selection-end="3051" vertical-scroll-proportion="-12.291667" vertical-offset="1400" max-vertical-offset="3105">
+        <state line="51" column="30" selection-start="1064" selection-end="1064" vertical-scroll-proportion="-8.166667" vertical-offset="569" max-vertical-offset="975">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Audio.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.783237" vertical-offset="569" max-vertical-offset="975">
+        <state line="108" column="17" selection-start="2924" selection-end="2924" vertical-scroll-proportion="0.67919075" vertical-offset="1385" max-vertical-offset="3030">
           <folding />
         </state>
       </provider>
