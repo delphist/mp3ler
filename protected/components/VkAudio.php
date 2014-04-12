@@ -107,6 +107,11 @@ class VkAudio extends Audio
                  */
                 if( ! $this->cache->isNewRecord || VkCache::model()->findByQuery($this->query) === NULL)
                 {
+                    if(YII_DEBUG)
+                    {
+                        var_dump($this->cache);
+                    }
+
                     $this->cache->save();
                 }
             }

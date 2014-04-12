@@ -62,7 +62,7 @@
       <file leaf-file-name="VkAudio.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="22" selection-start="2824" selection-end="2824" vertical-scroll-proportion="0.59248555" vertical-offset="1400" max-vertical-offset="3030">
+            <state line="113" column="20" selection-start="3071" selection-end="3071" vertical-scroll-proportion="0.8526012" vertical-offset="1400" max-vertical-offset="3105">
               <folding />
             </state>
           </provider>
@@ -98,7 +98,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="84" selection-start="160" selection-end="160" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="270">
+            <state line="11" column="14" selection-start="1053" selection-end="1053" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="270">
               <folding>
                 <marker date="1397286296000" expanded="true" signature="648:1058" placeholder="..." />
               </folding>
@@ -109,10 +109,10 @@
       <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="55" selection-start="1209" selection-end="1209" vertical-scroll-proportion="-3.125" vertical-offset="225" max-vertical-offset="2820">
+            <state line="29" column="72" selection-start="1702" selection-end="1702" vertical-scroll-proportion="3.125" vertical-offset="510" max-vertical-offset="2820">
               <folding>
-                <marker date="1397300180000" expanded="true" signature="1349:1402" placeholder="{...}" />
-                <marker date="1397300180000" expanded="true" signature="3513:4028" placeholder="..." />
+                <marker date="1397302134000" expanded="true" signature="1241:1294" placeholder="{...}" />
+                <marker date="1397302134000" expanded="true" signature="3405:3920" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -175,9 +175,9 @@
         <option value="$PROJECT_DIR$/protected/messages/ru/app.php" />
         <option value="$PROJECT_DIR$/protected/messages/ge/app.php" />
         <option value="$PROJECT_DIR$/protected/messages/az/app.php" />
-        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/models/VkCache.php" />
         <option value="$PROJECT_DIR$/protected/components/Audio.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/components/VkAudio.php" />
       </list>
     </option>
@@ -1103,25 +1103,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="84" selection-start="160" selection-end="160" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="270">
-          <folding>
-            <marker date="1397286296000" expanded="true" signature="648:1058" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="55" selection-start="1209" selection-end="1209" vertical-scroll-proportion="-3.125" vertical-offset="225" max-vertical-offset="2820">
-          <folding>
-            <marker date="1397300180000" expanded="true" signature="1349:1402" placeholder="{...}" />
-            <marker date="1397300180000" expanded="true" signature="3513:4028" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/Audio.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="0" selection-start="516" selection-end="516" vertical-scroll-proportion="-5.4166665" vertical-offset="305" max-vertical-offset="960">
@@ -1136,9 +1117,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="72" selection-start="1702" selection-end="1702" vertical-scroll-proportion="3.125" vertical-offset="510" max-vertical-offset="2820">
+          <folding>
+            <marker date="1397302134000" expanded="true" signature="1241:1294" placeholder="{...}" />
+            <marker date="1397302134000" expanded="true" signature="3405:3920" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="14" selection-start="1053" selection-end="1053" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="270">
+          <folding>
+            <marker date="1397286296000" expanded="true" signature="648:1058" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="22" selection-start="2824" selection-end="2824" vertical-scroll-proportion="0.59248555" vertical-offset="1400" max-vertical-offset="3030">
+        <state line="113" column="20" selection-start="3071" selection-end="3071" vertical-scroll-proportion="0.8526012" vertical-offset="1400" max-vertical-offset="3105">
           <folding />
         </state>
       </provider>
