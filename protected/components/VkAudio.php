@@ -92,7 +92,7 @@ class VkAudio extends Audio
 
             if(YII_DEBUG)
             {
-                var_dump(serialize($this->cache));
+                var_dump($this->cache);
             }
 
             try
