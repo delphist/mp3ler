@@ -13,4 +13,5 @@ return array(
     'Enter song or singer name' => 'Ne Arıyoruz?',
     'Listen' => 'Dinlemek',
     'Download' => 'Indirin',
+    'Pause' => 'Durma',
 );

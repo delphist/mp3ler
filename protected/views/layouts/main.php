@@ -25,6 +25,7 @@
         });
     </script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile-1.4.2.min.js" type="text/javascript"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.jplayer.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="<?=Yii::app()->request->baseUrl?>/css/application.css" />
     <?php foreach(array('en', 'ru', 'az', 'tr', 'ge') as $language) { ?>
         <link rel="alternate" href="http://mp3ler.biz<?=$this->createLanguageUrl($language)?>" hreflang="<?=$language?>" />

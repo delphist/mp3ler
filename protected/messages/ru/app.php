@@ -12,4 +12,5 @@ return array(
     'Enter song or singer name' => 'Введите название песни',
     'Listen' => 'Слушать',
     'Download' => 'Загрузить',
+    'Pause' => 'Пауза',
 );

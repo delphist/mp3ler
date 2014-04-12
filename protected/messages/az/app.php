@@ -12,4 +12,5 @@ return array(
     'Enter song or singer name' => 'Ne axtarırıq',
     'Listen' => 'Dinlə',
     'Download' => 'Yüklə',
+    'Pause' => 'Fasilə',
 );

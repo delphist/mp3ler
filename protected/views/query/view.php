@@ -15,9 +15,46 @@ if($track !== NULL)
     <br /><br />
 
     <fieldset class="ui-grid-a">
-        <div class="ui-block-a"><a href="<?=$this->createTrackDownloadUrl($track)?>" data-role="button" class="button" data-corners="false"><?=Yii::t('app', 'Listen')?></a></div>
+        <div class="ui-block-a"><a href="<?=$this->createTrackDownloadUrl($track)?>" data-role="button" class="button jplayer-toggle" data-corners="false"><?=Yii::t('app', 'Listen')?></a></div>
         <div class="ui-block-b"><a href="<?=$this->createTrackDownloadUrl($track)?>" data-role="button" class="button" data-corners="false"><?=Yii::t('app', 'Download')?></a></div>
     </fieldset>
+
+    <div class="jplayer"></div>
+
+    <script type="text/javascript">
+        $(function() {
+            var player = $('.jplayer');
+            var button = $('.jplayer-toggle');
+
+            player.jPlayer({
+                play: function(event) {
+                    button.text('<?=Yii::t('app', 'Pause')?>');
+                },
+                pause: function(event) {
+                    button.text('<?=Yii::t('app', 'Listen')?>');
+                },
+                ended: function(event) {
+                    button.text('<?=Yii::t('app', 'Listen')?>');
+                },
+                swfPath: "/js",
+                supplied: "mp3",
+                wmode: "window"
+            });
+
+            player.jPlayer("setMedia", {
+                mp3: button.attr("href")
+            });
+
+            button.click(function(e) {
+                if (player.data().jPlayer.status.paused == false) {
+                    player.jPlayer('pause');
+                } else {
+                    player.jPlayer('play');
+                }
+                e.preventDefault();
+            });
+        });
+    </script>
 
     <br />
 
@@ -35,7 +72,7 @@ if($track !== NULL)
         ))?></li>
     <?php if(count($query->results) > 0) { ?>
         <?php foreach($query->results as $result) { ?>
-            <li data-icon="false"><a href="<?=$this->createUrl('query/view', array('text' => $result['artist_title'].' - '.$result['title']))?>" title="<?=addslashes($result['artist_title'].' - '.$result['title'])?> mp3"><?='<b>'.CHtml::encode($result['artist_title']).'</b> — '.CHtml::encode($result['title'])?></a></li>
+            <li data-icon="false"><a href="<?=$this->createUrl('query/view', array('text' => $result['artist_title'].' - '.$result['title']))?>" title="<?=CHtml::encode($result['artist_title'].' - '.$result['title'])?> mp3"><?='<b>'.CHtml::encode($result['artist_title']).'</b> — '.CHtml::encode($result['title'])?></a></li>
         <?php } ?>
     <?php } ?>
 </ul>

@@ -12,4 +12,5 @@ return array(
     'Enter song or singer name' => 'სიმღერის სათაური',
     'Listen' => 'მოუსმინოს',
     'Download' => 'ჩამოტვირთვა',
+    'Pause' => 'პაუზა',
 );
