@@ -109,10 +109,10 @@
       <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="13" selection-start="4719" selection-end="4719" vertical-scroll-proportion="0.9099099" vertical-offset="1017" max-vertical-offset="2820">
+            <state line="88" column="119" selection-start="4719" selection-end="4719" vertical-scroll-proportion="0.8598131" vertical-offset="768" max-vertical-offset="2820">
               <folding>
-                <marker date="1397302342000" expanded="true" signature="1982:2676" placeholder="..." />
-                <marker date="1397302342000" expanded="true" signature="3248:3763" placeholder="..." />
+                <marker date="1397302629000" expanded="true" signature="1982:2676" placeholder="..." />
+                <marker date="1397302629000" expanded="true" signature="3248:3763" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -781,10 +781,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42328766" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42328766" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1137,10 +1137,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="13" selection-start="4719" selection-end="4719" vertical-scroll-proportion="0.9099099" vertical-offset="1017" max-vertical-offset="2820">
+        <state line="88" column="119" selection-start="4719" selection-end="4719" vertical-scroll-proportion="0.8598131" vertical-offset="768" max-vertical-offset="2820">
           <folding>
-            <marker date="1397302342000" expanded="true" signature="1982:2676" placeholder="..." />
-            <marker date="1397302342000" expanded="true" signature="3248:3763" placeholder="..." />
+            <marker date="1397302629000" expanded="true" signature="1982:2676" placeholder="..." />
+            <marker date="1397302629000" expanded="true" signature="3248:3763" placeholder="..." />
           </folding>
         </state>
       </provider>
