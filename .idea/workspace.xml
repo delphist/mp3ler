@@ -53,7 +53,7 @@
       <file leaf-file-name="VkCache.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/models/VkCache.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="15" selection-start="1247" selection-end="1247" vertical-scroll-proportion="-12.5" vertical-offset="660" max-vertical-offset="1755">
+            <state line="58" column="5" selection-start="1136" selection-end="1136" vertical-scroll-proportion="-36.25" vertical-offset="0" max-vertical-offset="1755">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="VkAudio.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="117" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.27027026" vertical-offset="585" max-vertical-offset="2835">
+            <state line="98" column="17" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.46728972" vertical-offset="1170" max-vertical-offset="2880">
               <folding />
             </state>
           </provider>
@@ -90,7 +90,9 @@
         <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="4" column="54" selection-start="374" selection-end="374" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="270">
-              <folding />
+              <folding>
+                <marker date="1397286296000" expanded="true" signature="648:1058" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -779,7 +781,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42328766" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42328766" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1080,7 +1082,9 @@
     <entry file="file://$PROJECT_DIR$/protected/views/site/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="54" selection-start="374" selection-end="374" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="270">
-          <folding />
+          <folding>
+            <marker date="1397286296000" expanded="true" signature="648:1058" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1121,14 +1125,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/VkCache.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="15" selection-start="1247" selection-end="1247" vertical-scroll-proportion="-12.5" vertical-offset="660" max-vertical-offset="1755">
+        <state line="58" column="5" selection-start="1136" selection-end="1136" vertical-scroll-proportion="-36.25" vertical-offset="0" max-vertical-offset="1755">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="117" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.27027026" vertical-offset="585" max-vertical-offset="2835">
+        <state line="98" column="17" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.46728972" vertical-offset="1170" max-vertical-offset="2880">
           <folding />
         </state>
       </provider>
