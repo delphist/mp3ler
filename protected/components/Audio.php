@@ -53,6 +53,7 @@ abstract class Audio extends CComponent
         $value = htmlspecialchars_decode($value);
         $value = preg_replace('/\s+/su', ' ', $value);
         $value = str_replace(chr(0), '', $value);
+        $value = iconv("utf-8", "utf-8//ignore", $value);
 
         return $value;
     }
