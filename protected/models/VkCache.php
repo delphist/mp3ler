@@ -68,12 +68,12 @@ class VkCache extends CActiveRecord
             }
             catch(Exception $e)
             {
-                return NULL;
+                $this->response_data = NULL;
             }
 
-            if( ! is_array($this->response_data))
+            if( ! $this->response_data instanceof Results)
             {
-                return NULL;
+                $this->response_data = NULL;
             }
         }
 
