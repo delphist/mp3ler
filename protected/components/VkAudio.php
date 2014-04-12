@@ -49,7 +49,6 @@ class VkAudio extends Audio
              * Если запись не найдена в кеше то создаем новый обьект кеша
              */
             $this->cache = new VkCache;
-            $this->cache->vk_offset = NULL;
             $this->results = new Results;
         }
         else
@@ -57,13 +56,18 @@ class VkAudio extends Audio
             /**
              * Иначе используем результаты из кеша
              */
-
             if($this->cache->response === NULL || ! ($this->cache->response instanceof Results))
             {
+                $this->cache->vk_offset = NULL;
                 $this->cache->response = new Results;
             }
 
             $this->results = $this->cache->response;
+        }
+
+        if( ! count($this->results))
+        {
+            $this->cache->vk_offset = NULL;
         }
 
         while($this->page * $this->perpage > count($this->results))
