@@ -60,7 +60,7 @@ class VkCache extends CActiveRecord
 
     public function getResponse()
     {
-        if( ! is_array($this->response_data))
+        if(is_string($this->response_data))
         {
             try
             {
@@ -68,12 +68,12 @@ class VkCache extends CActiveRecord
             }
             catch(Exception $e)
             {
-                $this->response_data = array();
+                return NULL;
             }
 
             if( ! is_array($this->response_data))
             {
-                $this->response_data = array();
+                return NULL;
             }
         }
 
