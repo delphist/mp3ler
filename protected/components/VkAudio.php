@@ -105,7 +105,7 @@ class VkAudio extends Audio
                 /**
                  * Кеш на эту страницу может быть уже создан за время работы с API VK
                  */
-                if(VkCache::model()->findByQuery($this->query) === NULL)
+                if( ! $this->cache->isNewRecord || VkCache::model()->findByQuery($this->query) === NULL)
                 {
                     $this->cache->save();
                 }
