@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="<?php echo CHtml::encode($this->metaKeywords); ?>"/>
-    <meta name="description" content="<?php echo CHtml::encode($this->metaDescription); ?><?=Yii::t('app', 'meta description')?>"/>
+    <meta name="description" content="<?php echo CHtml::encode($this->metaDescription); ?>"/>
     <meta http-equiv="content-language" content="<?=Yii::app()->language?>"/>
-    <meta name="author" content="Global search mp3 - mp3ler.biz "/>
+    <meta name="author" content="<?php echo CHtml::encode($this->metaAuthor); ?>"/>
     <meta name="distribution" content="Global"/>
     <meta name="rating" content="General"/>
     <meta name="copyright" content="mp3ler.biz"/>
