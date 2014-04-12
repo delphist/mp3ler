@@ -94,6 +94,11 @@ class VkCache extends CActiveRecord
 
     public function beforeSave()
     {
+        if(YII_DEBUG)
+        {
+            exit;
+        }
+
         if(parent::beforeSave())
         {
             if( ! is_string($this->response_data))
