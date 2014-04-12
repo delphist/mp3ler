@@ -8,3 +8,14 @@ $this->pageTitle = Yii::t('app', 'Global search mp3-bedava dinle indir,download,
         <li data-icon="false"><a href="<?=$this->createUrl('query/view', array('text' => $track->searchTitle))?>" title="<?=addslashes($track->searchTitle)?> mp3"><?=$track->fullTitle?></a></li>
     <?php } ?>
 </ul>
+
+<?php if($pages->pageCount > 1) { ?>
+    <?php $this->widget('application.components.Pager', array(
+        'pages' => $pages,
+        'prevPageLabel' => Yii::t('app', 'Previous page'),
+        'nextPageLabel' => Yii::t('app', 'Next page'),
+    )) ?>
+
+    <br />
+    <br />
+<?php } ?>

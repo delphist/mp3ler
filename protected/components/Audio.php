@@ -32,10 +32,12 @@ abstract class Audio extends CComponent
      * Обьект должен создаваться и инициализировать текстовый запрос
      *
      * @param string $query текстовый запрос
+     * @param int $page номер страницы
      */
-    public function __construct($query)
+    public function __construct($query, $page = 1)
     {
         $this->query = $query;
+        $this->page = $page;
     }
 
     /**

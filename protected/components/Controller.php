@@ -15,6 +15,21 @@ class Controller extends CController
     public $headerTitle;
 
     /**
+     * @var string Meta-заголовок description
+     */
+    public $metaDescription;
+
+    /**
+     * @var string Meta-заголовок keywords
+     */
+    public $metaKeywords;
+
+    /**
+     * @var string Meta-заголовок author
+     */
+    public $metaAuthor;
+
+    /**
      * @var boolean Использовать ли h1 для заголовка
      */
     public $isH1 = TRUE;

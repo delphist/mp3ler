@@ -3,8 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="<?=Yii::t('app', 'Bedava MP3 Ara , MP3 Indir ,youtube mp3 , download mp3 , free mp3 , pulsuz mp3 yukle , free music 2013, music lyrics , mp3 yukle')?>"/>
-    <meta name="description" content="<?=Yii::t('app', 'Global search mp3 mp3ler.biz - bedava mp3 indir, bedava şarkı , en son muzikler,free mp3 download,mp3 скачать')?>"/>
+    <meta name="keywords" content="<?php echo CHtml::encode($this->metaKeywords); ?>"/>
+    <meta name="description" content="<?php echo CHtml::encode($this->metaDescription); ?><?=Yii::t('app', 'meta description')?>"/>
     <meta http-equiv="content-language" content="<?=Yii::app()->language?>"/>
     <meta name="author" content="Global search mp3 - mp3ler.biz "/>
     <meta name="distribution" content="Global"/>
@@ -15,7 +15,7 @@
     <meta name="robots" content="all"/>
     <meta name="robots" content="follow"/>
     <meta name="robots" content="index"/>
-    <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    <title><?php echo CHtml::encode($this->pageTitle) ?></title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" type="text/css" href="<?=Yii::app()->request->baseUrl?>/css/jquery.mobile-1.4.2.min.css" />
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js" type="text/javascript"></script>

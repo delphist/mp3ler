@@ -12,10 +12,14 @@ class QueryController extends Controller
     /**
      * Страница поиска по текстовому запросу
      *
-     * @param $text
+     * @param $text текст запроса
+     * @param $page номер страницы
      */
-    public function actionView($text)
+    public function actionView($text, $page = 1)
     {
+        $pages = new CPagination;
+        $pages->pageSize = 20;
+
         $text = trim($text);
         $text = preg_replace('/\s+/su', ' ', $text);
         $text = str_replace(chr(0), '', $text);
@@ -31,21 +35,9 @@ class QueryController extends Controller
         }
 
         /**
-         * Сначала пытаемся найти результаты среди файлов
-         * старой версии сайта
+         * Ищем вконтакте
          */
-        if(count($query->results) === 0)
-        {
-            $query->results = new Mp3lerAudio($query->text);
-        }
-
-        /**
-         * Если результатов на старом сайте нет то ищем вконтакте
-         */
-        if(count($query->results) === 0)
-        {
-            $query->results = new VkAudio($query->text);
-        }
+        $query->results = new VkAudio($query->text, $page);
 
         /**
          * Сверяем найденные результаты с текстовым запросом,
@@ -62,6 +54,8 @@ class QueryController extends Controller
                 $track->data = $result;
             }
         }
+
+        $pages->itemCount = $query->results->real_count;
 
         /**
          * Сохраняем запрос, т.к. он может быть новый, либо
@@ -84,6 +78,7 @@ class QueryController extends Controller
         $this->render('view', array(
             'track' => $track,
             'query' => $query,
+            'pages' => $pages,
         ));
     }
 
@@ -92,13 +87,20 @@ class QueryController extends Controller
      */
     public function actionTop()
     {
-        $queries = Query::model()->findAll(array(
+        $criteria = new CDbCriteria(array(
             'order' => 'id DESC',
-            'limit' => 10,
         ));
+
+        $pages = new CPagination;
+        $pages->pageSize = 20;
+        $pages->itemCount = 1000;
+        $pages->applyLimit($criteria);
+
+        $queries = Query::model()->cache(60)->findAll($criteria);
 
         $this->render('top', array(
             'queries' => $queries,
+            'pages' => $pages,
         ));
     }
 }

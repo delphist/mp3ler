@@ -52,4 +52,12 @@ class VkCommand extends CConsoleCommand
 
         print_r($account);
     }
+
+    /**
+     * Сбрасывает статус всех аккаунтов
+     */
+    public function actionResetAlive()
+    {
+
+    }
 }

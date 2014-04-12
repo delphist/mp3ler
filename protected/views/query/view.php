@@ -1,7 +1,10 @@
 <?php
 $this->searchQuery = $query->text;
-$this->headerTitle = Yii::t('app', '{text} MP3 Download', array('{text}' => CHtml::encode($query->title)));
-$this->pageTitle = Yii::t('app', '{text}-bedava dinle indir,download,скачать', array('{text}' => CHtml::encode($query->title)));
+$this->headerTitle = Yii::t('app', '{text} MP3 Download', array('{text}' => $query->title));
+$this->pageTitle = Yii::t('app', '{text}-bedava dinle indir,download,скачать', array('{text}' => $query->title));
+$this->metaDescription = Yii::t('app', '{text} mp3ler.biz - bedava mp3 indir, bedava şarkı , en son muzikler,free mp3 download,mp3 скачать', array('{text}' => $query->title));
+$this->metaKeywords = Yii::t('app', 'Bedava MP3 Ara , MP3 Indir ,youtube mp3 , download mp3 , free mp3 , pulsuz mp3 yukle , free music 2013, music lyrics , mp3 yukle');
+$this->metaAuthor = Yii::t('app', '{text} - mp3ler.biz', array('{text}' => $query->title));
 ?>
 <?php
 if($track !== NULL)
@@ -36,3 +39,14 @@ if($track !== NULL)
         <?php } ?>
     <?php } ?>
 </ul>
+
+<?php if($pages->pageCount > 1) { ?>
+    <?php $this->widget('application.components.Pager', array(
+        'pages' => $pages,
+        'prevPageLabel' => Yii::t('app', 'Previous page'),
+        'nextPageLabel' => Yii::t('app', 'Next page'),
+    )) ?>
+
+    <br />
+    <br />
+<?php } ?>

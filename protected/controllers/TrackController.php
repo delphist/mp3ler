@@ -183,13 +183,20 @@ class TrackController extends Controller
      */
     public function actionTop()
     {
-        $tracks = Track::model()->cache(60)->findAll(array(
+        $criteria = new CDbCriteria(array(
             'order' => 'downloads_count DESC',
-            'limit' => 10,
         ));
+
+        $pages = new CPagination;
+        $pages->pageSize = 20;
+        $pages->itemCount = 1000;
+        $pages->applyLimit($criteria);
+
+        $tracks = Track::model()->cache(60)->findAll($criteria);
 
         $this->render('top', array(
             'tracks' => $tracks,
+            'pages' => $pages,
         ));
     }
 
