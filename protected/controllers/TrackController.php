@@ -155,6 +155,7 @@ class TrackController extends Controller
                             if(YII_DEBUG)
                             {
                                 var_dump($this->track);
+                                exit;
                             }
 
                             throw new CHttpException(404, 'vK 404 on file ('.$this->track->data['url'].')');
