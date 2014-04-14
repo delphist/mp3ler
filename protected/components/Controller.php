@@ -120,6 +120,28 @@ class Controller extends CController
     }
 
     /**
+     * Нормализует текстовый запрос для поиска
+     *
+     * @param $text
+     */
+    public function normalizeQuery($text)
+    {
+        /**
+         * Удаляем из запроса все кроме букв, цифр и пробелов
+         */
+        $text = str_replace(chr(0), '', $text);
+        $text = preg_replace('/[^\w\d\s]/ius', '', $text);
+
+        /**
+         * Обрезаем двойные пробелмы и пробелы по краям
+         */
+        $text = preg_replace('/\s+/su', ' ', $text);
+        $text = trim($text);
+
+        return $text;
+    }
+
+    /**
      *
      * @param $filterChain
      */

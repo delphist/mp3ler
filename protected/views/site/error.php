@@ -1,5 +1,5 @@
 <?php
-$this->pageTitle='Error '.$code.' - '.Yii::app()->name;
+$this->pageTitle = 'Error '.$code.' - '.Yii::app()->name;
 ?>
 
 <ul class="list" data-role="listview">
@@ -7,6 +7,6 @@ $this->pageTitle='Error '.$code.' - '.Yii::app()->name;
 </ul>
 
 <p>
-    <?php echo CHtml::encode($message); ?>
+    Sorry, try later.
 </p>
 <br />

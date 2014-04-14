@@ -201,6 +201,36 @@ class TrackController extends Controller
     }
 
     /**
+     * Производит поиск трека по его ID вконтакте и делает
+     * редирект на страницу поиска с названием этого трека
+     *
+     * @param $vk_id перевернутый ID трека вконтакте
+     */
+    public function actionVkId($vkid)
+    {
+        $vkid = explode('_', $vkid);
+        $vkid = $vkid[1].'_'.$vkid[0];
+
+        $api = new VkApi;
+        $response = $api->execute('audio.getById', array(
+            'audios' => $vkid,
+        ));
+
+        if($response !== NULL && isset($response->audio) && count($response->audio) > 0)
+        {
+            $audio = $response->audio[0];
+
+            $this->redirect($this->createUrl('query/view', array(
+                'text' => $this->normalizeQuery($audio->artist.' - '.$audio->title)
+            )), TRUE, 301);
+        }
+        else
+        {
+            throw new CHttpException(404, 'Audiofile not found by id '.$vkid);
+        }
+    }
+
+    /**
      * Коллбек, срабатывающий при чтении каждой части файла CURL'ом
      *
      * @param $curl

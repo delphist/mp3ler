@@ -63,7 +63,7 @@ a, p, h1, span {
     background-color: #09A8A1 !important;
 }
 
-.ui-footer h1 {
+.ui-footer span {
     color: white;
     outline-color: #444444;
     text-shadow: #111111 0px 1px 0px;

@@ -63,6 +63,8 @@ if($track !== NULL)
 <?php
 }
 ?>
+
+<?php if(count($query->results) > 0) { ?>
 <ul class="list" data-role="listview" itemscope itemtype="http://schema.org/MusicGroup">
     <li class="divider" data-role="list-divider"><?=Yii::t('app', 'On request: {text} Found: {found}', array(
             '{text}' => '<b>'.CHtml::encode($query->title).'</b>',
@@ -70,10 +72,18 @@ if($track !== NULL)
         ))?></li>
     <?php if(count($query->results) > 0) { ?>
         <?php foreach($query->results as $result) { ?>
-            <li data-icon="false"><a href="<?=$this->createUrl('query/view', array('text' => $result['artist_title'].' - '.$result['title']))?>" title="<?=CHtml::encode($result['artist_title'].' - '.$result['title'])?> mp3"><?='<b>'.CHtml::encode($result['artist_title']).'</b> — '.CHtml::encode($result['title'])?></a></li>
+            <li data-icon="false"><a href="<?=$this->createUrl('query/view', array('text' => $this->normalizeQuery($result['artist_title'].' - '.$result['title'])))?>" title="<?=CHtml::encode($result['artist_title'].' - '.$result['title'])?> mp3"><?='<b>'.CHtml::encode($result['artist_title']).'</b> — '.CHtml::encode($result['title'])?></a></li>
         <?php } ?>
     <?php } ?>
 </ul>
+<?php } elseif($track === NULL) { ?>
+    <ul class="list" data-role="listview">
+        <li class="divider" data-role="list-divider"><?=Yii::t('app', 'No results')?></li>
+    </ul>
+
+    <p>Sorry, nothing found</p>
+    <br />
+<?php } ?>
 
 <?php if($pages->pageCount > 1) { ?>
     <?php $this->widget('application.components.Pager', array(

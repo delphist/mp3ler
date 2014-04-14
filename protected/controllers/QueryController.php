@@ -20,9 +20,15 @@ class QueryController extends Controller
         $pages = new CPagination;
         $pages->pageSize = 20;
 
-        $text = trim($text);
-        $text = preg_replace('/\s+/su', ' ', $text);
-        $text = str_replace(chr(0), '', $text);
+        /**
+         * Приводим запрос к нормализованному виду
+         */
+        if($text != $this->normalizeQuery($text))
+        {
+            $this->redirect($this->createUrl('query/view', array(
+                'text' => $this->normalizeQuery($text)
+            )), TRUE, 301);
+        }
 
         /**
          * Ищем запрос либо создаем новый
@@ -44,14 +50,16 @@ class QueryController extends Controller
          * при точном совпадении создаем трек
          */
         $track = NULL;
-        foreach($query->results as $result)
+        foreach($query->results as $k => $result)
         {
-            if(mb_strtolower($query->text) == mb_strtolower($result['artist_title'].' - '.$result['title']))
+            if(mb_strtolower($this->normalizeQuery($query->text)) == mb_strtolower($this->normalizeQuery($result['artist_title'].' - '.$result['title'])))
             {
                 $track = new Track;
                 $track->artist_title = $result['artist_title'];
                 $track->title = $result['title'];
                 $track->data = $result;
+
+                unset($query->results[$k]);
             }
         }
 

@@ -23,6 +23,13 @@
         <link rel="alternate" href="http://mp3ler.biz<?=$this->createLanguageUrl($language)?>" hreflang="<?=$language?>" />
     <?php } ?>
     <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" />
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+            $.mobile.ajaxEnabled = false;
+        });
+    </script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile-1.4.2.min.js" type="text/javascript"></script>
 </head>
 <body class="ui-mobile-viewport ui-overlay-a">
 <div data-role="page" class="page" data-quicklinks="true">
@@ -32,11 +39,11 @@
 
     <div data-role="navbar" class="lang-select">
         <ul>
-            <li><a href="<?=$this->createLanguageUrl('en')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_en.png"></a></li>
-            <li><a href="<?=$this->createLanguageUrl('ru')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_ru.png"></a></li>
-            <li><a href="<?=$this->createLanguageUrl('az')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_az.png"></a></li>
-            <li><a href="<?=$this->createLanguageUrl('tr')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_tr.png"></a></li>
-            <li><a href="<?=$this->createLanguageUrl('ge')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_ge.png"></a></li>
+            <li><a href="<?=$this->createLanguageUrl('en')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_en.png" alt="English"></a></li>
+            <li><a href="<?=$this->createLanguageUrl('ru')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_ru.png" alt="Русский"></a></li>
+            <li><a href="<?=$this->createLanguageUrl('az')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_az.png" alt="Azərbaycanca"></a></li>
+            <li><a href="<?=$this->createLanguageUrl('tr')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_tr.png" alt="Türkçe"></a></li>
+            <li><a href="<?=$this->createLanguageUrl('ge')?>"><img src="<?=Yii::app()->request->baseUrl?>/images/lang_ge.png" alt="Georgian"></a></li>
         </ul>
     </div>
 
@@ -74,7 +81,7 @@
     <div role="main" class="ui-content">
         <?php echo $content; ?>
 
-        <ul class="list" data-role="listview" >
+        <ul class="list" data-role="listview">
             <li class="divider" data-role="list-divider"><?=Yii::t('app', 'Other Services:')?></li>
             <li data-icon="false"><a href="<?=$this->createUrl('query/top')?>"><?=Yii::t('app', 'List of all queries')?></a></li>
             <li data-icon="false"><a href="<?=$this->createUrl('track/top')?>"><?=Yii::t('app', 'Top downloads for mp3')?></a></li>
@@ -93,16 +100,8 @@
         <?php $this->endCache(); } ?>
 
     <div data-role="footer">
-        <h1>© mp3ler.biz</h1>
+        <span class="ui-title">© mp3ler.biz</span>
     </div>
-
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.0.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(document).bind("mobileinit", function () {
-            $.mobile.ajaxEnabled = false;
-        });
-    </script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile-1.4.2.min.js" type="text/javascript"></script>
 
     <div class="counters">
         <a href="http://toplog.biz/in.php?uid=1509"><img src="http://toplog.biz/count.php?uid=1509/" title="Top Rating" alt="TopLog.Biz" height="10" width="60" /></a>
