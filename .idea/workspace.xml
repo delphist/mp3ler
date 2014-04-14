@@ -73,10 +73,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SiteCommand.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SiteCommand.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/commands/SiteCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="8" selection-start="151" selection-end="151" vertical-scroll-proportion="0.20547946" vertical-offset="0" max-vertical-offset="657">
+            <state line="11" column="1" selection-start="151" selection-end="151" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="131" column="47" selection-start="2945" selection-end="2945" vertical-scroll-proportion="0.44748858" vertical-offset="1671" max-vertical-offset="2655">
               <folding />
             </state>
           </provider>
@@ -136,15 +145,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="socialBar.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/components/views/socialBar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -193,7 +193,6 @@
         <option value="$PROJECT_DIR$/protected/components/Audio.php" />
         <option value="$PROJECT_DIR$/protected/components/VkAudio.php" />
         <option value="$PROJECT_DIR$/css/application.css" />
-        <option value="$PROJECT_DIR$/protected/components/Controller.php" />
         <option value="$PROJECT_DIR$/protected/views/query/top.php" />
         <option value="$PROJECT_DIR$/protected/views/site/error.php" />
         <option value="$PROJECT_DIR$/protected/views/site/index.php" />
@@ -206,6 +205,7 @@
         <option value="$PROJECT_DIR$/protected/config/main.php" />
         <option value="$PROJECT_DIR$/protected/controllers/TrackController.php" />
         <option value="$PROJECT_DIR$/protected/commands/SiteCommand.php" />
+        <option value="$PROJECT_DIR$/protected/components/Controller.php" />
       </list>
     </option>
   </component>
@@ -808,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="41" selection-start="2805" selection-end="2805" vertical-scroll-proportion="-9.125" vertical-offset="1671" max-vertical-offset="2655">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/site/error.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="2" selection-start="66" selection-end="66" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="255">
@@ -970,7 +963,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/commands/SiteCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="8" selection-start="151" selection-end="151" vertical-scroll-proportion="0.20547946" vertical-offset="0" max-vertical-offset="657">
+        <state line="11" column="1" selection-start="151" selection-end="151" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="47" selection-start="2945" selection-end="2945" vertical-scroll-proportion="0.44748858" vertical-offset="1671" max-vertical-offset="2655">
           <folding />
         </state>
       </provider>

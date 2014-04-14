@@ -130,7 +130,7 @@ class Controller extends CController
          * Удаляем из запроса все кроме букв, цифр и пробелов
          */
         $text = str_replace(chr(0), '', $text);
-        $text = preg_replace('/[^\w\d\s]/ius', '', $text);
+        $text = preg_replace('/[^\w\d\s]/ius', ' ', $text);
 
         /**
          * Обрезаем двойные пробелмы и пробелы по краям
