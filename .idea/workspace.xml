@@ -76,16 +76,25 @@
       <file leaf-file-name="SiteCommand.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/commands/SiteCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="1" selection-start="151" selection-end="151" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="255">
+            <state line="9" column="0" selection-start="143" selection-end="143" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/application.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="29" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.2863436" vertical-offset="735" max-vertical-offset="2040">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="47" selection-start="2945" selection-end="2945" vertical-scroll-proportion="0.44748858" vertical-offset="1671" max-vertical-offset="2655">
+            <state line="123" column="6" selection-start="2735" selection-end="2735" vertical-scroll-proportion="-7.25" vertical-offset="1671" max-vertical-offset="2655">
               <folding />
             </state>
           </provider>
@@ -105,42 +114,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="38" column="19" selection-start="954" selection-end="954" vertical-scroll-proportion="-10.5" vertical-offset="318" max-vertical-offset="1365">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="10" selection-start="3164" selection-end="3164" vertical-scroll-proportion="-16.833334" vertical-offset="301" max-vertical-offset="3045">
-              <folding>
-                <marker date="1397433297000" expanded="true" signature="2132:2320" placeholder="..." />
-                <marker date="1397433297000" expanded="true" signature="2370:3163" placeholder="..." />
-                <marker date="1397433297000" expanded="true" signature="2383:3152" placeholder="..." />
-                <marker date="1397433297000" expanded="true" signature="3242:3469" placeholder="..." />
-                <marker date="1397433297000" expanded="true" signature="3745:3983" placeholder="{...}" />
-                <marker date="1397433297000" expanded="true" signature="3891:3933" placeholder="/*...*/" />
-                <marker date="1397433297000" expanded="true" signature="4240:4754" placeholder="..." />
-                <marker date="1397433297000" expanded="true" signature="5247:8147" placeholder="..." />
-                <marker date="1397433297000" expanded="false" signature="6086:6095" placeholder="..." />
-                <marker date="1397433297000" expanded="true" signature="6239:6859" placeholder="..." />
-                <marker date="1397433297000" expanded="true" signature="6960:8004" placeholder="..." />
-                <marker date="1397433297000" expanded="true" signature="6994:7939" placeholder="{...}" />
-                <marker date="1397433297000" expanded="true" signature="7048:7390" placeholder="{...}" />
-                <marker date="1397433297000" expanded="true" signature="7074:7359" placeholder="{...}" />
-                <marker date="1397433297000" expanded="true" signature="7137:7335" placeholder="{&quot;id&quot;: 24313723...}" />
-                <marker date="1397433297000" expanded="true" signature="7822:7911" placeholder="{...}" />
-                <marker date="1397433297000" expanded="false" signature="8077:8109" placeholder="..." />
-                <marker date="1397433297000" expanded="true" signature="8219:9095" placeholder="..." />
-                <marker date="1397433297000" expanded="true" signature="8245:9038" placeholder="{...}" />
-                <marker date="1397433297000" expanded="true" signature="8291:8569" placeholder="{...}" />
-                <marker date="1397433297000" expanded="true" signature="8309:8546" placeholder="{...}" />
-                <marker date="1397433297000" expanded="true" signature="8364:8530" placeholder="{&quot;id&quot;: 24313723...}" />
-                <marker date="1397433297000" expanded="true" signature="8945:9018" placeholder="{...}" />
-                <marker date="1397433297000" expanded="false" signature="9160:9192" placeholder="..." />
-                <marker date="1397433297000" expanded="true" signature="9285:9841" placeholder="..." />
-                <marker date="1397433297000" expanded="true" signature="9507:9827" placeholder="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -192,7 +165,6 @@
         <option value="$PROJECT_DIR$/protected/models/VkCache.php" />
         <option value="$PROJECT_DIR$/protected/components/Audio.php" />
         <option value="$PROJECT_DIR$/protected/components/VkAudio.php" />
-        <option value="$PROJECT_DIR$/css/application.css" />
         <option value="$PROJECT_DIR$/protected/views/query/top.php" />
         <option value="$PROJECT_DIR$/protected/views/site/error.php" />
         <option value="$PROJECT_DIR$/protected/views/site/index.php" />
@@ -206,6 +178,7 @@
         <option value="$PROJECT_DIR$/protected/controllers/TrackController.php" />
         <option value="$PROJECT_DIR$/protected/commands/SiteCommand.php" />
         <option value="$PROJECT_DIR$/protected/components/Controller.php" />
+        <option value="$PROJECT_DIR$/css/application.css" />
       </list>
     </option>
   </component>
@@ -638,11 +611,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/components/TagBar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="33" selection-start="485" selection-end="485" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="645" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/LanguageUrlRule.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="7" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1035" />
@@ -845,13 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="18" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1980">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/QueryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="35" selection-start="1467" selection-end="1467" vertical-scroll-proportion="-9.333333" vertical-offset="616" max-vertical-offset="1785">
@@ -877,32 +838,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="10" selection-start="3164" selection-end="3164" vertical-scroll-proportion="-16.833334" vertical-offset="301" max-vertical-offset="3045">
           <folding>
-            <marker date="1397433297000" expanded="true" signature="2132:2320" placeholder="..." />
-            <marker date="1397433297000" expanded="true" signature="2370:3163" placeholder="..." />
-            <marker date="1397433297000" expanded="true" signature="2383:3152" placeholder="..." />
-            <marker date="1397433297000" expanded="true" signature="3242:3469" placeholder="..." />
-            <marker date="1397433297000" expanded="true" signature="3745:3983" placeholder="{...}" />
-            <marker date="1397433297000" expanded="true" signature="3891:3933" placeholder="/*...*/" />
-            <marker date="1397433297000" expanded="true" signature="4240:4754" placeholder="..." />
-            <marker date="1397433297000" expanded="true" signature="5247:8147" placeholder="..." />
-            <marker date="1397433297000" expanded="false" signature="6086:6095" placeholder="..." />
-            <marker date="1397433297000" expanded="true" signature="6239:6859" placeholder="..." />
-            <marker date="1397433297000" expanded="true" signature="6960:8004" placeholder="..." />
-            <marker date="1397433297000" expanded="true" signature="6994:7939" placeholder="{...}" />
-            <marker date="1397433297000" expanded="true" signature="7048:7390" placeholder="{...}" />
-            <marker date="1397433297000" expanded="true" signature="7074:7359" placeholder="{...}" />
-            <marker date="1397433297000" expanded="true" signature="7137:7335" placeholder="{&quot;id&quot;: 24313723...}" />
-            <marker date="1397433297000" expanded="true" signature="7822:7911" placeholder="{...}" />
-            <marker date="1397433297000" expanded="false" signature="8077:8109" placeholder="..." />
-            <marker date="1397433297000" expanded="true" signature="8219:9095" placeholder="..." />
-            <marker date="1397433297000" expanded="true" signature="8245:9038" placeholder="{...}" />
-            <marker date="1397433297000" expanded="true" signature="8291:8569" placeholder="{...}" />
-            <marker date="1397433297000" expanded="true" signature="8309:8546" placeholder="{...}" />
-            <marker date="1397433297000" expanded="true" signature="8364:8530" placeholder="{&quot;id&quot;: 24313723...}" />
-            <marker date="1397433297000" expanded="true" signature="8945:9018" placeholder="{...}" />
-            <marker date="1397433297000" expanded="false" signature="9160:9192" placeholder="..." />
-            <marker date="1397433297000" expanded="true" signature="9285:9841" placeholder="..." />
-            <marker date="1397433297000" expanded="true" signature="9507:9827" placeholder="{...}" />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="{&quot;id&quot;: 24313723...}" />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1397433297000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="{&quot;id&quot;: 24313723...}" />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1397433297000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1397433297000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -961,16 +922,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/commands/SiteCommand.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="1" selection-start="151" selection-end="151" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="255">
+        <state line="123" column="6" selection-start="2735" selection-end="2735" vertical-scroll-proportion="-7.25" vertical-offset="1671" max-vertical-offset="2655">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
+    <entry file="file://$PROJECT_DIR$/css/jquery.mobile-1.4.2.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="47" selection-start="2945" selection-end="2945" vertical-scroll-proportion="0.44748858" vertical-offset="1671" max-vertical-offset="2655">
+        <state line="2" column="38" selection-start="177" selection-end="177" vertical-scroll-proportion="0.04491018" vertical-offset="0" max-vertical-offset="668">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/commands/SiteCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="143" selection-end="143" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="29" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.2863436" vertical-offset="735" max-vertical-offset="2040">
           <folding />
         </state>
       </provider>
