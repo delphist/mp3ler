@@ -137,6 +137,11 @@ class TrackController extends Controller
                     $this->track = new Track;
                     $this->track->data = $data;
 
+                    if(YII_DEBUG)
+                    {
+                        print_r($this->track);
+                    }
+
                     try
                     {
                         $this->track->download(

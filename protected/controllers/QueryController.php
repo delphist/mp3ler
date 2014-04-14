@@ -43,7 +43,9 @@ class QueryController extends Controller
         /**
          * Ищем вконтакте
          */
-        $query->results = new VkAudio($query->text, $page);
+        $vk_audio = new VkAudio($query->text, $page);
+        $vk_audio->flush_cache = TRUE;
+        $query->results = $vk_audio;
 
         /**
          * Сверяем найденные результаты с текстовым запросом,
