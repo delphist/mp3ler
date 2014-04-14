@@ -136,10 +136,28 @@ class TrackController extends Controller
                     $this->track = new Track;
                     $this->track->data = $data;
 
-                    $this->track->download(
-                        NULL,
-                        array($this, '_callback_body')
-                    );
+                    try
+                    {
+                        $this->track->download(
+                            NULL,
+                            array($this, '_callback_body')
+                        );
+                    }
+                    catch(Exception $e)
+                    {
+                        if($e->getMessage() == 'Http code 404')
+                        {
+                            /**
+                             * Теперь выдаем просто 404
+                             */
+
+                            throw new CHttpException(404, 'vK 404 on file ('.$this->track->data['url'].')');
+                        }
+                        else
+                        {
+                            throw $e;
+                        }
+                    }
 
                     $this->track->save();
                 }
