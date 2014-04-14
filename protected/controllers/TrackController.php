@@ -154,6 +154,7 @@ class TrackController extends Controller
 
                             if(YII_DEBUG)
                             {
+                                var_dump($results);
                                 var_dump($this->track);
                                 exit;
                             }

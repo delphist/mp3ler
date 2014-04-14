@@ -44,7 +44,7 @@
       <file leaf-file-name="TrackController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/controllers/TrackController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="37" selection-start="4757" selection-end="4757" vertical-scroll-proportion="0.9104478" vertical-offset="2050" max-vertical-offset="4665">
+            <state line="156" column="51" selection-start="4715" selection-end="4715" vertical-scroll-proportion="0.5074627" vertical-offset="2170" max-vertical-offset="4680">
               <folding />
             </state>
           </provider>
@@ -942,7 +942,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/TrackController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="37" selection-start="4757" selection-end="4757" vertical-scroll-proportion="0.9104478" vertical-offset="2050" max-vertical-offset="4665">
+        <state line="156" column="51" selection-start="4715" selection-end="4715" vertical-scroll-proportion="0.5074627" vertical-offset="2170" max-vertical-offset="4680">
           <folding />
         </state>
       </provider>
