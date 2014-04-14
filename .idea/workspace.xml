@@ -44,7 +44,7 @@
       <file leaf-file-name="TrackController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/controllers/TrackController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="46" selection-start="4185" selection-end="4185" vertical-scroll-proportion="0.69720495" vertical-offset="1666" max-vertical-offset="4650">
+            <state line="157" column="29" selection-start="4749" selection-end="4749" vertical-scroll-proportion="0.9104478" vertical-offset="2050" max-vertical-offset="4650">
               <folding />
             </state>
           </provider>
@@ -569,7 +569,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42213115" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42213115" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -942,7 +942,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/TrackController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="46" selection-start="4185" selection-end="4185" vertical-scroll-proportion="0.69720495" vertical-offset="1666" max-vertical-offset="4650">
+        <state line="157" column="29" selection-start="4749" selection-end="4749" vertical-scroll-proportion="0.9104478" vertical-offset="2050" max-vertical-offset="4650">
           <folding />
         </state>
       </provider>
