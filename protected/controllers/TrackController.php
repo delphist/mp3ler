@@ -93,7 +93,7 @@ class TrackController extends Controller
                  * Если загрузка не получилась, то находим в VK
                  * трек с таким же названием и пытаемся скачать его
                  */
-                $title = $this->track->artist_title.' - '.$this->track->title;
+                $title = $this->normalizeQuery($this->track->artist_title.' - '.$this->track->title);
                 $vk_audio = new VkAudio($title);
                 $results = $vk_audio->results();
 
@@ -104,7 +104,7 @@ class TrackController extends Controller
                 $found_result = NULL;
                 foreach($results as $result)
                 {
-                    if($result['artist_title'].' - '.$result['title'] == $title)
+                    if($this->normalizeQuery($result['artist_title'].' - '.$result['title']) == $title)
                     {
                         $found_result = $result;
                         break;
@@ -117,7 +117,7 @@ class TrackController extends Controller
                 if($found_result === NULL)
                 {
                     reset($results);
-                    $found_result = current($results);
+                    $found_result = $results[0];
                 }
 
                 $found_track = Track::model()->findByData($found_result);
