@@ -121,6 +121,12 @@ class TrackController extends Controller
                     $found_result = $results[0];
                 }
 
+                if(YII_DEBUG)
+                {
+                    var_dump($found_result);
+                    exit;
+                }
+
                 $found_track = Track::model()->findByData($found_result);
                 if($found_track !== NULL)
                 {
@@ -151,13 +157,6 @@ class TrackController extends Controller
                             /**
                              * Теперь выдаем просто 404
                              */
-
-                            if(YII_DEBUG)
-                            {
-                                var_dump($results);
-                                var_dump($this->track);
-                                exit;
-                            }
 
                             throw new CHttpException(404, 'vK 404 on file ('.$this->track->data['url'].')');
                         }
