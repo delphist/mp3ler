@@ -95,6 +95,7 @@ class TrackController extends Controller
                  */
                 $title = $this->normalizeQuery($this->track->artist_title.' - '.$this->track->title);
                 $vk_audio = new VkAudio($title);
+                $vk_audio->flush_cache = TRUE;
                 $results = $vk_audio->results();
 
                 /**

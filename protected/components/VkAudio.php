@@ -31,6 +31,11 @@ class VkAudio extends Audio
     protected $cache_changed = FALSE;
 
     /**
+     * @var bool Пометка о том, что нужно обновить кеш
+     */
+    public $flush_cache = FALSE;
+
+    /**
      * Сначала проверяет, сохранены ли результаты поиска в кеше
      * (используется таблица mysql) и выдает результаты оттуда,
      * если кеш не найден то выполняет запрос к API вконтакте,
@@ -63,6 +68,15 @@ class VkAudio extends Audio
             }
 
             $this->results = $this->cache->response;
+        }
+
+        if($this->flush_cache)
+        {
+            /**
+             * Обнуляем результаты если была пометка о сбросе кеша
+             */
+
+            $this->results = new Results;
         }
 
         if( ! count($this->results))
