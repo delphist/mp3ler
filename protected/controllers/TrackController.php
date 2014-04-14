@@ -121,12 +121,6 @@ class TrackController extends Controller
                     $found_result = $results[0];
                 }
 
-                if(YII_DEBUG)
-                {
-                    var_dump($found_result);
-                    exit;
-                }
-
                 $found_track = Track::model()->findByData($found_result);
                 if($found_track !== NULL)
                 {
@@ -141,7 +135,7 @@ class TrackController extends Controller
                      * Если же такого трека нет в базе, то качаем прямо в этом процессе
                      */
                     $this->track = new Track;
-                    $this->track->data = $data;
+                    $this->track->data = $found_result;
 
                     try
                     {
