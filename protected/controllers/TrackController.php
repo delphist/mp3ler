@@ -5,7 +5,7 @@ class TrackController extends Controller
     public function filters()
     {
         return array(
-            'languageControl',
+            'languageControl', 'languageRedirect -vkId'
         );
     }
 

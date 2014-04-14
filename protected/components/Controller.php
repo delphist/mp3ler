@@ -142,6 +142,7 @@ class Controller extends CController
     }
 
     /**
+     * Устанавливает системный язык
      *
      * @param $filterChain
      */
@@ -158,6 +159,16 @@ class Controller extends CController
             $this->setLanguage(Yii::app()->request->cookies['dil']->value);
         }
 
+        $filterChain->run();
+    }
+
+    /**
+     * Выполняет редирект на страницу с правильным адресом дял текущего языка
+     *
+     * @param $filterChain
+     */
+    public function filterLanguageRedirect($filterChain)
+    {
         if(isset($_GET['lang']) && $_GET['lang'] == Yii::app()->params['default_language'])
         {
             $this->redirect($this->createLanguageUrl(NULL));

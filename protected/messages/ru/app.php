@@ -16,4 +16,6 @@ return array(
     'Pause' => 'Пауза',
     'Next page' => 'Следующая страница',
     'Previous page' => 'Предыдущая страница',
+    'Error {code}' => 'Ошибка {code}',
+    'Sorry, try later.' => 'Пожалуйста, попробуйте позже.',
 );

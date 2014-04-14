@@ -50,7 +50,8 @@ return array(
                 'search.php' => 'query/top',
                 'x.php' => 'site/partner',
                 'wmall.php' => 'site/partnerInfo',
-                '<vkid:\d+_\d+>' => 'track/vkId',
+                '<vkid:[\d\-]+_[\d\-]+>' => 'track/vkId',
+                'mp3/<vkid:[\d\-]+_[\d\-]+>.php' => 'track/vkId',
 			),
 		),
         'cache' => array(
