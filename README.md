@@ -34,15 +34,15 @@ Mp3ler
 Ключи Redis
 -----------
 * **Общая информация о кликах**
-    * `t:t:{id}` (transition : time) — сортированный список (sorted set) **засчитанных кликов**, где score — таймстамп клика, member — идентификатор клика
-    * `nct:t:{id}` (not counted transition : time) — сортированный список (sorted set) **не засчитанных кликов**, где score — таймстамп клика, member — идентификатор клика
+    * `t:t` (transition : time) — сортированный список (sorted set) **засчитанных кликов**, где score — таймстамп клика, member — идентификатор клика
+    * `nct:t` (not counted transition : time) — сортированный список (sorted set) **не засчитанных кликов**, где score — таймстамп клика, member — идентификатор клика
 * **Информация о кликах для партнера**
     * `p:t:ip:{id}` (partner transition ip)  — множество (set) уникальных ip засчитанных кликов для партнера `{id}` за все время
     * `p:t:t:{id}` (partner : transition : time) — сортированный список (sorted set) **засчитанных кликов** партнера `{id}`, где score — таймстамп клика, member — идентификатор клика
     * `p:nct:t:{id}` (partner : not counted transition : time) — сортированный список (sorted set) **не засчитанных кликов** партнера `{id}`, где score — таймстамп клика, member — идентификатор клика
 * **Клики**
     * `t:ar` (transition autoincrement) — числовое поле для автоинкремента id кликов
-    * `t:i:{part_id}` (transition info) — хеш (hash) с данными о кликах (всех) партнера, где field — идентификатор клика, member — json-обьект с данными. {part_id} используется для оптимизации памяти ([подробнее о способе][1])
+    * `t:i` (transition info) — хеш (hash) с данными о кликах (всех) партнера, где field — идентификатор клика, member — json-обьект с данными. TODO: ([сделать так][1])
 
 
   [1]: http://instagram-engineering.tumblr.com/post/12202313862/storing-hundreds-of-millions-of-simple-key-value-pairs
