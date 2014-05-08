@@ -5,7 +5,7 @@ class SiteController extends Controller
     public function filters()
     {
         return array(
-            'languageControl', 'languageRedirect -error'
+            'languageControl', 'languageRedirect -error', 'transitionControl -error'
         );
     }
 

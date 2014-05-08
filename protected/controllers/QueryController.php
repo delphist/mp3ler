@@ -5,7 +5,7 @@ class QueryController extends Controller
     public function filters()
     {
         return array(
-            'languageControl', 'languageRedirect'
+            'languageControl', 'languageRedirect', 'transitionControl'
         );
     }
 
@@ -72,7 +72,7 @@ class QueryController extends Controller
          * в нем изменилось количество найденных результатов
          */
         $check = preg_match('/^[\w\d\s\.\(\)\-\!\;\%\&\*\+\_\/\[\]\<\>]+$/isu', $query->text);
-        if($check)
+        if($check && $track === NULL)
         {
             /**
              * Сохраняем запрос в том случае если он состоит из слов, цифр

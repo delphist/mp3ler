@@ -30,6 +30,7 @@
         });
     </script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile-1.4.2.min.js" type="text/javascript"></script>
+    <script src='http://my.mobfox.com/ad.js'></script>
 </head>
 <body class="ui-mobile-viewport ui-overlay-a">
 <div data-role="page" class="page" data-quicklinks="true">
@@ -78,6 +79,8 @@
         'query' => $this->searchQuery,
     )); ?>
 
+    <?=$this->renderPartial('/default/_banner')?>
+
     <div role="main" class="ui-content">
         <?php echo $content; ?>
 
@@ -90,6 +93,8 @@
 
         <?php $this->widget('application.components.SocialBar'); ?>
     </div>
+
+    <?=$this->renderPartial('/default/_banner')?>
 
     <?php $this->widget('application.components.SearchBar', array(
         'query' => $this->searchQuery,

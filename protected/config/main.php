@@ -1,87 +1,60 @@
 <?php
 
-return array(
-	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name' => 'Mp3ler.biz',
-    'sourceLanguage' => 'en',
-    'language' => 'en',
-    'preload' => array('log'),
-	'import'=>array(
-		'application.models.*',
-        'application.models.vk.*',
-		'application.components.*',
-        'application.vendors.*'
-	),
-    'params' => array(
-        'default_language' => 'tr',
-    ),
-	'modules' => array(
-		'gii' => array(
-			'class' => 'system.gii.GiiModule',
-			'password' => '123',
-			'ipFilters' => array('127.0.0.1','::1'),
-		),
-	),
-	'components'=>array(
-        'request' => array(
-            //'baseUrl' => 'http://'.$_SERVER['HTTP_HOST'],
+return CMap::mergeArray(
+    require(dirname(__FILE__).'/environment.php'),
+    array(
+        'basePath' => dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
+        'name' => 'Mp3ler.biz',
+        'sourceLanguage' => 'en',
+        'language' => 'en',
+        'preload' => array('log'),
+        'import'=>array(
+            'application.models.*',
+            'application.models.vk.*',
+            'application.components.*',
+            'application.vendors.*',
+            'application.extensions.redis.*',
         ),
-		'user'=>array(
-			'allowAutoLogin'=>true,
-		),
-        'captchaSolver'=>array(
-            'class' => 'application.components.Antigate',
-        ),
-		'urlManager' => array(
-			'urlFormat' => 'path',
-            'showScriptName' => false,
-			'rules' => array(
-                /**
-                 * Часть адресов пришлось роутить через кастомные правила,
-                 * потому что нужно было сохранять структуру адресов предыдущей
-                 * версии сайта
-                 */
+        'params' => CMap::mergeArray(
+                require(dirname(__FILE__).'/params.php'),
                 array(
-                    /** Поисковые запросы */
-                    'class' => 'application.components.QueryUrlRule',
-                ),
-				'download/<filename:.*?\.mp3>' => 'track/download',
-                'top.php' => 'track/top',
-                'search.php' => 'query/top',
-                'x.php' => 'site/partner',
-                'wmall.php' => 'site/partnerInfo',
-                '<vkid:[\d\-]+_[\d\-]+>' => 'track/vkId',
-                'mp3/<vkid:[\d\-]+_[\d\-]+>.php' => 'track/vkId',
-			),
-		),
-        'cache' => array(
-            'class' => 'system.caching.CMemCache',
-            'servers' => array(
-                array('host' => 'localhost', 'port' => 11211, 'weight' => 60),
+                    'default_language' => 'tr',
+                    'languages' => array('ru', 'en', 'az', 'tr', 'ge'),
+                )
             ),
-        ),
-		'db' => array(
-			'connectionString' => 'mysql:host=localhost;dbname=mp3ler',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
-			'charset' => 'utf8',
-		),
-		'errorHandler'=>array(
-			'errorAction' => 'site/error',
-		),
-        'log' => array(
-            'class'=>'CLogRouter',
-            'routes'=>array(
-                array(
-                    'class' => 'CFileLogRoute',
-                    'levels' => 'error, warning',
-                ),
-                array(
-                    'class' => 'CWebLogRoute',
-                    'enabled' => isset($_GET['debug_mode_28f'])
+        'components'=>array(
+            'user'=>array(
+                'class' => 'WebUser',
+                'allowAutoLogin'=>true,
+                'loginUrl' => array('/user/login'),
+            ),
+            'request' => array(
+                //'baseUrl' => 'http://'.$_SERVER['HTTP_HOST'],
+            ),
+            'transitionStatistics' => array(
+                'class' => 'application.components.TransitionStatistics',
+            ),
+            "redis" => require(dirname(__FILE__).'/redis.php'),
+            'captchaSolver' => require(dirname(__FILE__).'/captcha.php'),
+            'urlManager' => require(dirname(__FILE__).'/urls.php'),
+            'cache' => require(dirname(__FILE__).'/cache.php'),
+            'db' => require(dirname(__FILE__).'/database.php'),
+            'errorHandler' => array(
+                'errorAction' => 'site/error',
+            ),
+            'log' => array(
+                'class' => 'CLogRouter',
+                'routes' => array(
+                    array(
+                        'class' => 'CFileLogRoute',
+                        'levels' => 'error, warning',
+                    ),
+                    array(
+                        'class' => 'CWebLogRoute',
+                        'enabled' => YII_DEBUG,
+                    ),
                 ),
             ),
         ),
-	),
+    )
 );

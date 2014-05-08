@@ -5,7 +5,7 @@ class TrackController extends Controller
     public function filters()
     {
         return array(
-            'languageControl', 'languageRedirect -vkId'
+            'languageControl', 'languageRedirect -vkId', 'transitionControl'
         );
     }
 
@@ -13,6 +13,15 @@ class TrackController extends Controller
      * @var Track обьект трека
      */
     protected $track;
+
+    /**
+     * Использовать ли streaming при первой загрузке файла?
+     * Дело в том что это очень сильно плодит процессы, и в зависимости от
+     * конфигурации сервера эту переменную нужно менять
+     *
+     * @var bool
+     */
+    protected $streaming = TRUE;
 
     /**
      * Скачивание файла с сервера
@@ -27,7 +36,7 @@ class TrackController extends Controller
          * докачаться и сохраниться в базу
          */
         ignore_user_abort(TRUE);
-        set_time_limit(60 * 2);
+        set_time_limit(60);
         ini_set('memory_limit', '256M');
 
         /**
@@ -60,7 +69,8 @@ class TrackController extends Controller
             {
                 $result = $this->track->download(
                     NULL,
-                    array($this, '_callback_body')
+                    array($this, '_callback_body'),
+                    array($this, '_callback_end')
                 );
             }
             catch(Exception $e)
@@ -78,16 +88,7 @@ class TrackController extends Controller
                 }
             }
 
-            if($result)
-            {
-                /**
-                 * При удачной загрузке сохраняем в базу и закрываем коннект
-                 */
-                $this->track->save();
-
-                Yii::app()->end();
-            }
-            else
+            if( ! $result)
             {
                 /**
                  * Если загрузка не получилась, то находим в VK
@@ -141,7 +142,8 @@ class TrackController extends Controller
                     {
                         $this->track->download(
                             NULL,
-                            array($this, '_callback_body')
+                            array($this, '_callback_body'),
+                            array($this, '_callback_end')
                         );
                     }
                     catch(Exception $e)
@@ -152,16 +154,16 @@ class TrackController extends Controller
                              * Теперь выдаем просто 404
                              */
 
-                            throw new CHttpException(404, 'vK 404 on file ('.$this->track->data['url'].')');
+                            throw new CHttpException(404, 'VK 404 on file ('.$this->track->data['url'].')');
                         }
                         else
                         {
                             throw $e;
                         }
                     }
-
-                    $this->track->save();
                 }
+
+                Yii::app()->end();
             }
 
         }
@@ -250,10 +252,39 @@ class TrackController extends Controller
     }
 
     /**
+     * Коллбек, срабатывающий при удачной загрузке файла
+     *
+     * @param $curl дескриптор cURL
+     */
+    public function _callback_end($curl)
+    {
+        /**
+         * При удачной загрузке сохраняем в базу
+         */
+        $this->track->save();
+
+        if( ! $this->streaming)
+        {
+            if(YII_DEBUG)
+            {
+                echo 'header(\'X-Accel-Redirect: \'.'.$this->track->fileUrl.');';
+            }
+            else
+            {
+                /**
+                 * На продакшене при отключенном стриминге
+                 * посылаем заголовок чтобы файлом занимался nginx
+                 */
+                header('X-Accel-Redirect: '.$this->track->fileUrl);
+            }
+        }
+    }
+
+    /**
      * Коллбек, срабатывающий при чтении каждой части файла CURL'ом
      *
-     * @param $curl
-     * @param $string
+     * @param $curl дескриптор cURL
+     * @param $string часть файла
      */
     public function _callback_body($curl, $string)
     {
@@ -265,15 +296,21 @@ class TrackController extends Controller
         {
             $this->_send_headers(curl_getinfo($curl, CURLINFO_CONTENT_LENGTH_DOWNLOAD), $this->track->filename);
 
-            ob_start();
+            if($this->streaming)
+            {
+                ob_start();
+            }
         }
 
-        /**
-         * Посылаем часть файла браузеру
-         */
-        echo $string;
+        if($this->streaming)
+        {
+            /**
+             * Посылаем часть файла браузеру в случае стриминга
+             */
+            echo $string;
 
-        $this->_flush();
+            $this->_flush();
+        }
     }
 
     protected function _send_headers($length, $filename)

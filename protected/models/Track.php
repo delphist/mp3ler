@@ -14,8 +14,10 @@
 class Track extends CActiveRecord
 {
     protected $_filepointer;
+
     protected $_header_callback;
     protected $_body_callback;
+    protected $_end_callback;
 
     public function tableName()
     {
@@ -53,15 +55,17 @@ class Track extends CActiveRecord
      *
      * @param callable $header_callback
      * @param callable $body_callback
+     * @param callable $end_callback
      * @return bool статус закачки файла
      */
-    public function download(callable $header_callback = NULL, callable $body_callback = NULL)
+    public function download(callable $header_callback = NULL, callable $body_callback = NULL, callable $end_callback = NULL)
     {
         $this->file = $this->storageFileName;
 
         $this->_filepointer = NULL;
         $this->_header_callback = $header_callback;
         $this->_body_callback = $body_callback;
+        $this->_end_callback = $end_callback;
 
         try
         {
@@ -82,12 +86,13 @@ class Track extends CActiveRecord
                 CURLOPT_FOLLOWLOCATION => TRUE,
                 CURLOPT_AUTOREFERER => TRUE,
                 CURLOPT_FAILONERROR => TRUE,
-                CURLOPT_TIMEOUT => 60,
+                CURLOPT_TIMEOUT => 30,
                 CURLOPT_HEADERFUNCTION => array($this, '_download_header_callback'),
                 CURLOPT_WRITEFUNCTION => array($this, '_download_body_callback'),
             ));
 
             $result = curl_exec($curl);
+
             if($this->_filepointer != NULL)
             {
                 fclose($this->_filepointer);
@@ -99,6 +104,11 @@ class Track extends CActiveRecord
             if($code !== 200)
             {
                 throw new Exception('Http code '.$code);
+            }
+
+            if(is_callable($this->_end_callback))
+            {
+                call_user_func($this->_end_callback, $curl);
             }
         }
         catch(Exception $e)

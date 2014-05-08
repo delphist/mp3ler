@@ -35,6 +35,11 @@ class Controller extends CController
     public $isH1 = TRUE;
 
     /**
+     * @var User обьект партнера
+     */
+    public $partner;
+
+    /**
      * @var array Список доступных языков
      */
     public $possible_languages = array('en', 'ru', 'az', 'tr', 'ge');
@@ -177,6 +182,45 @@ class Controller extends CController
         {
             $this->redirect($this->createLanguageUrl(Yii::app()->language));
         }
+
+        $filterChain->run();
+    }
+
+    /**
+     * Определяет и записывает переход с партнерки
+     *
+     * @param $filterChain
+     */
+    public function filterTransitionControl($filterChain)
+    {
+        if(isset($_GET['ref']))
+        {
+            $this->partner = User::model()->findByAttributes(array(
+                'sitename' => $_GET['ref']
+            ));
+
+            if($this->partner !== NULL)
+            {
+                Yii::app()->transitionStatistics->commit($_SERVER['REMOTE_ADDR'], $this->partner->id);
+            }
+        }
+
+        $filterChain->run();
+    }
+
+    /**
+     * @var array данные о графике кликов
+     */
+    public $transitionChartData;
+
+    /**
+     * Обрабатывает информацию о данных графика кликов партнера
+     *
+     * @param $filterChain
+     */
+    public function filterTransitionChart($filterChain)
+    {
+        $this->transitionChartData = Yii::app()->transitionStatistics->parsePeriodName($_GET['periodName']);
 
         $filterChain->run();
     }
