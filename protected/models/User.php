@@ -44,7 +44,7 @@ class User extends CActiveRecord
     {
         return array(
             array('hashed_password', 'unsafe'),
-            array('username, email, hashedPassword, group', 'required'),
+            array('username, email, hashed_password, group', 'required'),
             array('username', 'length', 'max' => 20, 'min' => 3),
             array('password', 'length', 'max' => 150, 'min' => 5),
             array('email', 'email'),
