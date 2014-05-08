@@ -220,6 +220,11 @@ class Controller extends CController
      */
     public function filterTransitionChart($filterChain)
     {
+        if( ! isset($_GET['periodName']))
+        {
+            $_GET['periodName'] = 'today';
+        }
+
         $this->transitionChartData = Yii::app()->transitionStatistics->parsePeriodName($_GET['periodName']);
 
         $filterChain->run();
