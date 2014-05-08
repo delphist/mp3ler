@@ -41,8 +41,20 @@ class PartnerController extends Controller
 
     public function actionPayouts()
     {
-        $this->render('payouts', array(
+        $criteria = new CDbCriteria(array(
+            'order' => 'id DESC',
+            'condition' => '`user_id`=:partnerId',
+            'params' => array('partnerId' => Yii::app()->user->model()->id)
+        ));
 
+        $pages = new CPagination(Payout::model()->count($criteria));
+        $pages->pageSize = 10;
+        $pages->applyLimit($criteria);
+
+        $payouts = Payout::model()->findAll($criteria);
+
+        $this->render('payouts', array(
+            'payouts' => $payouts,
         ));
     }
 

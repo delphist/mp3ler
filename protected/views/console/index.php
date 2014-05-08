@@ -1,3 +1,7 @@
+<?php
+$this->pageTitle = Yii::t('app', 'Console');
+?>
+
 <?=$this->renderPartial('_header')?>
 
     <div class="row marketing">

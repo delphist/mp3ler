@@ -120,15 +120,41 @@ class ConsoleController extends Controller
 
     public function actionPayout($id = NULL)
     {
+        $user = NULL;
+
         if($id != NULL)
         {
-            $partner = User::model()->findByPk($id);
+            $user = User::model()->findByPk($id);
         }
 
-        $payout = $partner->createPayout();
+        if($user === NULL)
+        {
+            throw new CHttpException(404);
+        }
+
+        if(isset($_POST['Payout']))
+        {
+            $model = new Payout;
+            $model->attributes = $_POST['Payout'];
+            $model->user_id = $user->id;
+            $model->is_payed = 1;
+            $model->payed_at = new CDbExpression('NOW()');
+            $model->calculateAmount();
+
+            if($model->validate())
+            {
+                $model->save();
+
+                $this->redirect($this->createUrl('console/partner', array('id' => $user->id)));
+            }
+        }
+        else
+        {
+            $model = $user->createPayout();
+        }
 
         $this->render('payout', array(
-            'payout' => $payout
+            'model' => $model
         ));
     }
 }

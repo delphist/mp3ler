@@ -111,6 +111,11 @@ class User extends CActiveRecord
         return $this->createPayout()->calculateAmount()->amount;
     }
 
+    public function getLastPayoutTimestamp()
+    {
+        return CDateTimeParser::parse($this->lastPayoutDate, 'yyyy-MM-dd hh:mm:ss');
+    }
+
     /**
      * Создает новую выплату
      *
@@ -119,9 +124,9 @@ class User extends CActiveRecord
     public function createPayout()
     {
         $model = new Payout;
-        $model->start_date = $this->lastPayoutDate;
-        $model->end_date = time();
-        $model->partner = $this;
+        $model->startDateTimestamp = $this->lastPayoutTimestamp;
+        $model->endDateTimestamp = time();
+        $model->user_id = $this->id;
         $model->calculateAmount();
 
         return $model;

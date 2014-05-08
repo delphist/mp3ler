@@ -1,3 +1,7 @@
+<?php
+$this->pageTitle = Yii::t('app', 'Partners');
+?>
+
 <?=$this->renderPartial('_header')?>
 
 <?=$this->renderPartial('//partner/_chart_block', array(

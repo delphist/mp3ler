@@ -1,3 +1,7 @@
+<?php
+$this->pageTitle = Yii::t('app', 'Partner :partner', array(':partner' => $partner->sitename));
+?>
+
 <?=$this->renderPartial('_header')?>
 
     <div class="row marketing">
@@ -63,7 +67,8 @@
                     <?php foreach($payouts as $payout) { ?>
                         <tr>
                             <td><?=$payout->id?></td>
-                            <td><?=date('d-m-Y H:i:s', $payout->start_date)?> — <?=date('d-m-Y H:i:s', $payout->end_date)?></a></td>
+                            <td><?=$payout->startDateTimestamp ? date('d-m-Y H:i:s', $payout->startDateTimestamp) : 'Start'?> — <?=date('d-m-Y H:i:s', $payout->endDateTimestamp)?></a></td>
+                            <td><?=$payout->transitions?></td>
                             <td><?=$payout->amount?> $</td>
                         </tr>
                     <?php } ?>
