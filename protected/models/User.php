@@ -63,7 +63,7 @@ class User extends CActiveRecord
     public function setPassword($value)
     {
         $this->_password = $value;
-        $this->hashedPassword = sha1($value);
+        $this->hashed_password = sha1($value);
     }
 
     /**

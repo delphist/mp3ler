@@ -1,3 +1,6 @@
+<?php
+$this->pageTitle = Yii::t('app', 'Login');
+?>
 <div class="container">
     <?=CHtml::beginForm('', 'post', array('class' => 'form-signin', 'role' => 'form'))?>
     <h2 class="form-signin-heading"><?=Yii::t('app', 'Enter')?></h2>

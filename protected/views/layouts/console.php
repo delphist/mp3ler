@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> — Mp3ler</title>
+    <title><?php echo CHtml::encode($this->pageTitle) ?> — Mp3ler</title>
 
     <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?=Yii::app()->request->baseUrl?>/css/user.css" />

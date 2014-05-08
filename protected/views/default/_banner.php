@@ -1,5 +1,5 @@
 <?php
-$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+$ua = isset($_SERVER['HTTP_USER_AGENT']) ? strtolower($_SERVER['HTTP_USER_AGENT']) : '';
 $link = 'http://val.mobi';
 $target=" target=\"_blank\"";
 if(stripos($ua,'android') !== false) { // && stripos($ua,'mobile') !== false) {
