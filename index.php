@@ -1,5 +1,4 @@
 <?php
-
 $links = array(
     '/?query=kid+rock+celebrate+wrestlemania+30&lang=az',
     '/?query=WWE+WrestleMania+XXX+30+2014+2+Legacy+by+Eminem',
@@ -36,7 +35,7 @@ if(strpos($_SERVER['HTTP_HOST'], 'localhost') === 0)
 }
 else
 {
-    define('YII_DEBUG', isset($_COOKIES['debug_mode_28f']));
+    define('YII_DEBUG', isset($_COOKIE['debug_mode_28f']));
 }
 
 require_once($webRoot.'/../framework/yii.php');

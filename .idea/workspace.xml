@@ -32,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="1" selection-start="494" selection-end="494" vertical-scroll-proportion="-6.0416665" vertical-offset="95" max-vertical-offset="750">
+            <state line="37" column="38" selection-start="951" selection-end="951" vertical-scroll-proportion="0.5955056" vertical-offset="290" max-vertical-offset="735">
               <folding />
             </state>
           </provider>
@@ -74,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsoleController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ConsoleController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="46" selection-start="4540" selection-end="4540" vertical-scroll-proportion="0.8167939" vertical-offset="2060" max-vertical-offset="2715">
+            <state line="144" column="50" selection-start="3739" selection-end="3739" vertical-scroll-proportion="-4.1666665" vertical-offset="2060" max-vertical-offset="2715">
               <folding />
             </state>
           </provider>
@@ -143,7 +143,6 @@
         <option value="$PROJECT_DIR$/protected/config/redis.example.php" />
         <option value="$PROJECT_DIR$/protected/config/database.example.php" />
         <option value="$PROJECT_DIR$/protected/config/params.example.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/protected/controllers/QueryController.php" />
         <option value="$PROJECT_DIR$/protected/views/partner/settings.php" />
         <option value="$PROJECT_DIR$/protected/views/default/_banner.php" />
@@ -180,6 +179,7 @@
         <option value="$PROJECT_DIR$/protected/components/TransitionChart.php" />
         <option value="$PROJECT_DIR$/protected/components/views/transitionChart.php" />
         <option value="$PROJECT_DIR$/protected/controllers/ConsoleController.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -754,7 +754,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28767124" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28767124" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1129,13 +1129,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="1" selection-start="494" selection-end="494" vertical-scroll-proportion="-6.0416665" vertical-offset="95" max-vertical-offset="750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="122" column="0" selection-start="2650" selection-end="2650" vertical-scroll-proportion="-19.791666" vertical-offset="1355" max-vertical-offset="4125">
@@ -1152,7 +1145,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="46" selection-start="4540" selection-end="4540" vertical-scroll-proportion="0.8167939" vertical-offset="2060" max-vertical-offset="2715">
+        <state line="144" column="50" selection-start="3739" selection-end="3739" vertical-scroll-proportion="-4.1666665" vertical-offset="2060" max-vertical-offset="2715">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="38" selection-start="951" selection-end="951" vertical-scroll-proportion="0.5955056" vertical-offset="290" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
