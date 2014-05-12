@@ -41,19 +41,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Controller.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="5" selection-start="4859" selection-end="4859" vertical-scroll-proportion="-3.5416667" vertical-offset="3050" max-vertical-offset="4125">
+            <state line="135" column="53" selection-start="2983" selection-end="2983" vertical-scroll-proportion="0.7480916" vertical-offset="1535" max-vertical-offset="4125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransitionStatistics.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TransitionStatistics.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="212" column="5" selection-start="6893" selection-end="6893" vertical-scroll-proportion="0.19847329" vertical-offset="3050" max-vertical-offset="4500">
+            <state line="216" column="6" selection-start="6971" selection-end="6971" vertical-scroll-proportion="-7.9166665" vertical-offset="3050" max-vertical-offset="4500">
               <folding />
             </state>
           </provider>
@@ -178,8 +178,8 @@
         <option value="$PROJECT_DIR$/protected/components/views/transitionChart.php" />
         <option value="$PROJECT_DIR$/protected/controllers/ConsoleController.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/protected/components/Controller.php" />
         <option value="$PROJECT_DIR$/protected/components/TransitionStatistics.php" />
+        <option value="$PROJECT_DIR$/protected/components/Controller.php" />
       </list>
     </option>
   </component>
@@ -1143,16 +1143,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="5" selection-start="4859" selection-end="4859" vertical-scroll-proportion="-3.5416667" vertical-offset="3050" max-vertical-offset="4125">
+        <state line="216" column="6" selection-start="6971" selection-end="6971" vertical-scroll-proportion="-7.9166665" vertical-offset="3050" max-vertical-offset="4500">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="212" column="5" selection-start="6893" selection-end="6893" vertical-scroll-proportion="0.19847329" vertical-offset="3050" max-vertical-offset="4500">
+        <state line="135" column="53" selection-start="2983" selection-end="2983" vertical-scroll-proportion="0.7480916" vertical-offset="1535" max-vertical-offset="4125">
           <folding />
         </state>
       </provider>

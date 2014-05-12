@@ -133,7 +133,7 @@ class Controller extends CController
 
         if($this->partner)
         {
-            $params['ref'] = $this->partner;
+            $params['ref'] = $this->partner->sitename;
         }
 
         return parent::createUrl($route, $params, $ampersand);
