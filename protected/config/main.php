@@ -25,8 +25,9 @@ return CMap::mergeArray(
         'components'=>array(
             'user'=>array(
                 'class' => 'WebUser',
-                'allowAutoLogin'=>true,
+                'allowAutoLogin' => TRUE,
                 'loginUrl' => array('/user/login'),
+                'returnUrl' => array('/user/index'),
             ),
             'request' => array(
                 //'baseUrl' => 'http://'.$_SERVER['HTTP_HOST'],

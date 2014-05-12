@@ -39,13 +39,21 @@ class LoginForm extends CFormModel
         );
     }
 
+    public function attributeLabels()
+    {
+        return array(
+            'username' => Yii::t('app', 'Sitename'),
+            'password' => Yii::t('app', 'Password'),
+        );
+    }
+
     public function authenticate($attribute, $params)
     {
         $this->identity = new UserIdentity($this->username, $this->password);
 
         if( ! $this->identity->authenticate())
         {
-            $this->addError('password', 'Incorrect password');
+            $this->addError('password', Yii::t('app', 'Incorrect password'));
         }
     }
 

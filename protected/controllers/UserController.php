@@ -7,6 +7,12 @@ class UserController extends Controller
 {
     public $layout = '//layouts/console';
 
+    public $defaultLanguage = 'en';
+
+    public $possibleLanguages = array('en', 'ru');
+
+    public $languageCookieName = 'partnerLanguage';
+
     public function filters()
     {
         return array(
@@ -61,7 +67,7 @@ class UserController extends Controller
             {
                 $model->login();
 
-                $this->redirect(Yii::app()->user->returnUrl);
+                $this->redirect(array('user/index'));
             }
         }
 

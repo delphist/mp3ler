@@ -130,3 +130,11 @@ body {
 .table-borderless td {
     border: none !important;
 }
+
+.datepicker div table {
+    margin: 0 auto;
+}
+
+.yiiLog {
+    display: none;
+}

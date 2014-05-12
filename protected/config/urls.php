@@ -14,6 +14,11 @@ return array(
         ),
 
         /**
+         * Главная
+         */
+        '/' => 'site/index',
+
+        /**
          * Скачивание файла
          */
         'download/<filename:.*?\.mp3>' => 'track/download',
@@ -47,8 +52,13 @@ return array(
         'partner/<action:\w+>' => 'partner/<action>',
 
         /**
-         * Панель юзер
+         * Панель юзера
          */
         'user/<action:\w+>' => 'user/<action>',
+
+        /**
+         * Консоль
+         */
+        'console/<action:\w+>' => 'console/<action>',
     ),
 );

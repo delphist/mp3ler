@@ -13,11 +13,11 @@ $this->pageTitle = Yii::t('app', 'Partner :partner', array(':partner' => $partne
                 <div class="panel-body">
                     <table class="table table-borderless" style="margin-bottom: 0px;">
                         <tr>
-                            <td class="col-lg-2"><?=Yii::t('app', 'Login:')?></td>
+                            <td class="col-lg-3"><?=Yii::t('app', 'Login:')?></td>
                             <td><?=$partner->username?></td>
                         </tr>
                         <tr>
-                            <td class="col-lg-2"><?=Yii::t('app', 'Sitename:')?></td>
+                            <td class="col-lg-3"><?=Yii::t('app', 'Sitename:')?></td>
                             <td><a href="<?=$partner->siteurl?>"><?=CHtml::encode($partner->sitename)?></a></td>
                         </tr>
                         <tr>
@@ -25,11 +25,11 @@ $this->pageTitle = Yii::t('app', 'Partner :partner', array(':partner' => $partne
                             <td><a href="mailto:<?=$partner->email?>"><?=CHtml::encode($partner->email)?></a></td>
                         </tr>
                         <tr>
-                            <td class="col-lg-2"><?=Yii::t('app', 'Payed:')?></td>
+                            <td class="col-lg-3"><?=Yii::t('app', 'Payed:')?></td>
                             <td><?=$partner->totalPayed?> $</td>
                         </tr>
                         <tr>
-                            <td class="col-lg-2"><?=Yii::t('app', 'Not payed:')?></td>
+                            <td class="col-lg-3"><?=Yii::t('app', 'Not payed:')?></td>
                             <td><?=$partner->totalUnpayed?> $</td>
                         </tr>
                     </table>
@@ -41,6 +41,7 @@ $this->pageTitle = Yii::t('app', 'Partner :partner', array(':partner' => $partne
 <?=$this->renderPartial('//partner/_chart_block', array(
     'periodData' => $this->transitionChartData,
     'partner' => $partner,
+    'chartLists' => array('countable', 'notcountable'),
 ))?>
 
     <div class="row marketing">
@@ -67,7 +68,7 @@ $this->pageTitle = Yii::t('app', 'Partner :partner', array(':partner' => $partne
                     <?php foreach($payouts as $payout) { ?>
                         <tr>
                             <td><?=$payout->id?></td>
-                            <td><?=$payout->startDateTimestamp ? date('d-m-Y H:i:s', $payout->startDateTimestamp) : 'Start'?> — <?=date('d-m-Y H:i:s', $payout->endDateTimestamp)?></a></td>
+                            <td><?=$payout->startDateTimestamp ? date('d-m-Y H:i:s', $payout->startDateTimestamp) : Yii::t('app', 'Start')?> — <?=date('d-m-Y H:i:s', $payout->endDateTimestamp)?></a></td>
                             <td><?=$payout->transitions?></td>
                             <td><?=$payout->amount?> $</td>
                         </tr>
@@ -88,7 +89,7 @@ $this->pageTitle = Yii::t('app', 'Partner :partner', array(':partner' => $partne
                 )) ?>
             <?php } else { ?>
                 <div class="alert alert-info">
-                    No payouts found.
+                    <?=Yii::t('app', 'No payouts found')?>
                 </div>
             <?php } ?>
         </div>

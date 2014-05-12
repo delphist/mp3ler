@@ -23,100 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="payout.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/console/payout.php">
+      <file leaf-file-name="partner.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/console/partner.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="240">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="43" selection-start="613" selection-end="613" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="3120">
-              <folding>
-                <marker date="1399532895000" expanded="true" signature="1775:1828" placeholder="{...}" />
-                <marker date="1399532895000" expanded="true" signature="2187:2375" placeholder="..." />
-                <marker date="1399532895000" expanded="true" signature="2425:3218" placeholder="..." />
-                <marker date="1399532895000" expanded="true" signature="2438:3207" placeholder="..." />
-                <marker date="1399532895000" expanded="false" signature="3585:3597" placeholder="..." />
-                <marker date="1399532895000" expanded="true" signature="3800:4038" placeholder="{...}" />
-                <marker date="1399532895000" expanded="true" signature="3946:3988" placeholder="/*...*/" />
-                <marker date="1399532895000" expanded="true" signature="4346:4860" placeholder="..." />
-                <marker date="1399532895000" expanded="false" signature="6243:6252" placeholder="..." />
-                <marker date="1399532895000" expanded="true" signature="6396:7016" placeholder="..." />
-                <marker date="1399532895000" expanded="true" signature="7117:8161" placeholder="..." />
-                <marker date="1399532895000" expanded="true" signature="7151:8096" placeholder="{...}" />
-                <marker date="1399532895000" expanded="true" signature="7205:7547" placeholder="{...}" />
-                <marker date="1399532895000" expanded="true" signature="7231:7516" placeholder="{...}" />
-                <marker date="1399532895000" expanded="true" signature="7294:7492" placeholder="{&quot;id&quot;: 24313723...}" />
-                <marker date="1399532895000" expanded="true" signature="7979:8068" placeholder="{...}" />
-                <marker date="1399532895000" expanded="false" signature="8234:8266" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="21" selection-start="1213" selection-end="1213" vertical-scroll-proportion="-4.7916665" vertical-offset="545" max-vertical-offset="2205">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_banner.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/default/_banner.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="41" selection-start="273" selection-end="273" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="285">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="226" column="8" selection-start="5326" selection-end="5326" vertical-scroll-proportion="0.80972517" vertical-offset="3007" max-vertical-offset="3555">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="m140422_031749_create_user_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/migrations/m140422_031749_create_user_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="33" selection-start="426" selection-end="426" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="495">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterForm.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/RegisterForm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="265" selection-end="265" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="420">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="payouts.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/partner/payouts.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="29" selection-start="179" selection-end="179" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="210">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/partner/settings.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="42" selection-start="48" selection-end="48" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="270">
+            <state line="42" column="26" selection-start="1915" selection-end="1915" vertical-scroll-proportion="-8.125" vertical-offset="435" max-vertical-offset="1545">
               <folding />
             </state>
           </provider>
@@ -125,7 +35,85 @@
       <file leaf-file-name="transitions.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/partner/transitions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="32" selection-start="256" selection-end="256" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="255">
+            <state line="9" column="4" selection-start="223" selection-end="258" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="270">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/console/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="31" selection-start="156" selection-end="156" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="405">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginForm.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/LoginForm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="7" selection-start="419" selection-end="419" vertical-scroll-proportion="-7.2916665" vertical-offset="260" max-vertical-offset="1035">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransitionStatistics.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="39" selection-start="611" selection-end="611" vertical-scroll-proportion="-7.5" vertical-offset="105" max-vertical-offset="4500">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transitionChart.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/components/views/transitionChart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="28" selection-start="998" selection-end="998" vertical-scroll-proportion="-9.25" vertical-offset="123" max-vertical-offset="780">
+              <folding>
+                <marker date="1399909886000" expanded="true" signature="678:1856" placeholder="{...}" />
+                <marker date="1399909886000" expanded="true" signature="746:1664" placeholder="{...}" />
+                <marker date="1399909886000" expanded="true" signature="821:1654" placeholder="[...]" />
+                <marker date="1399909886000" expanded="true" signature="908:1612" placeholder="{&quot;fillColor&quot;: &quot;rgba(9,168,161,0.5)&quot;...}" />
+                <marker date="1399909886000" expanded="true" signature="1666:1848" placeholder="{&quot;scaleOverride&quot;: true...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConsoleController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="11" selection-start="2597" selection-end="2597" vertical-scroll-proportion="0.519084" vertical-offset="1100" max-vertical-offset="2580">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_chart_block.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/partner/_chart_block.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="83" selection-start="2056" selection-end="2056" vertical-scroll-proportion="16.25" vertical-offset="1200" max-vertical-offset="1875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="partners.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/views/console/partners.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="4" selection-start="203" selection-end="254" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="885">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransitionChart.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/components/TransitionChart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="47" selection-start="564" selection-end="564" vertical-scroll-proportion="-7.2916665" vertical-offset="215" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
@@ -141,57 +129,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/models/RemindForm.php" />
-        <option value="$PROJECT_DIR$/protected/models/RegisterForm.php" />
-        <option value="$PROJECT_DIR$/protected/components/UserIdentity.php" />
-        <option value="$PROJECT_DIR$/protected/components/WebUser.php" />
-        <option value="$PROJECT_DIR$/protected/models/LoginForm.php" />
         <option value="$PROJECT_DIR$/protected/migrations/m140422_031749_create_user_table.php" />
         <option value="$PROJECT_DIR$/protected/migrations/m140502_140019_create_transition_table.php" />
         <option value="$PROJECT_DIR$/protected/migrations/m140424_140019_create_transition_table.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/user.php" />
-        <option value="$PROJECT_DIR$/protected/views/partner/_footer.php" />
-        <option value="$PROJECT_DIR$/protected/config/urls.php" />
-        <option value="$PROJECT_DIR$/protected/views/partner/_header.php" />
         <option value="$PROJECT_DIR$/protected/models/Transition.php" />
         <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/protected/controllers/TrackController.php" />
         <option value="$PROJECT_DIR$/protected/migrations/m140503_051519_create_payout_table.php" />
-        <option value="$PROJECT_DIR$/protected/views/console/_footer.php" />
-        <option value="$PROJECT_DIR$/protected/views/console/accounts.php" />
-        <option value="$PROJECT_DIR$/protected/views/console/index.php" />
-        <option value="$PROJECT_DIR$/protected/views/console/_header.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/protected/composer.json" />
         <option value="$PROJECT_DIR$/protected/config/redis.php" />
         <option value="$PROJECT_DIR$/protected/config/redis.example.php" />
-        <option value="$PROJECT_DIR$/protected/components/TransitionChart.php" />
-        <option value="$PROJECT_DIR$/protected/components/views/transitionChart.php" />
-        <option value="$PROJECT_DIR$/css/user.css" />
-        <option value="$PROJECT_DIR$/protected/views/console/partners.php" />
-        <option value="$PROJECT_DIR$/protected/views/partner/_chart_block.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/PartnerController.php" />
-        <option value="$PROJECT_DIR$/protected/views/console/partner.php" />
-        <option value="$PROJECT_DIR$/protected/components/TransitionStatistics.php" />
-        <option value="$PROJECT_DIR$/protected/models/Payout.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/ConsoleController.php" />
         <option value="$PROJECT_DIR$/protected/config/database.example.php" />
         <option value="$PROJECT_DIR$/protected/config/params.example.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/protected/controllers/QueryController.php" />
-        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/views/partner/settings.php" />
+        <option value="$PROJECT_DIR$/protected/views/default/_banner.php" />
+        <option value="$PROJECT_DIR$/protected/views/console/accounts.php" />
+        <option value="$PROJECT_DIR$/protected/views/console/index.php" />
+        <option value="$PROJECT_DIR$/protected/migrations/m140508_113033_payout_fixes.php" />
+        <option value="$PROJECT_DIR$/protected/views/console/payout.php" />
+        <option value="$PROJECT_DIR$/protected/models/Payout.php" />
+        <option value="$PROJECT_DIR$/protected/components/UserIdentity.php" />
+        <option value="$PROJECT_DIR$/protected/components/TransitionStatistics.php" />
+        <option value="$PROJECT_DIR$/protected/views/partner/payouts.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/console.php" />
+        <option value="$PROJECT_DIR$/css/user.css" />
+        <option value="$PROJECT_DIR$/protected/views/partner/_footer.php" />
+        <option value="$PROJECT_DIR$/protected/views/console/_footer.php" />
+        <option value="$PROJECT_DIR$/protected/components/Controller.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/PartnerController.php" />
+        <option value="$PROJECT_DIR$/protected/config/urls.php" />
+        <option value="$PROJECT_DIR$/protected/views/console/_header.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/views/partner/_header.php" />
         <option value="$PROJECT_DIR$/protected/views/user/login.php" />
         <option value="$PROJECT_DIR$/protected/views/user/register.php" />
-        <option value="$PROJECT_DIR$/protected/views/partner/payouts.php" />
-        <option value="$PROJECT_DIR$/protected/views/partner/settings.php" />
-        <option value="$PROJECT_DIR$/protected/views/partner/transitions.php" />
-        <option value="$PROJECT_DIR$/protected/views/console/payout.php" />
-        <option value="$PROJECT_DIR$/protected/views/default/_banner.php" />
+        <option value="$PROJECT_DIR$/protected/models/LoginForm.php" />
         <option value="$PROJECT_DIR$/protected/models/User.php" />
-        <option value="$PROJECT_DIR$/protected/components/Controller.php" />
+        <option value="$PROJECT_DIR$/protected/models/RegisterForm.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/protected/messages/ru/app.php" />
+        <option value="$PROJECT_DIR$/protected/views/partner/_chart_block.php" />
+        <option value="$PROJECT_DIR$/protected/views/partner/transitions.php" />
+        <option value="$PROJECT_DIR$/protected/views/console/partners.php" />
+        <option value="$PROJECT_DIR$/protected/views/console/partner.php" />
+        <option value="$PROJECT_DIR$/protected/components/TransitionChart.php" />
+        <option value="$PROJECT_DIR$/protected/components/views/transitionChart.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/ConsoleController.php" />
       </list>
     </option>
   </component>
@@ -746,12 +734,12 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24931507" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28767124" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.315832" sideWeight="0.67094016" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.315832" sideWeight="0.67094016" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -783,161 +771,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/views/console/_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="10" selection-start="559" selection-end="559" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="84" selection-start="191" selection-end="191" vertical-scroll-proportion="-0.625" vertical-offset="90" max-vertical-offset="930" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/cache.example.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="497" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/captcha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="165" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/params.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="20" selection-end="20" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="195" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/redis.example.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2" selection-start="163" selection-end="163" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="195" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/console/accounts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="938" selection-end="938" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="1065" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/query/top.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="42" selection-start="397" selection-end="397" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="390" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/TransitionChart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="1" selection-start="383" selection-end="383" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/block.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="14" selection-start="4027" selection-end="4027" vertical-scroll-proportion="6.68552" vertical-offset="0" max-vertical-offset="3405" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/TrackController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="32" selection-start="536" selection-end="536" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="5130" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/track/top.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="890" selection-end="890" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="390" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/console.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1245" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/user.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="41" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.0" vertical-offset="1316" max-vertical-offset="2055" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/views/transitionChart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="525" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/partner/_chart_block.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="17" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0" vertical-offset="258" max-vertical-offset="900" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/PartnerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="33" selection-start="999" selection-end="999" vertical-scroll-proportion="-7.5" vertical-offset="510" max-vertical-offset="1965">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/migrations/m140503_051519_create_payout_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="54" selection-start="204" selection-end="204" vertical-scroll-proportion="0.16030534" vertical-offset="0" max-vertical-offset="655">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="37" selection-start="4536" selection-end="4536" vertical-scroll-proportion="-1.5189873" vertical-offset="2070" max-vertical-offset="2670">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Payout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="21" selection-start="734" selection-end="734" vertical-scroll-proportion="-21.875" vertical-offset="0" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/console/partner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1816" selection-end="1816" vertical-scroll-proportion="-12.375" vertical-offset="303" max-vertical-offset="1455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/console/partners.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="148" selection-end="319" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/console/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="28" selection-start="504" selection-end="504" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/captcha.example.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="93" selection-end="93" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="21" selection-start="161" selection-end="161" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/redis.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="2" selection-start="168" selection-end="168" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="195">
@@ -980,23 +813,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/QueryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="54" selection-start="2218" selection-end="2218" vertical-scroll-proportion="-16.75" vertical-offset="753" max-vertical-offset="1815">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/environment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="2" selection-start="222" selection-end="222" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="47" selection-start="2059" selection-end="2059" vertical-scroll-proportion="-12.208333" vertical-offset="502" max-vertical-offset="975">
           <folding />
         </state>
       </provider>
@@ -1011,43 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10" selection-start="268" selection-end="268" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="2085">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/console.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="36" selection-start="235" selection-end="251" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/user/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="555">
-          <folding>
-            <marker date="1399533790000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/user/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/partner/transitions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="256" selection-end="256" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/partner/settings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="42" selection-start="48" selection-end="48" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="270">
@@ -1055,76 +837,302 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/partner/payouts.php">
+    <entry file="file://$PROJECT_DIR$/protected/views/console/accounts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="29" selection-start="179" selection-end="179" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/console/payout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="43" selection-start="613" selection-end="613" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="3120">
-          <folding>
-            <marker date="1399532895000" expanded="true" signature="1775:1828" placeholder="{...}" />
-            <marker date="1399532895000" expanded="true" signature="2187:2375" placeholder="..." />
-            <marker date="1399532895000" expanded="true" signature="2425:3218" placeholder="..." />
-            <marker date="1399532895000" expanded="true" signature="2438:3207" placeholder="..." />
-            <marker date="1399532895000" expanded="false" signature="3585:3597" placeholder="..." />
-            <marker date="1399532895000" expanded="true" signature="3800:4038" placeholder="{...}" />
-            <marker date="1399532895000" expanded="true" signature="3946:3988" placeholder="/*...*/" />
-            <marker date="1399532895000" expanded="true" signature="4346:4860" placeholder="..." />
-            <marker date="1399532895000" expanded="false" signature="6243:6252" placeholder="..." />
-            <marker date="1399532895000" expanded="true" signature="6396:7016" placeholder="..." />
-            <marker date="1399532895000" expanded="true" signature="7117:8161" placeholder="..." />
-            <marker date="1399532895000" expanded="true" signature="7151:8096" placeholder="{...}" />
-            <marker date="1399532895000" expanded="true" signature="7205:7547" placeholder="{...}" />
-            <marker date="1399532895000" expanded="true" signature="7231:7516" placeholder="{...}" />
-            <marker date="1399532895000" expanded="true" signature="7294:7492" placeholder="{&quot;id&quot;: 24313723...}" />
-            <marker date="1399532895000" expanded="true" signature="7979:8068" placeholder="{...}" />
-            <marker date="1399532895000" expanded="false" signature="8234:8266" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/RegisterForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="265" selection-end="265" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/migrations/m140422_031749_create_user_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="33" selection-start="426" selection-end="426" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="495">
+        <state line="1" column="42" selection-start="48" selection-end="48" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="1125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/default/_banner.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="41" selection-start="273" selection-end="273" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="285">
+        <state line="9" column="0" selection-start="295" selection-end="295" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="285">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/User.php">
+    <entry file="file://$PROJECT_DIR$/protected/controllers/TrackController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="21" selection-start="1213" selection-end="1213" vertical-scroll-proportion="-4.7916665" vertical-offset="545" max-vertical-offset="2205">
+        <state line="48" column="43" selection-start="1169" selection-end="1169" vertical-scroll-proportion="-15.625" vertical-offset="345" max-vertical-offset="5130">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/migrations/m140503_051519_create_payout_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="4" selection-start="75" selection-end="696" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/migrations/m140508_113033_payout_fixes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="5" selection-start="719" selection-end="719" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Payout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="27" selection-start="447" selection-end="447" vertical-scroll-proportion="-2.8333333" vertical-offset="292" max-vertical-offset="1680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/console/payout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="16" selection-start="176" selection-end="176" vertical-scroll-proportion="-2.2916667" vertical-offset="65" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/UserIdentity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="393" selection-end="393" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/params.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="679">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="446" column="15" selection-start="13513" selection-end="13525" vertical-scroll-proportion="0.07915994" vertical-offset="6641" max-vertical-offset="15885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/migrations/m140422_031749_create_user_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="35" selection-start="703" selection-end="703" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/QueryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="30" selection-start="321" selection-end="321" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="1815">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/user.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="32" selection-start="2142" selection-end="2142" vertical-scroll-proportion="0.0" vertical-offset="1436" max-vertical-offset="2175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/partner/_footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="31" selection-start="174" selection-end="210" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/console.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="677" selection-end="677" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="570">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="226" column="8" selection-start="5326" selection-end="5326" vertical-scroll-proportion="0.80972517" vertical-offset="3007" max-vertical-offset="3555">
+        <state line="48" column="7" selection-start="858" selection-end="858" vertical-scroll-proportion="-6.0416665" vertical-offset="575" max-vertical-offset="4125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/PartnerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="51" selection-start="271" selection-end="271" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="28" selection-start="487" selection-end="487" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/urls.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="11" selection-start="737" selection-end="737" vertical-scroll-proportion="-7.2916665" vertical-offset="305" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/partner/payouts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="924" selection-end="924" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="7" selection-start="2032" selection-end="2032" vertical-scroll-proportion="-6.875" vertical-offset="330" max-vertical-offset="3120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/console/_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="12" selection-start="658" selection-end="879" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/partner/_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="965" selection-end="965" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/user/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="47" selection-start="946" selection-end="946" vertical-scroll-proportion="-15.166667" vertical-offset="71" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/console/_footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="6" selection-start="243" selection-end="243" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/user/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="27" selection-start="408" selection-end="408" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Track.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="5" selection-start="1340" selection-end="1340" vertical-scroll-proportion="-9.375" vertical-offset="510" max-vertical-offset="4995">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="4" selection-start="1162" selection-end="1394" vertical-scroll-proportion="-8.541667" vertical-offset="425" max-vertical-offset="2415">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/RegisterForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="455" selection-end="455" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="26" selection-start="850" selection-end="850" vertical-scroll-proportion="-3.2916667" vertical-offset="296" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="7" selection-start="1076" selection-end="1076" vertical-scroll-proportion="-6.25" vertical-offset="585" max-vertical-offset="2055">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/messages/ru/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="24" selection-start="1391" selection-end="1391" vertical-scroll-proportion="-6.125" vertical-offset="273" max-vertical-offset="1245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/LoginForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="7" selection-start="419" selection-end="419" vertical-scroll-proportion="-7.2916665" vertical-offset="260" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="39" selection-start="611" selection-end="611" vertical-scroll-proportion="-7.5" vertical-offset="105" max-vertical-offset="4500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/console/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="31" selection-start="156" selection-end="156" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/partner/transitions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="4" selection-start="223" selection-end="258" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/console/partners.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="4" selection-start="203" selection-end="254" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/console/partner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="26" selection-start="1915" selection-end="1915" vertical-scroll-proportion="-8.125" vertical-offset="435" max-vertical-offset="1545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/TransitionChart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="47" selection-start="564" selection-end="564" vertical-scroll-proportion="-7.2916665" vertical-offset="215" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/partner/_chart_block.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="83" selection-start="2056" selection-end="2056" vertical-scroll-proportion="16.25" vertical-offset="1200" max-vertical-offset="1875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/views/transitionChart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="28" selection-start="998" selection-end="998" vertical-scroll-proportion="-9.25" vertical-offset="123" max-vertical-offset="780">
+          <folding>
+            <marker date="1399909886000" expanded="true" signature="678:1856" placeholder="{...}" />
+            <marker date="1399909886000" expanded="true" signature="746:1664" placeholder="{...}" />
+            <marker date="1399909886000" expanded="true" signature="821:1654" placeholder="[...]" />
+            <marker date="1399909886000" expanded="true" signature="908:1612" placeholder="{&quot;fillColor&quot;: &quot;rgba(9,168,161,0.5)&quot;...}" />
+            <marker date="1399909886000" expanded="true" signature="1666:1848" placeholder="{&quot;scaleOverride&quot;: true...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="11" selection-start="2597" selection-end="2597" vertical-scroll-proportion="0.519084" vertical-offset="1100" max-vertical-offset="2580">
           <folding />
         </state>
       </provider>

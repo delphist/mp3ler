@@ -42,7 +42,17 @@ class Controller extends CController
     /**
      * @var array Список доступных языков
      */
-    public $possible_languages = array('en', 'ru', 'az', 'tr', 'ge');
+    public $possibleLanguages = array('en', 'ru', 'az', 'tr', 'ge');
+
+    /**
+     * @var string Дефолтный язык
+     */
+    public $defaultLanguage = 'tr';
+
+    /**
+     * @var string Имя куки в которой хранится язык
+     */
+    public $languageCookieName = 'dil';
 
     /**
      * Создает ссылку для скачивания трека
@@ -96,16 +106,16 @@ class Controller extends CController
      */
     protected function setLanguage($language, $set_cookie = FALSE)
     {
-        if(in_array($language, $this->possible_languages))
+        if(in_array($language, $this->possibleLanguages))
         {
             Yii::app()->setLanguage($language);
 
             if($set_cookie)
             {
-                $cookie = new CHttpCookie('dil', $language);
+                $cookie = new CHttpCookie($this->languageCookieName, $language);
                 $cookie->expire = time()+60*60*24*180;
 
-                Yii::app()->request->cookies['dil'] = $cookie;
+                Yii::app()->request->cookies[$this->languageCookieName] = $cookie;
             }
 
             return TRUE;
@@ -116,9 +126,14 @@ class Controller extends CController
 
     public function createUrl($route, $params = array(), $ampersand = '&')
     {
-        if(Yii::app()->language != Yii::app()->params['default_language'])
+        if(Yii::app()->language != $this->defaultLanguage)
         {
             $params['lang'] = Yii::app()->language;
+        }
+
+        if($this->partner)
+        {
+            $params['ref'] = $this->partner;
         }
 
         return parent::createUrl($route, $params, $ampersand);
@@ -153,15 +168,15 @@ class Controller extends CController
      */
     public function filterLanguageControl($filterChain)
     {
-        $this->setLanguage(Yii::app()->params['default_language']);
+        $this->setLanguage($this->defaultLanguage);
 
         if(isset($_GET['lang']))
         {
             $this->setLanguage($_GET['lang'], TRUE);
         }
-        elseif(Yii::app()->request->cookies->contains('dil'))
+        elseif(Yii::app()->request->cookies->contains($this->languageCookieName))
         {
-            $this->setLanguage(Yii::app()->request->cookies['dil']->value);
+            $this->setLanguage(Yii::app()->request->cookies[$this->languageCookieName]->value);
         }
 
         $filterChain->run();
@@ -174,11 +189,11 @@ class Controller extends CController
      */
     public function filterLanguageRedirect($filterChain)
     {
-        if(isset($_GET['lang']) && $_GET['lang'] == Yii::app()->params['default_language'])
+        if(isset($_GET['lang']) && $_GET['lang'] == $this->defaultLanguage)
         {
             $this->redirect($this->createLanguageUrl(NULL));
         }
-        elseif( ! isset($_GET['lang']) && Yii::app()->language != Yii::app()->params['default_language'])
+        elseif( ! isset($_GET['lang']) && Yii::app()->language != $this->defaultLanguage)
         {
             $this->redirect($this->createLanguageUrl(Yii::app()->language));
         }
@@ -193,16 +208,34 @@ class Controller extends CController
      */
     public function filterTransitionControl($filterChain)
     {
+        $data = array(
+            'ip' => $_SERVER['REMOTE_ADDR'],
+            'referer' => $_SERVER['HTTP_REFERER'],
+        );
+
+        $isCommit = TRUE;
+
         if(isset($_GET['ref']))
         {
             $this->partner = User::model()->findByAttributes(array(
                 'sitename' => $_GET['ref']
             ));
 
-            if($this->partner !== NULL)
+            /**
+             * Не записываем переход если он уже был совершен внутри сайта
+             */
+            if( ! Yii::app()->transitionStatistics->compareDomains(
+                Yii::app()->params->domain,
+                $data['referer']
+            ))
             {
-                Yii::app()->transitionStatistics->commit($_SERVER['REMOTE_ADDR'], $this->partner->id);
+                $isCommit = FALSE;
             }
+        }
+
+        if($this->partner !== NULL && $isCommit)
+        {
+            Yii::app()->transitionStatistics->commit($this->partner, $data);
         }
 
         $filterChain->run();
@@ -220,12 +253,17 @@ class Controller extends CController
      */
     public function filterTransitionChart($filterChain)
     {
-        if( ! isset($_GET['periodName']))
+        if( ! isset($_GET['period']))
         {
-            $_GET['periodName'] = 'today';
+            $_GET['period'] = 'today';
         }
 
-        $this->transitionChartData = Yii::app()->transitionStatistics->parsePeriodName($_GET['periodName']);
+        $this->transitionChartData = Yii::app()->transitionStatistics->parsePeriodName($_GET['period']);
+
+        if($this->transitionChartData === NULL)
+        {
+            throw new CHttpException(400, 'Bad time period');
+        }
 
         $filterChain->run();
     }

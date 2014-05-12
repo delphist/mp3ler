@@ -39,6 +39,11 @@ $this->pageTitle = Yii::t('app', 'Registration');
         <a href="<?=$this->createUrl('user/login')?>"><?= Yii::t('app', 'Login form'); ?></a>
         <br />
         <a href="<?=$this->createUrl('user/remind')?>"><?= Yii::t('app', 'Remind password'); ?></a>
+
+        <br/><br/>
+
+        <a href="<?=$this->createLanguageUrl('en')?>">english</a> /
+        <a href="<?=$this->createLanguageUrl('ru')?>">русский</a>
     </p>
 
     <?=CHtml::endForm()?>

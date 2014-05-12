@@ -4,6 +4,12 @@ class ConsoleController extends Controller
 {
     public $layout = '//layouts/console';
 
+    public $defaultLanguage = 'ru';
+
+    public $possibleLanguages = array('en', 'ru');
+
+    public $languageCookieName = 'consoleLanguage';
+
     public function filters()
     {
         return array(
@@ -114,6 +120,7 @@ class ConsoleController extends Controller
 
         $this->render('partner', array(
             'partner' => $partner,
+            'pages' => $pages,
             'payouts' => $payouts
         ));
     }

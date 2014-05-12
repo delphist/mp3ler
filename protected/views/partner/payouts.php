@@ -18,7 +18,7 @@ $this->pageTitle = Yii::t('app', 'Payouts');
         <?php foreach($payouts as $payout) { ?>
             <tr>
                 <td><?=$payout->id?></td>
-                <td><?=$payout->startDateTimestamp ? date('d-m-Y H:i:s', $payout->startDateTimestamp) : 'Start'?> — <?=date('d-m-Y H:i:s', $payout->endDateTimestamp)?></a></td>
+                <td><?=$payout->startDateTimestamp ? date('d-m-Y H:i:s', $payout->startDateTimestamp) : Yii::t('app', 'Start')?> — <?=date('d-m-Y H:i:s', $payout->endDateTimestamp)?></a></td>
                 <td><?=$payout->transitions?></td>
                 <td><?=$payout->amount?> $</td>
             </tr>
@@ -39,7 +39,7 @@ $this->pageTitle = Yii::t('app', 'Payouts');
     )) ?>
 <?php } else { ?>
     <div class="alert alert-info">
-        No payouts found.
+        <?=Yii::t('app', 'No payouts found')?>
     </div>
 <?php } ?>
 

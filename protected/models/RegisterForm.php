@@ -13,6 +13,13 @@ class RegisterForm extends User
      */
     public $verifyPassword;
 
+    public function attributeLabels()
+    {
+        return array_merge(parent::attributeLabels(), array(
+            'verifyPassword' => Yii::t('app', 'Verify password'),
+        ));
+    }
+
     public function rules()
     {
         return array_merge(parent::rules(), array(

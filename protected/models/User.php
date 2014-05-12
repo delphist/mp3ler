@@ -40,6 +40,15 @@ class User extends CActiveRecord
         );
     }
 
+    public function attributeLabels()
+    {
+        return array(
+            'username' => Yii::t('app', 'Sitename'),
+            'email' => Yii::t('app', 'E-mail'),
+            'password' => Yii::t('app', 'Password'),
+        );
+    }
+
     public function rules()
     {
         return array(

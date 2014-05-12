@@ -17,8 +17,8 @@ class TransitionStatistics extends CApplicationComponent
      *               - to: таймстамп конца промежутка
      *               - period: периодичность разбивки данных (константа)
      * @param array $options опциональные настройки
-     *               - partner: идентификатор партнера
-     *               - countable: какие клики показывать (засчитанные/незасчитанные) (ture/false)
+     *               - partner: партнер
+     *               - countable: какие клики показывать (засчитанные/незасчитанные) (true/false)
      *               - return: что возвращать (sum — сумма кликов, count — количество кликов)
      * @return array
      */
@@ -82,8 +82,15 @@ class TransitionStatistics extends CApplicationComponent
      * Конвертирует строковое название периода времени в
      * массив с данными таймстампов
      *
-     * @param $periodName
-     * @return array
+     * Доступные форматы:
+     *  - today (сегодня)
+     *  - yesterday (вчера)
+     *  - month (текущий месяц)
+     *  - yyyy-mm (показ за определенный месяц; yyyy - год, mm - месяц)
+     *  - yyyy-mm-dd (показ за определенный день, yyyy - год, mm - месяц, dd - день)
+     *
+     * @param $periodName название периода (см. список доступных форматов)
+     * @return array|null массив с данными таймстампов либо NULL в случае невозможности разбора
      */
     public function parsePeriodName($periodName)
     {
@@ -117,7 +124,34 @@ class TransitionStatistics extends CApplicationComponent
                 break;
 
             default:
-                return $this->parsePeriodName('today');
+                if(preg_match('/^(\d{4})\-(\d{2})\-(\d{2})$/', $periodName, $results))
+                {
+                    $year = $results[1];
+                    $month = $results[2];
+                    $day = $results[3];
+
+                    return array(
+                        'period' => TransitionStatistics::HOUR,
+                        'from' => mktime(0, 0, 0, $month, $day, $year),
+                        'to' => mktime(23, 59, 59, $month, $day, $year),
+                        'periodName' => 'custom-day'
+                    );
+                }
+                elseif(preg_match('/^(\d{4})\-(\d{2})$/', $periodName, $results))
+                {
+                    $year = $results[1];
+                    $month = $results[2];
+
+                    return array(
+                        'period' => TransitionStatistics::DAY,
+                        'from' => mktime(0, 0, 0, $month, 1, $year),
+                        'to' => mktime(23, 59, 59, $month + 1, 0, $year),
+                        'periodName' => 'custom-month'
+                    );
+                }
+
+                return NULL;
+
                 break;
         }
     }
@@ -125,45 +159,133 @@ class TransitionStatistics extends CApplicationComponent
     /**
      * Записывает информацию о переходе
      *
-     * @param string $ip ip-адрес посетителя
-     * @param int $partner_id id партнера
-     * @param bool $counted засчитан ли клик
-     * @return bool TRUE в случае если запись была сделана,
-     *              FALSE в случае если переход неуникален
+     * @param User|int $partner обьект партнера User либо id партнера
+     * @param array $data информация о клике
      */
-    public function commit($ip, $partner_id, $counted = TRUE)
+    public function commit($partner, array $data)
     {
-        $partner_ips = new ARedisSet('p:t:ip:'.$partner_id);
+        Yii::beginProfile('commitTransition');
+
         $time = time();
 
-        if( ! $partner_ips->contains($ip))
+        if( ! $partner instanceof User)
         {
+            $partner = User::model()->findByPk($partner);
+        }
+        $partner_id = $partner->id;
+
+        $countable = $this->checkCountable($partner, $data);
+
+        $id = Yii::app()->redis->getClient()->incr('t:ar');
+        $transitions = new ARedisHash('t:i');
+
+        Yii::beginProfile('addTransitionInfoToRedis');
+        $transitions->add($id, json_encode(array(
+            'i' => $ip,
+            'p' => $partner_id,
+            't' => $time,
+            'c' => $countable
+        )));
+        Yii::endProfile('addTransitionToRedis');
+
+        if($countable)
+        {
+            $partner_ips = new ARedisSet('p:t:ip:'.$partner_id);
             $partner_ips->add($ip);
 
-            $id = Yii::app()->redis->getClient()->incr('t:ar');
-            $transitions = new ARedisHash('t:i');
-            $transitions->add($id, json_encode(array(
-                'ip' => $ip,
-                'pid' => $partner_id,
-                'time' => $time,
-            )));
-
-            if($counted)
-            {
-                $partner_transitions_time = new ARedisSortedSet('p:t:t:'.$partner_id);
-                $transitions_time = new ARedisSortedSet('t:t');
-            }
-            else
-            {
-                $partner_transitions_time = new ARedisSortedSet('p:nct:t:'.$partner_id);
-                $transitions_time = new ARedisSortedSet('nct:t');
-            }
-
-            foreach(array($partner_transitions_time, $transitions_time) as $_time)
-            {
-                $_time->add($id, $time);
-            }
+            $partner_transitions_time = new ARedisSortedSet('p:t:t:'.$partner_id);
+            $transitions_time = new ARedisSortedSet('t:t');
         }
+        else
+        {
+            $partner_transitions_time = new ARedisSortedSet('p:nct:t:'.$partner_id);
+            $transitions_time = new ARedisSortedSet('nct:t');
+        }
+
+        Yii::beginProfile('addTransitionTimestampsToRedis');
+        foreach(array($partner_transitions_time, $transitions_time) as $_time)
+        {
+            $_time->add($id, $time);
+        }
+        Yii::endProfile('addTransitionTimestampsToRedis');
+
+        Yii::endProfile('commitTransition');
+    }
+
+    /**
+     * Проверяет, является ли переход засчитанным (countable)
+     *
+     * @param User|int $partner обьект партнера User либо id партнера
+     * @param array $data массив с информацией о переходе
+     *                     - ip: ip-адрес посетителя
+     *                     - referer: HTTP_REFERER посетителя
+     * @return bool надо ли засчитывать переход
+     */
+    public function checkCountable($partner, array $data)
+    {
+        Yii::beginProfile('checkTransitionCountable');
+
+        if( ! $partner instanceof User)
+        {
+            $partner = User::model()->findByPk($partner);
+        }
+
+        /**
+         * Проверяем на наличие реферера
+         */
+        if( ! isset($data['referer']) || empty($data['referer']))
+        {
+            Yii::endProfile('checkTransitionCountable');
+
+            return FALSE;
+        }
+
+        /**
+         * Сверяем реферер с нашим доменом
+         */
+        if( ! $this->compareDomains($data['referer'], $partner->sitename))
+        {
+            Yii::endProfile('checkTransitionCountable');
+
+            return FALSE;
+        }
+
+        /**
+         * Проверяем, был ли уже совершен клик с этого ip
+         */
+        $partner_ips = new ARedisSet('p:t:ip:'.$partner->id);
+        if($partner_ips->contains($ip))
+        {
+            Yii::endProfile('checkTransitionCountable');
+
+            return FALSE;
+        }
+
+        Yii::endProfile('checkTransitionCountable');
+
+        return TRUE;
+    }
+
+    /**
+     * Сравнивает два URL на предмет соответствия доменов
+     *
+     * @param $url1
+     * @param $url2
+     * @return bool
+     */
+    public function compareDomains($url1, $url2)
+    {
+        return mb_strtolower($this->getDomain($url1)) == mb_strtolower($this->getDomain($url2));
+    }
+
+    public function getDomain($url)
+    {
+        if(strpos('http://', mb_strtolower($url) === FALSE))
+        {
+            return $url;
+        }
+
+        return parse_url($url, PHP_URL_HOST);
     }
 
     public function transitionEarnings($commits)

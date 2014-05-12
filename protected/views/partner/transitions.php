@@ -6,7 +6,8 @@ $this->pageTitle = Yii::t('app', 'Transitions');
 
 <?=$this->renderPartial('_chart_block', array(
     'periodData' => $this->transitionChartData,
-    'partner' => $partner
+    'partner' => $partner,
+    'chartLists' => array('countable'),
 ))?>
 
 <?=$this->renderPartial('_footer')?>

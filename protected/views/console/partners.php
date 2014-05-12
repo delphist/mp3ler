@@ -6,6 +6,7 @@ $this->pageTitle = Yii::t('app', 'Partners');
 
 <?=$this->renderPartial('//partner/_chart_block', array(
     'periodData' => $this->transitionChartData,
+    'chartLists' => array('countable', 'notcountable'),
 ))?>
 
     <div class="row marketing">
