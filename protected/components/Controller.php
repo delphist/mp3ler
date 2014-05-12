@@ -209,8 +209,8 @@ class Controller extends CController
     public function filterTransitionControl($filterChain)
     {
         $data = array(
-            'ip' => $_SERVER['REMOTE_ADDR'],
-            'referer' => $_SERVER['HTTP_REFERER'],
+            'ip' => isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '',
+            'referer' => isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '',
         );
 
         $isCommit = TRUE;
