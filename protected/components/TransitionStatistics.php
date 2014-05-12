@@ -181,7 +181,7 @@ class TransitionStatistics extends CApplicationComponent
 
         Yii::beginProfile('addTransitionInfoToRedis');
         $transitions->add($id, json_encode(array(
-            'i' => $ip,
+            'i' => $data['ip'],
             'p' => $partner_id,
             't' => $time,
             'c' => $countable
@@ -191,7 +191,7 @@ class TransitionStatistics extends CApplicationComponent
         if($countable)
         {
             $partner_ips = new ARedisSet('p:t:ip:'.$partner_id);
-            $partner_ips->add($ip);
+            $partner_ips->add($data['ip']);
 
             $partner_transitions_time = new ARedisSortedSet('p:t:t:'.$partner_id);
             $transitions_time = new ARedisSortedSet('t:t');
@@ -254,7 +254,7 @@ class TransitionStatistics extends CApplicationComponent
          * Проверяем, был ли уже совершен клик с этого ip
          */
         $partner_ips = new ARedisSet('p:t:ip:'.$partner->id);
-        if($partner_ips->contains($ip))
+        if($partner_ips->contains($data['ip']))
         {
             Yii::endProfile('checkTransitionCountable');
 

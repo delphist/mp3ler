@@ -41,10 +41,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="74" selection-start="4957" selection-end="4957" vertical-scroll-proportion="0.25842696" vertical-offset="3050" max-vertical-offset="4125">
+            <state line="209" column="5" selection-start="4859" selection-end="4859" vertical-scroll-proportion="-3.5416667" vertical-offset="3050" max-vertical-offset="4125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransitionStatistics.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="212" column="5" selection-start="6893" selection-end="6893" vertical-scroll-proportion="0.19847329" vertical-offset="3050" max-vertical-offset="4500">
               <folding />
             </state>
           </provider>
@@ -101,15 +110,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="partners.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/console/partners.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="4" selection-start="203" selection-end="254" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="885">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TransitionChart.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/TransitionChart.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -152,7 +152,6 @@
         <option value="$PROJECT_DIR$/protected/views/console/payout.php" />
         <option value="$PROJECT_DIR$/protected/models/Payout.php" />
         <option value="$PROJECT_DIR$/protected/components/UserIdentity.php" />
-        <option value="$PROJECT_DIR$/protected/components/TransitionStatistics.php" />
         <option value="$PROJECT_DIR$/protected/views/partner/payouts.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/console.php" />
         <option value="$PROJECT_DIR$/css/user.css" />
@@ -180,6 +179,7 @@
         <option value="$PROJECT_DIR$/protected/controllers/ConsoleController.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/protected/components/Controller.php" />
+        <option value="$PROJECT_DIR$/protected/components/TransitionStatistics.php" />
       </list>
     </option>
   </component>
@@ -754,7 +754,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28767124" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28767124" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1060,13 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="39" selection-start="611" selection-end="611" vertical-scroll-proportion="-7.5" vertical-offset="105" max-vertical-offset="4500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/console/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="31" selection-start="156" selection-end="156" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="405">
@@ -1152,7 +1145,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="74" selection-start="4957" selection-end="4957" vertical-scroll-proportion="0.25842696" vertical-offset="3050" max-vertical-offset="4125">
+        <state line="209" column="5" selection-start="4859" selection-end="4859" vertical-scroll-proportion="-3.5416667" vertical-offset="3050" max-vertical-offset="4125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="212" column="5" selection-start="6893" selection-end="6893" vertical-scroll-proportion="0.19847329" vertical-offset="3050" max-vertical-offset="4500">
           <folding />
         </state>
       </provider>
