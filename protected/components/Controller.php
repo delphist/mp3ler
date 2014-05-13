@@ -130,7 +130,7 @@ class Controller extends CController
      */
     public function createUrl($route, $params = array(), $ampersand = '&')
     {
-        if( ! isset($params['lang']) && $params['lang'] !== NULL)
+        if( ! isset($params['lang']))
         {
             if(Yii::app()->language != $this->defaultLanguage)
             {
