@@ -27,17 +27,22 @@ class UserIdentity extends CUserIdentity
 
             if($user->password !== $check_user->password)
             {
-                $this->errorCode=self::ERROR_PASSWORD_INVALID;
+                $this->errorCode = self::ERROR_PASSWORD_INVALID;
             }
             else
             {
-                $this->_id = $user->id;
-                $this->setState('id', $user->id);
-                $this->errorCode = self::ERROR_NONE;
+                $this->authenticateModel($user);
             }
         }
 
         return $this->errorCode === self::ERROR_NONE;
+    }
+
+    public function authenticateModel(User $model)
+    {
+        $this->_id = $model->id;
+        $this->setState('id', $model->id);
+        $this->errorCode = self::ERROR_NONE;
     }
 
     public function getId()

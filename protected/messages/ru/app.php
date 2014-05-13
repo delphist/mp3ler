@@ -18,6 +18,7 @@ return array(
     'Previous page' => 'Предыдущая страница',
     'Error {code}' => 'Ошибка {code}',
     'Sorry, try later.' => 'Пожалуйста, попробуйте позже.',
+    'Get Ringtone' => 'Скачай Рингтон',
 
 
     // Console

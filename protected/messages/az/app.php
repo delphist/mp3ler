@@ -14,4 +14,5 @@ return array(
     'Listen' => 'Dinlə',
     'Download' => 'Yüklə',
     'Pause' => 'Fasilə',
+    'Get Ringtone' => 'Zengə əlavə et',
 );

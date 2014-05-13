@@ -15,4 +15,5 @@ return array(
     'Listen' => 'Dinlemek',
     'Download' => 'Indirin',
     'Pause' => 'Durma',
+    'Get Ringtone' => 'Zeng İçin İndir',
 );

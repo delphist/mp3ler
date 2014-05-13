@@ -64,15 +64,29 @@ class User extends CActiveRecord
     }
 
     /**
-     * Сеттер дял пароля, при установке значения также автоматически
+     * Сеттер для пароля, при установке значения также автоматически
      * генерируется хеш
      *
      * @param $value string незашифрованный пароль
      */
     public function setPassword($value)
     {
-        $this->_password = $value;
-        $this->hashed_password = sha1($value);
+        if($value)
+        {
+            $this->_password = $value;
+            $this->hashed_password = $this->hashPassword($value);
+        }
+    }
+
+    /**
+     * Шифрует пароль
+     *
+     * @param $value исходный пароль
+     * @return string зашифрованный пароль
+     */
+    public function hashPassword($value)
+    {
+        return sha1($value);
     }
 
     /**

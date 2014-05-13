@@ -56,6 +56,12 @@ if($track !== NULL)
 
     <br />
 
+    <div style="text-align: center;">
+        <a href="http://www.ringtonematcher.com/go/?sid=WMBZ&search=<?=rawurlencode($track->artist_title.' - '.$track->title)?>" target="_blank"><?=Yii::t('app', 'Get Ringtone')?></a>
+    </div>
+
+    <br /><br />
+
     <?php $this->widget('application.components.SocialBar'); ?>
 
     <br />

@@ -77,6 +77,28 @@ class UserController extends Controller
     }
 
     /**
+     * Страница настроек пользователя, редиректит на нужную страницу
+     * в зависимости от группы пользователя
+     */
+    public function actionSettings()
+    {
+        switch(Yii::app()->user->model()->group)
+        {
+            case 'partner':
+                $this->redirect(array('partner/settings'));
+                break;
+
+            case 'admin':
+                $this->redirect(array('console/settings'));
+                break;
+
+            default:
+                throw new CHttpException(404);
+                break;
+        }
+    }
+
+    /**
      * Страница регистрации
      */
     public function actionRegister()
@@ -106,7 +128,11 @@ class UserController extends Controller
             {
                 $model->save();
 
-                $this->redirect(Yii::app()->user->returnUrl);
+                $identity = new UserIdentity($model->username, $model->password);
+                $identity->authenticateModel($model);
+                Yii::app()->user->login($identity, NULL);
+
+                $this->redirect(array('user/settings'));
             }
         }
 

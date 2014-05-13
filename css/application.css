@@ -129,3 +129,7 @@ a, p, h1, span {
     outline-color: #444444 !important;
     text-shadow: #111111 0px 1px 0px !important;
 }
+
+.yiiLog {
+    display: none;
+}
