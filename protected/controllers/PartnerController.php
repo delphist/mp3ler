@@ -66,8 +66,22 @@ class PartnerController extends Controller
 
     public function actionSettings()
     {
-        $this->render('settings', array(
+        $model = SettingsForm::model()->findByPk(Yii::app()->user->model()->id);
 
+        if(isset($_POST['SettingsForm']))
+        {
+            $model->attributes=$_POST['SettingsForm'];
+
+            if($model->save())
+            {
+                Yii::app()->user->setFlash('success', Yii::t('app', 'Settings has been successfully saved'));
+
+                $this->redirect(array('partner/settings'));
+            }
+        }
+
+        $this->render('settings', array(
+            'model' => $model,
         ));
     }
 }

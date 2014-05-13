@@ -124,11 +124,22 @@ class Controller extends CController
         return FALSE;
     }
 
+    /**
+     * Создает URL, добавляя в него параметры текущего партнера
+     * и выбранного языка
+     */
     public function createUrl($route, $params = array(), $ampersand = '&')
     {
-        if(Yii::app()->language != $this->defaultLanguage)
+        if( ! isset($params['lang']) && $params['lang'] !== NULL)
         {
-            $params['lang'] = Yii::app()->language;
+            if(Yii::app()->language != $this->defaultLanguage)
+            {
+                $params['lang'] = Yii::app()->language;
+            }
+        }
+        else
+        {
+            unset($params['lang']);
         }
 
         if($this->partner)

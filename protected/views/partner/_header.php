@@ -9,3 +9,5 @@
         </ul>
         <h3 class="text-muted">Mp3ler.biz</h3>
     </div>
+
+    <?=$this->renderPartial('/default/_flashes')?>

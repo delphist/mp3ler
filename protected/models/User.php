@@ -44,8 +44,11 @@ class User extends CActiveRecord
     {
         return array(
             'username' => Yii::t('app', 'Sitename'),
+            'sitename' => Yii::t('app', 'Sitename'),
             'email' => Yii::t('app', 'E-mail'),
             'password' => Yii::t('app', 'Password'),
+            'webmoney_details' => Yii::t('app', 'Webmoney wallet (Z)'),
+            'paypal_details' => Yii::t('app', 'Paypal account'),
         );
     }
 
@@ -56,6 +59,7 @@ class User extends CActiveRecord
             array('username, email, hashed_password, group', 'required'),
             array('username', 'length', 'max' => 20, 'min' => 3),
             array('password', 'length', 'max' => 150, 'min' => 5),
+            array('webmoney_details, paypal_details', 'length', 'max' => 50, 'min' => 3),
             array('email', 'email'),
             array('username, sitename', 'unique'),
             array('username, sitename', 'match', 'pattern' => '/^[A-Za-z0-9_\.\-]+$/u'),

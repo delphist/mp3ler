@@ -7,5 +7,7 @@
             <li><a href="<?=$this->createUrl('user/logout')?>"><?=Yii::t('app', 'Logout')?></a></li>
             <li><a href="<?=$this->createUrl('site/index', array('lang' => NULL))?>"><?=Yii::t('app', 'Back to the site')?></a></li>
         </ul>
-        <h3 class="text-muted">Console</h3>
+        <h3 class="text-muted"><?=Yii::t('app', 'Console')?></h3>
     </div>
+
+<?=$this->renderPartial('/default/_flashes')?>

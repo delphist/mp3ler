@@ -28,6 +28,7 @@ return CMap::mergeArray(
                 'allowAutoLogin' => TRUE,
                 'loginUrl' => array('/user/login'),
                 'returnUrl' => array('/user/index'),
+                'autoUpdateFlash' => FALSE,
             ),
             'request' => array(
                 //'baseUrl' => 'http://'.$_SERVER['HTTP_HOST'],

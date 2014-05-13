@@ -132,6 +132,8 @@ class UserController extends Controller
                 $identity->authenticateModel($model);
                 Yii::app()->user->login($identity, NULL);
 
+                Yii::app()->user->setFlash('success', Yii::t('app', 'Congratulations! You\'ve been succesfully registered'));
+
                 $this->redirect(array('user/settings'));
             }
         }
