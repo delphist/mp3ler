@@ -34,7 +34,7 @@ class UserController extends Controller
         switch(Yii::app()->user->model()->group)
         {
             case 'admin':
-                $this->redirect($this->createUrl('user/login'));
+                $this->redirect($this->createUrl('console/index'));
                 break;
 
             case 'partner':
