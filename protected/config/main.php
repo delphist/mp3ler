@@ -36,7 +36,8 @@ return CMap::mergeArray(
             'transitionStatistics' => array(
                 'class' => 'application.components.TransitionStatistics',
             ),
-            "redis" => require(dirname(__FILE__).'/redis.php'),
+            'session' => require(dirname(__FILE__).'/session.php'),
+            'redis' => require(dirname(__FILE__).'/redis.php'),
             'captchaSolver' => require(dirname(__FILE__).'/captcha.php'),
             'urlManager' => require(dirname(__FILE__).'/urls.php'),
             'cache' => require(dirname(__FILE__).'/cache.php'),

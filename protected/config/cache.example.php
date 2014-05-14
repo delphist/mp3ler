@@ -1,5 +1,4 @@
 <?php
-
 return array(
     'class' => 'system.caching.CMemCache',
     'servers' => array(

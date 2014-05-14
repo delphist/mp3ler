@@ -3,5 +3,7 @@ protected/config/database.php
 protected/config/cache.php
 protected/config/environment.php
 protected/config/params.php
+protected/config/servers.php
+protected/config/session.php
 protected/config/captcha.php
 protected/config/redis.php
