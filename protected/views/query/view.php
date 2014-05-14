@@ -72,26 +72,28 @@ else
 {
     ?>
 
-    <a href="http://www.ringtonematcher.com/go/?sid=WMBZ&search=<?=rawurlencode($query->title)?>" target="_blank"><?=Yii::t('app', 'Get Ringtone')?></a>
+    <div style="text-align: center;">
+        <a href="http://www.ringtonematcher.com/go/?sid=WMBZ&search=<?=rawurlencode($query->title)?>" target="_blank"><?=Yii::t('app', 'Get Ringtone')?></a>
+    </div>
 
     <br /><br />
 
-    <?php
+<?php
 }
 ?>
 
 <?php if(count($query->results) > 0) { ?>
-<ul class="list" data-role="listview" itemscope itemtype="http://schema.org/MusicGroup">
-    <li class="divider" data-role="list-divider"><?=Yii::t('app', 'On request: {text} Found: {found}', array(
-            '{text}' => '<b>'.CHtml::encode($query->title).'</b>',
-            '{found}' => Yii::t('app', '{n} audio file|{n} audio files', array((int) $query->results->count, '{n}' => '<b>'.CHtml::encode(number_format((int) $query->results->count, 0, '.', ' ')).'</b>'))
-        ))?></li>
-    <?php if(count($query->results) > 0) { ?>
-        <?php foreach($query->results as $result) { ?>
-            <li data-icon="false"><a href="<?=$this->createUrl('query/view', array('text' => $this->normalizeQuery($result['artist_title'].' - '.$result['title'])))?>" title="<?=CHtml::encode($result['artist_title'].' - '.$result['title'])?> mp3"><?='<b>'.CHtml::encode($result['artist_title']).'</b> — '.CHtml::encode($result['title'])?></a></li>
+    <ul class="list" data-role="listview" itemscope itemtype="http://schema.org/MusicGroup">
+        <li class="divider" data-role="list-divider"><?=Yii::t('app', 'On request: {text} Found: {found}', array(
+                '{text}' => '<b>'.CHtml::encode($query->title).'</b>',
+                '{found}' => Yii::t('app', '{n} audio file|{n} audio files', array((int) $query->results->count, '{n}' => '<b>'.CHtml::encode(number_format((int) $query->results->count, 0, '.', ' ')).'</b>'))
+            ))?></li>
+        <?php if(count($query->results) > 0) { ?>
+            <?php foreach($query->results as $result) { ?>
+                <li data-icon="false"><a href="<?=$this->createUrl('query/view', array('text' => $this->normalizeQuery($result['artist_title'].' - '.$result['title'])))?>" title="<?=CHtml::encode($result['artist_title'].' - '.$result['title'])?> mp3"><?='<b>'.CHtml::encode($result['artist_title']).'</b> — '.CHtml::encode($result['title'])?></a></li>
+            <?php } ?>
         <?php } ?>
-    <?php } ?>
-</ul>
+    </ul>
 <?php } elseif($track === NULL) { ?>
     <ul class="list" data-role="listview">
         <li class="divider" data-role="list-divider"><?=Yii::t('app', 'No results')?></li>
