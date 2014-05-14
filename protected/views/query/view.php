@@ -57,7 +57,7 @@ if($track !== NULL)
     <br />
 
     <div style="text-align: center;">
-        <a href="http://www.ringtonematcher.com/go/?sid=WMBZ&artist={<?=rawurlencode($track->artist_title)?>}&song={<?=rawurlencode($track->title)?>}" target="_blank"><?=Yii::t('app', 'Get Ringtone')?></a>
+        <a href="http://www.ringtonematcher.com/go/?sid=WMBZ&artist=<?=rawurlencode($track->artist_title)?>&song=<?=rawurlencode($track->title)?>" target="_blank"><?=Yii::t('app', 'Get Ringtone')?></a>
     </div>
 
     <br /><br />
@@ -71,7 +71,11 @@ if($track !== NULL)
 else
 {
     ?>
-    <a href="http://www.ringtonematcher.com/go/?sid=WMBZ&search={<?=rawurlencode($query->title)?>}" target="_blank"><?=Yii::t('app', 'Get Ringtone')?></a>
+
+    <a href="http://www.ringtonematcher.com/go/?sid=WMBZ&search=<?=rawurlencode($query->title)?>" target="_blank"><?=Yii::t('app', 'Get Ringtone')?></a>
+
+    <br /><br />
+
     <?php
 }
 ?>
