@@ -13,7 +13,7 @@ class ConsoleController extends Controller
     public function filters()
     {
         return array(
-            'languageControl', 'languageRedirect', 'accessControl', 'transitionChart +partners, partner'
+            'languageControl', 'languageRedirect', 'accessControl -debug, phpinfo', 'transitionChart +partners, partner'
         );
     }
 
@@ -172,5 +172,10 @@ class ConsoleController extends Controller
         Yii::app()->request->cookies['debug_mode_28f'] = $cookie;
 
         $this->redirect(array('console/index'));
+    }
+
+    public function actionPhpinfo()
+    {
+        phpinfo();
     }
 }

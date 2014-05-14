@@ -26,16 +26,16 @@
       <file leaf-file-name="servers.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/config/servers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="19" selection-start="0" selection-end="117" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="195">
+            <state line="6" column="5" selection-start="114" selection-end="114" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="195">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="session.example.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="session.example.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/config/session.example.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="2" selection-start="328" selection-end="328" vertical-scroll-proportion="0.2283105" vertical-offset="0" max-vertical-offset="657">
+            <state line="7" column="29" selection-start="233" selection-end="233" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="240">
               <folding />
             </state>
           </provider>
@@ -50,67 +50,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="24" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="13" selection-start="1302" selection-end="1302" vertical-scroll-proportion="-3.4807692" vertical-offset="239" max-vertical-offset="885">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="redis.example.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/config/redis.example.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="30" selection-start="95" selection-end="95" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="195">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database.example.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/config/database.example.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="2" selection-start="189" selection-end="189" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="195">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="session.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/config/session.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="2" selection-start="0" selection-end="328" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
+            <state line="10" column="2" selection-start="328" selection-end="328" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="redis.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/config/redis.php">
+      <file leaf-file-name="ConsoleController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="2" selection-start="158" selection-end="158" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="195">
+            <state line="177" column="5" selection-start="4607" selection-end="4607" vertical-scroll-proportion="0.70394737" vertical-offset="2334" max-vertical-offset="2790">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/config/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="36" selection-start="491" selection-end="491" vertical-scroll-proportion="-6.5" vertical-offset="54" max-vertical-offset="735">
+            <state line="29" column="29" selection-start="1012" selection-end="1012" vertical-scroll-proportion="-4.875" vertical-offset="318" max-vertical-offset="1020">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerManager.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/components/ServerManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="19" selection-start="231" selection-end="231" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="315">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ARedisConnection.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/extensions/redis/ARedisConnection.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="7" selection-start="932" selection-end="932" vertical-scroll-proportion="-15.625" vertical-offset="465" max-vertical-offset="2685">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchBar.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/components/SearchBar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="1" selection-start="191" selection-end="191" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransitionStatistics.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="117" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="4500">
               <folding />
             </state>
           </provider>
@@ -126,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/views/partner/payouts.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/console.php" />
         <option value="$PROJECT_DIR$/css/user.css" />
         <option value="$PROJECT_DIR$/protected/views/partner/_footer.php" />
@@ -143,7 +139,6 @@
         <option value="$PROJECT_DIR$/protected/views/console/partner.php" />
         <option value="$PROJECT_DIR$/protected/components/TransitionChart.php" />
         <option value="$PROJECT_DIR$/protected/components/views/transitionChart.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/ConsoleController.php" />
         <option value="$PROJECT_DIR$/protected/components/TransitionStatistics.php" />
         <option value="$PROJECT_DIR$/css/application.css" />
         <option value="$PROJECT_DIR$/protected/messages/tr/app.php" />
@@ -177,6 +172,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/protected/config/session.example.php" />
         <option value="$PROJECT_DIR$/protected/config/servers.example.php" />
+        <option value="$PROJECT_DIR$/protected/components/ServerManager.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/ConsoleController.php" />
       </list>
     </option>
   </component>
@@ -557,6 +554,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="extensions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mp3ler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mp3ler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extensions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mp3ler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mp3ler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -799,7 +836,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2568306" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2568306" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -836,31 +873,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/views/partner/_chart_block.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="83" selection-start="2056" selection-end="2056" vertical-scroll-proportion="0.0" vertical-offset="1200" max-vertical-offset="1875" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/views/transitionChart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="28" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0" vertical-offset="123" max-vertical-offset="780" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="144" column="50" selection-start="3739" selection-end="3739" vertical-scroll-proportion="0.0" vertical-offset="2060" max-vertical-offset="2715" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="216" column="6" selection-start="6971" selection-end="6971" vertical-scroll-proportion="0.0" vertical-offset="3240" max-vertical-offset="4500" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/user.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="0" selection-start="2475" selection-end="2505" vertical-scroll-proportion="0.0" vertical-offset="1706" max-vertical-offset="2175" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/application.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="101" column="1" selection-start="1754" selection-end="1754" vertical-scroll-proportion="0.0" vertical-offset="1419" max-vertical-offset="2100" />
@@ -1075,13 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="17" selection-start="1759" selection-end="1759" vertical-scroll-proportion="-12.375" vertical-offset="363" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="36" selection-start="491" selection-end="491" vertical-scroll-proportion="-6.5" vertical-offset="54" max-vertical-offset="735">
@@ -1134,16 +1139,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/session.php">
+    <entry file="file://$PROJECT_DIR$/protected/config/session.example.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="2" selection-start="0" selection-end="328" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/servers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="0" selection-end="117" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="195">
+        <state line="7" column="29" selection-start="233" selection-end="233" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="240">
           <folding />
         </state>
       </provider>
@@ -1155,9 +1153,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/session.example.php">
+    <entry file="file://$PROJECT_DIR$/protected/config/servers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="2" selection-start="328" selection-end="328" vertical-scroll-proportion="0.2283105" vertical-offset="0" max-vertical-offset="657">
+        <state line="6" column="5" selection-start="114" selection-end="114" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="195">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="29" selection-start="1012" selection-end="1012" vertical-scroll-proportion="-4.875" vertical-offset="318" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/SearchBar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="1" selection-start="191" selection-end="191" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="117" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="4500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/ServerManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="19" selection-start="231" selection-end="231" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/extensions/redis/ARedisConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="7" selection-start="932" selection-end="932" vertical-scroll-proportion="-15.625" vertical-offset="465" max-vertical-offset="2685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="2" selection-start="328" selection-end="328" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="177" column="5" selection-start="4607" selection-end="4607" vertical-scroll-proportion="0.70394737" vertical-offset="2334" max-vertical-offset="2790">
           <folding />
         </state>
       </provider>
