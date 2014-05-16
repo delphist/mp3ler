@@ -69,7 +69,7 @@ class Controller extends CController
         $downloadKey = $this->trackDownloadKey($track);
 
         Yii::beginProfile('addDownloadKey:'.$downloadKey);
-        Yii::app()->redis->getClient()->set('d:'.$downloadKey, $this->trackDownloadData($track), array('ex' => $this->trackDownloadLinkTtl));
+        Yii::app()->redis->getClient()->setex('d:'.$downloadKey, $this->trackDownloadLinkTtl, $this->trackDownloadData($track));
         Yii::beginProfile('addDownloadKey:'.$downloadKey);
 
         return $this->createUrl('track/download', array(

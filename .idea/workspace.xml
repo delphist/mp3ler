@@ -77,19 +77,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Controller.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="0" selection-start="2465" selection-end="2465" vertical-scroll-proportion="-3.75" vertical-offset="1560" max-vertical-offset="5850">
+            <state line="72" column="58" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.3618421" vertical-offset="915" max-vertical-offset="5850">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="urls.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/config/urls.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="33" selection-start="571" selection-end="571" vertical-scroll-proportion="0.7036247" vertical-offset="15" max-vertical-offset="1035">
+            <state line="23" column="33" selection-start="571" selection-end="571" vertical-scroll-proportion="-13.75" vertical-offset="15" max-vertical-offset="1035">
               <folding />
             </state>
           </provider>
@@ -172,8 +172,8 @@
         <option value="$PROJECT_DIR$/protected/controllers/PartnerController.php" />
         <option value="$PROJECT_DIR$/protected/controllers/ConsoleController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/protected/components/Controller.php" />
         <option value="$PROJECT_DIR$/protected/config/urls.php" />
+        <option value="$PROJECT_DIR$/protected/components/Controller.php" />
       </list>
     </option>
   </component>
@@ -1160,16 +1160,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
+    <entry file="file://$PROJECT_DIR$/protected/config/urls.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="0" selection-start="2465" selection-end="2465" vertical-scroll-proportion="-3.75" vertical-offset="1560" max-vertical-offset="5850">
+        <state line="23" column="33" selection-start="571" selection-end="571" vertical-scroll-proportion="-13.75" vertical-offset="15" max-vertical-offset="1035">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/urls.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="33" selection-start="571" selection-end="571" vertical-scroll-proportion="0.7036247" vertical-offset="15" max-vertical-offset="1035">
+        <state line="72" column="58" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.3618421" vertical-offset="915" max-vertical-offset="5850">
           <folding />
         </state>
       </provider>
