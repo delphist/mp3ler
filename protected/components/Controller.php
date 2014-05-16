@@ -127,8 +127,8 @@ class Controller extends CController
         }
         else
         {
-            $key[] = $data['type'];
-            $key[] = $data['id'];
+            $key[] = $track->data['type'];
+            $key[] = $track->data['id'];
         }
 
         return sha1(implode($key, ':'));
