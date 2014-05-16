@@ -104,6 +104,12 @@
         <?php $this->widget('application.components.TagBar'); ?>
         <?php $this->endCache(); } ?>
 
+    <?php if(YII_DEBUG) { ?>
+    <div data-role="content" style="text-align: center;">
+        <a href="#" onclick="$('.yiiLog').toggle(); return false;">profiler</a>
+    </div>
+    <? } ?>
+
     <div data-role="footer">
         <span class="ui-title">© mp3ler.biz</span>
     </div>

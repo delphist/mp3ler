@@ -75,6 +75,7 @@ class Controller extends CController
         return $this->createUrl('track/download', array(
             'filename' => $track->filename,
             'id' => $downloadKey,
+            'lang' => NULL,
         ));
     }
 
@@ -219,7 +220,7 @@ class Controller extends CController
      */
     public function createUrl($route, $params = array(), $ampersand = '&')
     {
-        if( ! isset($params['lang']))
+        if( ! array_key_exists('lang', $params))
         {
             if(Yii::app()->language != $this->defaultLanguage)
             {
@@ -228,7 +229,10 @@ class Controller extends CController
         }
         else
         {
-            unset($params['lang']);
+            if( ! $params['lang'])
+            {
+                unset($params['lang']);
+            }
         }
 
         if($this->partner)

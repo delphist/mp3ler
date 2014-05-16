@@ -48,8 +48,11 @@ if($track !== NULL)
     <br /><br />
 
     <fieldset class="ui-grid-a">
-        <div class="ui-block-a"><a href="<?=$this->createTrackDownloadUrl($track)?>" data-role="button" class="button jplayer-toggle" data-corners="false"><?=Yii::t('app', 'Listen')?></a></div>
-        <div class="ui-block-b"><a href="<?=$this->createTrackDownloadUrl($track)?>" data-role="button" class="button" data-corners="false"><?=Yii::t('app', 'Download')?></a></div>
+        <?php
+        $downloadLink = $this->createTrackDownloadUrl($track);
+        ?>
+        <div class="ui-block-a"><a href="<?=$downloadLink?>" data-role="button" class="button jplayer-toggle" data-corners="false"><?=Yii::t('app', 'Listen')?></a></div>
+        <div class="ui-block-b"><a href="<?=$downloadLink?>" data-role="button" class="button" data-corners="false"><?=Yii::t('app', 'Download')?></a></div>
     </fieldset>
 
     <div class="jplayer"></div>
