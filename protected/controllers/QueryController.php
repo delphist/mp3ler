@@ -5,7 +5,10 @@ class QueryController extends Controller
     public function filters()
     {
         return array(
-            'languageControl', 'languageRedirect', 'transitionControl'
+            #'domainControl',
+            'transitionControl',
+            'languageControl',
+            'languageRedirect',
         );
     }
 
@@ -44,7 +47,6 @@ class QueryController extends Controller
          * Ищем вконтакте
          */
         $vk_audio = new VkAudio($query->text, $page);
-        $vk_audio->flush_cache = TRUE;
         $query->results = $vk_audio;
 
         /**
