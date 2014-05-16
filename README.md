@@ -47,7 +47,9 @@ Mp3ler
     * `t:ar` (transition autoincrement) — числовое поле для автоинкремента id кликов
     * `t:i` (transition info) — хеш (hash) с данными о кликах (всех) партнера, где field — идентификатор клика, member — json-обьект с данными. TODO: [сделать так][1]
 * **Сессии**
-    * `s:{id}` (session) — строка с данными сессии с идентификатором {id}
+    * `s:{id}` (session) — строка с данными сессии с идентификатором {id}, хранение происхоит через стандартные средства php (session.save_handler) и redis.so. Ключ живет определенное время (настраивается в конфиге session.php)
+* **Скачивания**
+    * `d:{id}` (download) — строка с данными (json) о временной ссылке скачивания трека, где {id} — идентификатор ссылки. Ключ живет определенное время (настраивается в params.php)
 
 
   [1]: http://instagram-engineering.tumblr.com/post/12202313862/storing-hundreds-of-millions-of-simple-key-value-pairs

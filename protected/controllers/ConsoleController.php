@@ -13,7 +13,11 @@ class ConsoleController extends Controller
     public function filters()
     {
         return array(
-            'languageControl', 'languageRedirect', 'accessControl -debug, phpinfo', 'transitionChart +partners, partner'
+            'domainControl',
+            'languageControl',
+            'languageRedirect',
+            'accessControl -debug, phpinfo',
+            'transitionChart +partners, partner',
         );
     }
 

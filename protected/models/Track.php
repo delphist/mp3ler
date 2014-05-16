@@ -306,10 +306,17 @@ class Track extends CActiveRecord
 
     public function findByData($data)
     {
-        return self::model()->findByAttributes(array(
-            'external_id' => $data['id'],
-            'external_type' => $data['type'],
-        ));
+        if(isset($data['type']))
+        {
+            return self::model()->findByAttributes(array(
+                'external_id' => $data['id'],
+                'external_type' => $data['type'],
+            ));
+        }
+        else
+        {
+            return self::model()->findByPk($data['id']);
+        }
     }
 
     public function search()

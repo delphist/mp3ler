@@ -55,16 +55,103 @@ class Controller extends CController
     public $languageCookieName = 'dil';
 
     /**
+     * @var int Время жизни ссылки для скачивания
+     */
+    public $trackDownloadLinkTtl = 21600; // 6 часов
+
+    /**
      * Создает ссылку для скачивания трека
      *
      * @param Track $track
      */
     protected function createTrackDownloadUrl(Track $track)
     {
+        $downloadKey = $this->trackDownloadKey($track);
+
+        Yii::app()->redis->getClient()->set('d:'.$downloadKey, $this->trackDownloadData($track), array('ex' => $this->trackDownloadLinkTtl));
+
         return $this->createUrl('track/download', array(
             'filename' => $track->filename,
-            'data' => base64_encode(json_encode($track->data))
+            'id' => $downloadKey,
         ));
+    }
+
+    /**
+     * Возвращает файл по идентификатору для скачивания
+     *
+     * @param string $key идентификатор
+     * @return null|Track
+     */
+    public function findTrackByKey($key)
+    {
+        $data = Yii::app()->redis->getClient()->get('d:'.$key);
+
+        if($data !== FALSE)
+        {
+            $data = json_decode($data, true);
+
+            if(is_array($data) && isset($data['id']))
+            {
+                $track = Track::model()->findByData($data);
+
+                if($track === NULL)
+                {
+                    $track = new Track;
+                    $track->data = $data;
+                }
+
+                return $track;
+            }
+        }
+
+        return NULL;
+    }
+
+    /**
+     * Генерирует случайный ключ для хранения информации о скачивании файла
+     *
+     * @param Track $track
+     * @return string уникальный хеш (40 символов)
+     */
+    protected function trackDownloadKey(Track $track)
+    {
+        $key = array(
+            'a6dcc8b207f92718dc7251518d4db06a', // salt
+            floor(time() / $this->trackDownloadLinkTtl),
+        );
+
+        if( ! $track->isNewRecord)
+        {
+            $key[] = 'saved';
+            $key[] = $track->id;
+        }
+        else
+        {
+            $key[] = $data['type'];
+            $key[] = $data['id'];
+        }
+
+        return sha1(implode($key, ':'));
+    }
+
+    /**
+     * Генерирует строку с информацией о скачивании файле
+     *
+     * @param Track $track
+     * @param string json-строка с информацией о скачивании
+     */
+    protected function trackDownloadData(Track $track)
+    {
+        if( ! $track->isNewRecord)
+        {
+            $data = array('id' => $track->id);
+        }
+        else
+        {
+            $data = $track->data;
+        }
+
+        return json_encode($data);
     }
 
     /**
@@ -170,6 +257,21 @@ class Controller extends CController
         $text = trim($text);
 
         return $text;
+    }
+
+    /**
+     * Редиректит на основной домен, если сайт запущен не из того места
+     *
+     * @param $filterChain
+     */
+    public function filterDomainControl($filterChain)
+    {
+        if(mb_strtolower($_SERVER['HTTP_HOST']) !== mb_strtolower(Yii::app()->serverManager->mainHost))
+        {
+            $this->redirect('http://'.Yii::app()->serverManager->mainHost.$_SERVER['REQUEST_URI']);
+        }
+
+        $filterChain->run();
     }
 
     /**

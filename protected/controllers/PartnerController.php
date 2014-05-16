@@ -16,7 +16,11 @@ class PartnerController extends Controller
     public function filters()
     {
         return array(
-            'languageControl', 'languageRedirect', 'accessControl', 'transitionChart +transitions'
+            'domainControl',
+            'languageControl',
+            'languageRedirect',
+            'accessControl',
+            'transitionChart +transitions',
         );
     }
 

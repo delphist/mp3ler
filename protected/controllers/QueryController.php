@@ -5,7 +5,7 @@ class QueryController extends Controller
     public function filters()
     {
         return array(
-            #'domainControl',
+            'domainControl',
             'transitionControl',
             'languageControl',
             'languageRedirect',

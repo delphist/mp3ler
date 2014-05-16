@@ -16,7 +16,9 @@ class UserController extends Controller
     public function filters()
     {
         return array(
-            'languageControl', 'languageRedirect'
+            'domainControl',
+            'languageControl',
+            'languageRedirect',
         );
     }
 

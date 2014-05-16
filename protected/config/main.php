@@ -39,6 +39,7 @@ return CMap::mergeArray(
             'session' => require(dirname(__FILE__).'/session.php'),
             'redis' => require(dirname(__FILE__).'/redis.php'),
             'captchaSolver' => require(dirname(__FILE__).'/captcha.php'),
+            'serverManager' => require(dirname(__FILE__).'/server.php'),
             'urlManager' => require(dirname(__FILE__).'/urls.php'),
             'cache' => require(dirname(__FILE__).'/cache.php'),
             'db' => require(dirname(__FILE__).'/database.php'),

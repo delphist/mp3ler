@@ -5,7 +5,10 @@ class TrackController extends Controller
     public function filters()
     {
         return array(
-            'languageControl', 'languageRedirect -vkId', 'transitionControl'
+            'domainControl -download',
+            'transitionControl',
+            'languageControl',
+            'languageRedirect -vkId',
         );
     }
 
@@ -26,10 +29,10 @@ class TrackController extends Controller
     /**
      * Скачивание файла с сервера
      *
+     * @param $id идентификатор ссылки для скачивания
      * @param $filename string имя файла
-     * @param $data string
      */
-    public function actionDownload($filename, $data)
+    public function actionDownload($id, $filename)
     {
         /**
          * При разрыве коннекта с клиентом файл должен
@@ -40,20 +43,12 @@ class TrackController extends Controller
         ini_set('memory_limit', '256M');
 
         /**
-         * Достаем информацию
+         * Достаем трек
          */
-        $data = json_decode(base64_decode($data), true);
-
-        /**
-         * Ищем трек по внешнему id в нашей базе, если
-         * он уже был хоть раз скачан, иначе создаем новый
-         */
-        $this->track = Track::model()->findByData($data);
-
+        $this->track = $this->findTrackByKey($id);
         if($this->track === NULL)
         {
-            $this->track = new Track;
-            $this->track->data = $data;
+            throw new CHttpException(404);
         }
 
         if($this->track->downloadable && ! $this->track->isDownloaded)
