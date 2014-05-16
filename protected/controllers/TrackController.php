@@ -8,7 +8,7 @@ class TrackController extends Controller
             'domainControl -download',
             'transitionControl',
             'languageControl',
-            'languageRedirect -vkId',
+            'languageRedirect -vkId -download',
         );
     }
 
@@ -173,22 +173,10 @@ class TrackController extends Controller
                 'downloads_count' => 1
             ));
 
-            if(YII_DEBUG)
-            {
-                /**
-                 * Локально читаем файл и отдаем через php
-                 */
-                $this->_flush();
-
-                readfile($this->track->filePath);
-            }
-            else
-            {
-                /**
-                 * На продакшене посылаем заголовок чтобы файлом занимался nginx
-                 */
-                header('X-Accel-Redirect: '.$this->track->fileUrl);
-            }
+            /**
+             * Посылаем заголовок чтобы файлом занимался nginx
+             */
+            header('X-Accel-Redirect: '.$this->track->fileUrl);
 
             Yii::app()->end();
         }
