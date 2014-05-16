@@ -69,12 +69,7 @@ class Controller extends CController
         $downloadKey = $this->trackDownloadKey($track);
 
         Yii::beginProfile('addDownloadKey:'.$downloadKey);
-        $r = Yii::app()->redis->getClient()->set('d:'.$downloadKey, $this->trackDownloadData($track), array('ex' => $this->trackDownloadLinkTtl));
-        echo '<!--';
-        var_dump($r);
-        var_dump('d:'.$downloadKey);
-        var_dump($this->trackDownloadData($track));
-        echo '-->';
+        Yii::app()->redis->getClient()->set('d:'.$downloadKey, $this->trackDownloadData($track), array('ex' => $this->trackDownloadLinkTtl));
         Yii::beginProfile('addDownloadKey:'.$downloadKey);
 
         return $this->createUrl('track/download', array(
@@ -118,7 +113,7 @@ class Controller extends CController
      * Генерирует случайный ключ для хранения информации о скачивании файла
      *
      * @param Track $track
-     * @return string уникальный хеш (40 символов)
+     * @return string уникальный хеш (32 символа)
      */
     protected function trackDownloadKey(Track $track)
     {
@@ -138,7 +133,7 @@ class Controller extends CController
             $key[] = $track->data['id'];
         }
 
-        return sha1(implode($key, ':'));
+        return md5(implode($key, ':'));
     }
 
     /**
