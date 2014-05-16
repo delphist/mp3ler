@@ -23,15 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ConsoleController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/ConsoleController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="26" selection-start="588" selection-end="588" vertical-scroll-proportion="-9.375" vertical-offset="165" max-vertical-offset="2850">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
@@ -41,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/query/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="57" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.66459626" vertical-offset="382" max-vertical-offset="1845">
+            <state line="32" column="40" selection-start="1573" selection-end="1573" vertical-scroll-proportion="-4.0833335" vertical-offset="382" max-vertical-offset="1845">
               <folding />
             </state>
           </provider>
@@ -131,7 +122,16 @@
       <file leaf-file-name="TransitionStatistics.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="8" selection-start="5829" selection-end="5875" vertical-scroll-proportion="-13.0" vertical-offset="2403" max-vertical-offset="4500">
+            <state line="170" column="39" selection-start="5536" selection-end="5536" vertical-scroll-proportion="-6.125" vertical-offset="2403" max-vertical-offset="4500">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VkApi.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/components/VkApi.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="18" selection-start="793" selection-end="793" vertical-scroll-proportion="0.16149068" vertical-offset="346" max-vertical-offset="4050">
               <folding />
             </state>
           </provider>
@@ -147,7 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/models/RegisterForm.php" />
         <option value="$PROJECT_DIR$/protected/views/partner/_chart_block.php" />
         <option value="$PROJECT_DIR$/protected/views/partner/transitions.php" />
         <option value="$PROJECT_DIR$/protected/views/console/partners.php" />
@@ -198,6 +197,7 @@
         <option value="$PROJECT_DIR$/protected/components/Controller.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/views/query/view.php" />
+        <option value="$PROJECT_DIR$/protected/components/VkApi.php" />
       </list>
     </option>
   </component>
@@ -897,11 +897,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/views/partner/settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="68" selection-start="2590" selection-end="2590" vertical-scroll-proportion="-2.4583333" vertical-offset="736" max-vertical-offset="1380" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/models/SettingsForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="28" selection-start="1369" selection-end="1369" vertical-scroll-proportion="-23.625" vertical-offset="228" max-vertical-offset="1215" />
@@ -1153,13 +1148,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="8" selection-start="5829" selection-end="5875" vertical-scroll-proportion="-13.0" vertical-offset="2403" max-vertical-offset="4500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/urls.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="33" selection-start="571" selection-end="571" vertical-scroll-proportion="-13.75" vertical-offset="15" max-vertical-offset="1035">
@@ -1228,7 +1216,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/query/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="57" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.66459626" vertical-offset="382" max-vertical-offset="1845">
+        <state line="32" column="40" selection-start="1573" selection-end="1573" vertical-scroll-proportion="-4.0833335" vertical-offset="382" max-vertical-offset="1845">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/TransitionStatistics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="39" selection-start="5536" selection-end="5536" vertical-scroll-proportion="-6.125" vertical-offset="2403" max-vertical-offset="4500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/components/VkApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="18" selection-start="793" selection-end="793" vertical-scroll-proportion="0.16149068" vertical-offset="346" max-vertical-offset="4050">
           <folding />
         </state>
       </provider>

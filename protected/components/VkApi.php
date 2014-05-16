@@ -28,6 +28,7 @@ class VkApi extends CComponent
      */
     public function execute($method, $params = FALSE)
     {
+        Yii::beginProfile('vkApiExecute'.$method);
         $attempt = 1;
         $account_ids = array();
 
@@ -65,6 +66,7 @@ class VkApi extends CComponent
 
             if($account === NULL)
             {
+                Yii::endProfile('vkApiExecute'.$method);
                 return NULL;
             }
 
@@ -88,6 +90,7 @@ class VkApi extends CComponent
                     $account->captcha_count++;
                     $account->save();
 
+
                     Yii::log('Got captcha ('.$account->id.')', 'info', 'vkapi');
                 }
                 elseif($result->error_code == 6)
@@ -98,6 +101,7 @@ class VkApi extends CComponent
 
                     Yii::log($error_message, 'warning', 'vkapi');
 
+                    Yii::endProfile('vkApiExecute'.$method);
                     return NULL;
                 }
                 else
@@ -112,6 +116,7 @@ class VkApi extends CComponent
                     $account->is_alive = FALSE;
                     $account->save();
 
+                    Yii::endProfile('vkApiExecute'.$method);
                     return NULL;
                 }
             }
@@ -122,10 +127,12 @@ class VkApi extends CComponent
                  * поля каптчи аккаунта
                  */
 
+                Yii::endProfile('vkApiExecute'.$method);
                 return $result;
             }
         }
 
+        Yii::endProfile('vkApiExecute'.$method);
         return NULL;
     }
 
@@ -139,6 +146,7 @@ class VkApi extends CComponent
      */
     public function execute_account(VkAccount $account, $method, array $params = NULL)
     {
+        Yii::beginProfile('vkApiExecuteAccount'.$account->id);
         if ($params === NULL)
         {
             $params = array();
@@ -188,6 +196,8 @@ class VkApi extends CComponent
         $account->saveCounters(array(
             'request_count' => 1,
         ));
+
+        Yii::endProfile('vkApiExecuteAccount'.$account->id);
 
         return $result;
     }
