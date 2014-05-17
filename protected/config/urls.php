@@ -22,6 +22,7 @@ return array(
          * Скачивание файла
          */
         'download/<id:[a-f0-9]{32}>/<filename:.*?\.mp3>' => 'track/download',
+        'download/<filename:.*?\.mp3>' => 'track/download',
 
         /**
          * Топ треков

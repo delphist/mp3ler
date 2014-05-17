@@ -32,7 +32,7 @@ class TrackController extends Controller
      * @param $id идентификатор ссылки для скачивания
      * @param $filename string имя файла
      */
-    public function actionDownload($id, $filename)
+    public function actionDownload($filename, $id = '')
     {
         /**
          * При разрыве коннекта с клиентом файл должен
@@ -45,10 +45,15 @@ class TrackController extends Controller
         /**
          * Достаем трек
          */
+        if( ! $id)
+        {
+            $this->redirectFilename($filename);
+        }
+
         $this->track = $this->findTrackByKey($id);
         if($this->track === NULL)
         {
-            throw new CHttpException(404);
+            $this->redirectFilename($filename);
         }
 
         if($this->track->downloadable && ! $this->track->isDownloaded)
@@ -316,5 +321,12 @@ class TrackController extends Controller
         ob_flush();
         flush();
         ob_start();
+    }
+
+    protected function redirectFilename($filename)
+    {
+        $this->redirect($this->createUrl('query/view', array(
+            'text' => $this->normalizeQuery(str_replace('.mp3', '', $filename))
+        )), TRUE, 301);
     }
 }

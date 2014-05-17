@@ -196,6 +196,7 @@ class VkAudio extends Audio
                     'artist_title' => $this->decode_string((string) $audio->artist),
                     'title' => $this->decode_string((string) $audio->title),
                     'duration' => (int) $audio->duration,
+                    'server_id' => Yii::app()->serverManager->currentServerId,
                     'url' => (string) $audio->url,
                 );
             }
