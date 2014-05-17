@@ -197,7 +197,7 @@ class Track extends CActiveRecord
         /**
          * Файлы менее 100 КБ скорее всего битые, перекачиваем заново
          */
-        if( ! filesize($this->filePath) < 1024 * 100)
+        if(filesize($this->filePath) < 1024 * 100)
         {
             return FALSE;
         }
