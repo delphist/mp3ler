@@ -123,43 +123,48 @@ class TrackController extends Controller
                 }
 
                 $found_track = Track::model()->findByData($found_result);
-                if($found_track !== NULL)
+
+                if($found_track !== NULL && $found_track->isDownloaded)
                 {
-                    /**
-                     * Если такой трек уже есть в базе, то редиректим на него
-                     */
-                    $this->redirect($this->createTrackDownloadUrl($found_track));
+                    if($found_track->id != $this->track->id)
+                    {
+                        /**
+                         * Если такой трек уже есть в базе, то редиректим на него
+                         */
+                        $this->redirect($this->createTrackDownloadUrl($found_track));
+                    }
                 }
                 else
                 {
-                    /**
-                     * Если же такого трека нет в базе, то качаем прямо в этом процессе
-                     */
                     $this->track = new Track;
-                    $this->track->data = $found_result;
+                }
 
-                    try
+                /**
+                 * Если же такого трека нет в базе, то качаем прямо в этом процессе
+                 */
+                $this->track->data = $found_result;
+
+                try
+                {
+                    $this->track->download(
+                        NULL,
+                        array($this, '_callback_body'),
+                        array($this, '_callback_end')
+                    );
+                }
+                catch(Exception $e)
+                {
+                    if($e->getMessage() == 'Http code 404')
                     {
-                        $this->track->download(
-                            NULL,
-                            array($this, '_callback_body'),
-                            array($this, '_callback_end')
-                        );
+                        /**
+                         * Теперь выдаем просто 404
+                         */
+
+                        throw new CHttpException(404, 'VK 404 on file ('.$this->track->data['url'].')');
                     }
-                    catch(Exception $e)
+                    else
                     {
-                        if($e->getMessage() == 'Http code 404')
-                        {
-                            /**
-                             * Теперь выдаем просто 404
-                             */
-
-                            throw new CHttpException(404, 'VK 404 on file ('.$this->track->data['url'].')');
-                        }
-                        else
-                        {
-                            throw $e;
-                        }
+                        throw $e;
                     }
                 }
 
