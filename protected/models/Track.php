@@ -10,6 +10,7 @@
  * @property $external_type тип источника трека (сейчас доступен только vk)
  * @property $external_id идентификатор трека в источнике
  * @property $external_data данные о треке из источника
+ * @property $content_length корректный размер файла (не обязательно фактический, который лежит на диске)
  */
 class Track extends CActiveRecord
 {
@@ -149,6 +150,8 @@ class Track extends CActiveRecord
             {
                 call_user_func($this->_body_callback, $curl, $string);
             }
+
+            $this->content_length = curl_getinfo($curl, CURLINFO_CONTENT_LENGTH_DOWNLOAD);
 
             if($this->_filepointer != NULL)
             {

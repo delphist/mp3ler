@@ -183,10 +183,14 @@ class TrackController extends Controller
                 'downloads_count' => 1
             ));
 
-            /**
-             * Посылаем заголовок чтобы файлом занимался nginx
-             */
-            header('X-Accel-Redirect: '.$this->track->fileUrl);
+            if($this->isXAccelRedirect())
+            {
+                header('X-Accel-Redirect: '.$this->track->fileUrl);
+            }
+            else
+            {
+                readfile($this->track->filePath);
+            }
 
             Yii::app()->end();
         }
@@ -258,20 +262,16 @@ class TrackController extends Controller
 
         if( ! $this->streaming)
         {
-            if(YII_DEBUG)
+            if($this->isXAccelRedirect())
             {
-                echo 'header(\'X-Accel-Redirect: \'.'.$this->track->fileUrl.');';
+                header('X-Accel-Redirect: '.$this->track->fileUrl);
             }
             else
             {
-                /**
-                 * На продакшене при отключенном стриминге
-                 * посылаем заголовок чтобы файлом занимался nginx
-                 */
-                header('X-Accel-Redirect: '.$this->track->fileUrl);
+                readfile($this->track->filePath);
             }
         }
-    }
+    }т
 
     /**
      * Коллбек, срабатывающий при чтении каждой части файла CURL'ом
@@ -326,6 +326,16 @@ class TrackController extends Controller
         ob_flush();
         flush();
         ob_start();
+    }
+
+    protected function isXAccelRedirect()
+    {
+        if(isset($_SERVER["SERVER_SOFTWARE"]) && strpos($_SERVER["SERVER_SOFTWARE"], 'Development Server') !== FALSE)
+        {
+            return FALSE;
+        }
+
+        return TRUE;
     }
 
     protected function redirectFilename($filename)

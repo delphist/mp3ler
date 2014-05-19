@@ -17,19 +17,19 @@
     <meta name="robots" content="index"/>
     <title><?php echo CHtml::encode($this->pageTitle) ?></title>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-    <link rel="stylesheet" type="text/css" href="<?=Yii::app()->request->baseUrl?>/css/jquery.mobile-1.4.2.min.css" />
-    <link rel="stylesheet" type="text/css" href="<?=Yii::app()->request->baseUrl?>/css/application.css" />
+    <link rel="stylesheet" type="text/css" href="<?=Yii::app()->request->baseUrl?>/css/jquery.mobile-1.4.2.min.css?v=1" />
+    <link rel="stylesheet" type="text/css" href="<?=Yii::app()->request->baseUrl?>/css/application.css?v=1" />
     <?php foreach(array('en', 'ru', 'az', 'tr', 'ge') as $language) { ?>
         <link rel="alternate" href="http://mp3ler.biz<?=$this->createLanguageUrl($language)?>" hreflang="<?=$language?>" />
     <?php } ?>
     <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" />
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.0.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.0.min.js?v=1" type="text/javascript"></script>
+    <script type="text/javascript">git
         $(document).bind("mobileinit", function () {
             $.mobile.ajaxEnabled = false;
         });
     </script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile-1.4.2.min.js" type="text/javascript"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile-1.4.2.min.js?v=1" type="text/javascript"></script>
     <script src='http://my.mobfox.com/ad.js'></script>
 </head>
 <body class="ui-mobile-viewport ui-overlay-a">
