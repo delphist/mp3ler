@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TrackController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TrackController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/controllers/TrackController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="6" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="5280">
+            <state line="273" column="5" selection-start="7689" selection-end="7689" vertical-scroll-proportion="-1.7304147" vertical-offset="4846" max-vertical-offset="5280">
               <folding />
             </state>
           </provider>
@@ -53,16 +53,16 @@
       <file leaf-file-name="Track.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/models/Track.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="44" selection-start="3053" selection-end="3053" vertical-scroll-proportion="-10.25" vertical-offset="1224" max-vertical-offset="5265">
+            <state line="98" column="44" selection-start="3053" selection-end="3053" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="5265">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="14" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.20512821" vertical-offset="273" max-vertical-offset="3210">
+            <state line="35" column="27" selection-start="2123" selection-end="2123" vertical-scroll-proportion="-10.5" vertical-offset="273" max-vertical-offset="3210">
               <folding />
             </state>
           </provider>
@@ -175,16 +175,15 @@
         <option value="$PROJECT_DIR$/protected/config/urls.php" />
         <option value="$PROJECT_DIR$/protected/migrations/m140517_053922_add_content_length_to_tracks.php" />
         <option value="$PROJECT_DIR$/protected/models/Track.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/TrackController.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/TrackController.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Php 5.4 (brew)" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
     <option name="width" value="1280" />
-    <option name="height" value="724" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -894,16 +893,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="724" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25609756" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2554645" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34087238" sideWeight="0.67094016" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34652665" sideWeight="0.67094016" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -911,11 +910,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1134,9 +1133,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/urls.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="11" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1050">
-          <folding />
-        </state>
+        <state line="26" column="11" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1050" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/Controller.php">
@@ -1144,16 +1141,9 @@
         <state line="87" column="40" selection-start="1956" selection-end="1956" vertical-scroll-proportion="0.3090062" vertical-offset="1106" max-vertical-offset="5910" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/tests/bootstrap.php">
+    <entry file="file://$PROJECT_DIR$/protected/migrations/m140517_053922_add_content_length_to_tracks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/RemindForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
+        <state line="13" column="1" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
           <folding />
         </state>
       </provider>
@@ -1165,16 +1155,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/migrations/m140517_053922_add_content_length_to_tracks.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/Track.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="1" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
+        <state line="98" column="44" selection-start="3053" selection-end="3053" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="5265">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
+    <entry file="file://$PROJECT_DIR$/protected/runtime/application.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="3255">
+        <state line="2788" column="40" selection-start="298744" selection-end="298744" vertical-scroll-proportion="0.0" vertical-offset="41505" max-vertical-offset="42150">
           <folding />
         </state>
       </provider>
@@ -1189,30 +1179,37 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/runtime/application.log">
+    <entry file="file://$PROJECT_DIR$/protected/components/VkAudio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2788" column="40" selection-start="298744" selection-end="298744" vertical-scroll-proportion="0.0" vertical-offset="41505" max-vertical-offset="42150">
+        <state line="7" column="7" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="3255">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/TrackController.php">
+    <entry file="file://$PROJECT_DIR$/protected/models/RemindForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="6" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="5280">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Track.php">
+    <entry file="file://$PROJECT_DIR$/protected/tests/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="44" selection-start="3053" selection-end="3053" vertical-scroll-proportion="-10.25" vertical-offset="1224" max-vertical-offset="5265">
+        <state line="10" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="240">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="14" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.20512821" vertical-offset="273" max-vertical-offset="3210">
+        <state line="35" column="27" selection-start="2123" selection-end="2123" vertical-scroll-proportion="-10.5" vertical-offset="273" max-vertical-offset="3210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/TrackController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="273" column="5" selection-start="7689" selection-end="7689" vertical-scroll-proportion="-1.7304147" vertical-offset="4846" max-vertical-offset="5280">
           <folding />
         </state>
       </provider>

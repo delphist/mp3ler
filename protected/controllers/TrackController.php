@@ -271,7 +271,7 @@ class TrackController extends Controller
                 readfile($this->track->filePath);
             }
         }
-    }т
+    }
 
     /**
      * Коллбек, срабатывающий при чтении каждой части файла CURL'ом
