@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_iframe.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_iframe.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/default/_iframe.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="82" selection-start="235" selection-end="235" vertical-scroll-proportion="0.18656716" vertical-offset="0" max-vertical-offset="402">
+            <state line="3" column="29" selection-start="151" selection-end="151" vertical-scroll-proportion="-0.56962025" vertical-offset="0" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
@@ -50,11 +50,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_flashes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/views/default/_flashes.php">
+      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="165">
-              <folding />
+            <state line="31" column="128" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.6236324" vertical-offset="180" max-vertical-offset="3225">
+              <folding>
+                <marker date="1400532343000" expanded="true" signature="1787:1840" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,7 +168,6 @@
         <option value="$PROJECT_DIR$/protected/migrations/m140517_053922_add_content_length_to_tracks.php" />
         <option value="$PROJECT_DIR$/protected/models/Track.php" />
         <option value="$PROJECT_DIR$/protected/controllers/TrackController.php" />
-        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/protected/messages/ru/app.php" />
@@ -174,6 +175,7 @@
         <option value="$PROJECT_DIR$/protected/messages/az/app.php" />
         <option value="$PROJECT_DIR$/protected/views/query/view.php" />
         <option value="$PROJECT_DIR$/protected/views/default/_iframe.php" />
+        <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
       </list>
     </option>
   </component>
@@ -1145,13 +1147,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="199" column="7" selection-start="9850" selection-end="9850" vertical-scroll-proportion="-9.666667" vertical-offset="2753" max-vertical-offset="3240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/default/_flashes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="494">
@@ -1231,8 +1226,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/default/_iframe.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="82" selection-start="235" selection-end="235" vertical-scroll-proportion="0.18656716" vertical-offset="0" max-vertical-offset="402">
+        <state line="3" column="29" selection-start="151" selection-end="151" vertical-scroll-proportion="-0.56962025" vertical-offset="0" max-vertical-offset="270">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="128" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.6236324" vertical-offset="180" max-vertical-offset="3225">
+          <folding>
+            <marker date="1400532343000" expanded="true" signature="1787:1840" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

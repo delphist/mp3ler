@@ -30,7 +30,6 @@
         });
     </script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile-1.4.2.min.js?v=1" type="text/javascript"></script>
-    <script src='http://my.mobfox.com/ad.js'></script>
 </head>
 <body class="ui-mobile-viewport ui-overlay-a">
 <div data-role="page" class="page" data-quicklinks="true">
