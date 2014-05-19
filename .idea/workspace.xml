@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_iframe.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_iframe.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/views/default/_iframe.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="65" selection-start="352" selection-end="352" vertical-scroll-proportion="-1.1392405" vertical-offset="0" max-vertical-offset="270">
+            <state line="5" column="82" selection-start="235" selection-end="235" vertical-scroll-proportion="0.18656716" vertical-offset="0" max-vertical-offset="402">
               <folding />
             </state>
           </provider>
@@ -68,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/query/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="11" selection-start="3122" selection-end="3122" vertical-scroll-proportion="0.6739606" vertical-offset="862" max-vertical-offset="1845">
+            <state line="65" column="16" selection-start="2961" selection-end="2961" vertical-scroll-proportion="-4.7083335" vertical-offset="862" max-vertical-offset="1845">
               <folding />
             </state>
           </provider>
@@ -169,11 +169,11 @@
         <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/protected/views/default/_iframe.php" />
         <option value="$PROJECT_DIR$/protected/messages/ru/app.php" />
         <option value="$PROJECT_DIR$/protected/messages/tr/app.php" />
         <option value="$PROJECT_DIR$/protected/messages/az/app.php" />
         <option value="$PROJECT_DIR$/protected/views/query/view.php" />
+        <option value="$PROJECT_DIR$/protected/views/default/_iframe.php" />
       </list>
     </option>
   </component>
@@ -1187,13 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/default/_iframe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="65" selection-start="352" selection-end="352" vertical-scroll-proportion="-1.1392405" vertical-offset="0" max-vertical-offset="270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="8" selection-start="761" selection-end="769" vertical-scroll-proportion="-6.4583335" vertical-offset="265" max-vertical-offset="735">
@@ -1231,7 +1224,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/query/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="11" selection-start="3122" selection-end="3122" vertical-scroll-proportion="0.6739606" vertical-offset="862" max-vertical-offset="1845">
+        <state line="65" column="16" selection-start="2961" selection-end="2961" vertical-scroll-proportion="-4.7083335" vertical-offset="862" max-vertical-offset="1845">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/default/_iframe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="82" selection-start="235" selection-end="235" vertical-scroll-proportion="0.18656716" vertical-offset="0" max-vertical-offset="402">
           <folding />
         </state>
       </provider>
