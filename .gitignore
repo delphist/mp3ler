@@ -7,3 +7,4 @@ protected/config/server.php
 protected/config/session.php
 protected/config/captcha.php
 protected/config/redis.php
+artists.txt

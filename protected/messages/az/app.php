@@ -14,5 +14,5 @@ return array(
     'Listen' => 'Dinlə',
     'Download' => 'Yüklə',
     'Pause' => 'Fasilə',
-    'Get Ringtone' => 'Zengə əlavə et',
+    'Send :query Ringtone' => ':query Zengə əlavə et',
 );

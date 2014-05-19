@@ -205,5 +205,7 @@
 
 </script>
 
+<?=$this->renderPartial('/default/_iframe')?>
+
 </body>
 </html>

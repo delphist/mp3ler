@@ -60,7 +60,7 @@ if($track !== NULL)
     <br />
 
     <div style="text-align: center;">
-        <a href="http://www.ringtonematcher.com/go/?sid=WMBZ&artist=<?=rawurlencode($track->artist_title)?>&song=<?=rawurlencode($track->title)?>" target="_blank"><?=Yii::t('app', 'Get Ringtone')?></a>
+        <a style="color: red !important;" href="http://www.ringtonematcher.com/go/?sid=WMBZ&artist=<?=rawurlencode($track->artist_title)?>&song=<?=rawurlencode($track->title)?>" target="_blank"><?=Yii::t('app', 'Send :query Ringtone', array(':query' => CHtml::encode($track->artist_title.' — '.$track->title)))?></a>
     </div>
 
     <br /><br />
@@ -76,7 +76,7 @@ else
     ?>
 
     <div style="text-align: center;">
-        <a href="http://www.ringtonematcher.com/go/?sid=WMBZ&search=<?=rawurlencode($query->title)?>" target="_blank"><?=Yii::t('app', 'Get Ringtone')?></a>
+        <a style="color: red !important;" href="http://www.ringtonematcher.com/go/?sid=WMBZ&search=<?=rawurlencode($query->title)?>" target="_blank"><?=Yii::t('app', 'Send :query Ringtone', array(':query' => CHtml::encode($query->title)))?></a>
     </div>
 
     <br /><br />

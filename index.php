@@ -14,7 +14,7 @@ if(in_array($_SERVER['REQUEST_URI'], $links))
 
 if (php_sapi_name() == 'cli-server')
 {
-    if (is_file($_SERVER['DOCUMENT_ROOT'].$_SERVER['REQUEST_URI']))
+    if (is_file($_SERVER['DOCUMENT_ROOT'].parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)))
     {
         return false;
     }
