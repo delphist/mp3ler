@@ -24,7 +24,7 @@
     <?php } ?>
     <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" />
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.0.min.js?v=1" type="text/javascript"></script>
-    <script type="text/javascript">git
+    <script type="text/javascript">
         $(document).bind("mobileinit", function () {
             $.mobile.ajaxEnabled = false;
         });

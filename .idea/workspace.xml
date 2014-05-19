@@ -62,7 +62,7 @@
       <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="38" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.8753316" vertical-offset="60" max-vertical-offset="3210">
+            <state line="23" column="14" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.20512821" vertical-offset="273" max-vertical-offset="3210">
               <folding />
             </state>
           </provider>
@@ -1212,7 +1212,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="38" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.8753316" vertical-offset="60" max-vertical-offset="3210">
+        <state line="23" column="14" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.20512821" vertical-offset="273" max-vertical-offset="3210">
           <folding />
         </state>
       </provider>
