@@ -78,8 +78,6 @@
         'query' => $this->searchQuery,
     )); ?>
 
-    <?=$this->renderPartial('/default/_banner')?>
-
     <div role="main" class="ui-content">
         <?php echo $content; ?>
 
