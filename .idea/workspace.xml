@@ -50,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="10" selection-start="4890" selection-end="4890" vertical-scroll-proportion="0.83588624" vertical-offset="1013" max-vertical-offset="3225">
+            <state line="93" column="10" selection-start="4890" selection-end="4890" vertical-scroll-proportion="-15.916667" vertical-offset="1013" max-vertical-offset="3225">
               <folding>
                 <marker date="1400812418000" expanded="true" signature="1787:1840" placeholder="{...}" />
               </folding>
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_banner.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_banner.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/views/default/_banner.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="2" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="285">
+            <state line="2" column="22" selection-start="117" selection-end="117" vertical-scroll-proportion="0.06382979" vertical-offset="0" max-vertical-offset="470">
               <folding />
             </state>
           </provider>
@@ -125,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/views/console/partner.php" />
         <option value="$PROJECT_DIR$/protected/components/TransitionChart.php" />
         <option value="$PROJECT_DIR$/protected/components/views/transitionChart.php" />
         <option value="$PROJECT_DIR$/protected/components/TransitionStatistics.php" />
@@ -176,6 +175,7 @@
         <option value="$PROJECT_DIR$/protected/views/query/view.php" />
         <option value="$PROJECT_DIR$/protected/views/default/_iframe.php" />
         <option value="$PROJECT_DIR$/protected/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/views/default/_banner.php" />
       </list>
     </option>
   </component>
@@ -1149,13 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/default/_banner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="2" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/messages/ge/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="481">
@@ -1207,10 +1200,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="10" selection-start="4890" selection-end="4890" vertical-scroll-proportion="0.83588624" vertical-offset="1013" max-vertical-offset="3225">
+        <state line="93" column="10" selection-start="4890" selection-end="4890" vertical-scroll-proportion="-15.916667" vertical-offset="1013" max-vertical-offset="3225">
           <folding>
             <marker date="1400812418000" expanded="true" signature="1787:1840" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/default/_banner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="22" selection-start="117" selection-end="117" vertical-scroll-proportion="0.06382979" vertical-offset="0" max-vertical-offset="470">
+          <folding />
         </state>
       </provider>
     </entry>
