@@ -53,9 +53,9 @@
       <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="10" selection-start="4123" selection-end="4123" vertical-scroll-proportion="0.6236324" vertical-offset="885" max-vertical-offset="3195">
+            <state line="93" column="10" selection-start="4890" selection-end="4890" vertical-scroll-proportion="0.83588624" vertical-offset="1013" max-vertical-offset="3225">
               <folding>
-                <marker date="1400746341000" expanded="true" signature="1787:1840" placeholder="{...}" />
+                <marker date="1400812418000" expanded="true" signature="1787:1840" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -1207,9 +1207,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="10" selection-start="4123" selection-end="4123" vertical-scroll-proportion="0.6236324" vertical-offset="885" max-vertical-offset="3195">
+        <state line="93" column="10" selection-start="4890" selection-end="4890" vertical-scroll-proportion="0.83588624" vertical-offset="1013" max-vertical-offset="3225">
           <folding>
-            <marker date="1400746341000" expanded="true" signature="1787:1840" placeholder="{...}" />
+            <marker date="1400812418000" expanded="true" signature="1787:1840" placeholder="{...}" />
           </folding>
         </state>
       </provider>

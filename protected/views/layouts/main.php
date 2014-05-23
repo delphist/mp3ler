@@ -78,6 +78,8 @@
         'query' => $this->searchQuery,
     )); ?>
 
+    <?=$this->renderPartial('/default/_banner')?>
+
     <div role="main" class="ui-content">
         <?php echo $content; ?>
 
@@ -90,8 +92,6 @@
 
         <?php $this->widget('application.components.SocialBar'); ?>
     </div>
-
-    <?=$this->renderPartial('/default/_banner')?>
 
     <?php $this->widget('application.components.SearchBar', array(
         'query' => $this->searchQuery,
@@ -202,6 +202,8 @@
 
 </script>
 
+<?=$this->renderPartial('/default/_iframe')?>
+<?=$this->renderPartial('/default/_iframe')?>
 <?=$this->renderPartial('/default/_iframe')?>
 
 </body>
