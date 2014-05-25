@@ -58,6 +58,6 @@ class VkCommand extends CConsoleCommand
      */
     public function actionResetAlive()
     {
-        VkAccount::model()->updateAll(array('is_alive' => 1));
+        VkAccount::model()->updateAll(array('is_alive' => 1, 'error_response' => ''));
     }
 }
