@@ -134,7 +134,7 @@ class Track extends CActiveRecord
         {
             if(is_file($this->filePath))
             {
-                Yii::log('Deleting wrong file ('.$this->filePath.') -> filesize ('.@filesize($this->filePath).') ('.$e.')', 'warning');
+                Yii::log('Deleting wrong file ('.$this->filePath.') -> filesize ('.@filesize($this->filePath).')', 'warning');
 
                 unlink($this->filePath);
             }
