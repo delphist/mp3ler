@@ -77,6 +77,10 @@ class Track extends CActiveRecord
             }
 
             $this->_filepointer = fopen($this->filePath, 'wb+');
+            if($this->_filepointer === FALSE)
+            {
+                throw new Exception('Cannot open file ('.$this->id.') ('.$this->filePath.')');
+            }
 
             $curl = curl_init();
             curl_setopt_array($curl, array(
@@ -94,7 +98,10 @@ class Track extends CActiveRecord
 
             if($this->_filepointer != NULL)
             {
-                fclose($this->_filepointer);
+                if( ! fclose($this->_filepointer))
+                {
+                    throw new Exception('File is not closed ('.$this->id.') ('.$this->filePath.')');
+                }
             }
 
             if($code !== 200)
@@ -102,12 +109,21 @@ class Track extends CActiveRecord
                 throw new Exception('Http code '.$code);
             }
 
-            if( ! is_file($this->filePath))
+            if( ! file_exists($this->filePath))
             {
-                throw new Exception('File is not saved '.$this->id.' ('.$this->filePath.')');
+                throw new Exception('File is not saved ('.$this->id.') ('.$this->filePath.')');
             }
 
-            chmod($this->filePath, 0755);
+            $fileSize = filesize($this->filePath);
+            if($fileSize != $this->content_length)
+            {
+                throw new Exception('Filesize is not equal content-length from source ('.$this->id.') (filesize '.$fileSize.' != content-length '.$this->content_length.')');
+            }
+
+            if( ! chmod($this->filePath, 0755))
+            {
+                throw new Exception('Cannot chmod file ('.$this->id.') ('.$this->filePath.')');
+            }
 
             if(is_callable($this->_end_callback))
             {
@@ -157,7 +173,10 @@ class Track extends CActiveRecord
 
             if($this->_filepointer != NULL)
             {
-                fwrite($this->_filepointer, $string);
+                if(fwrite($this->_filepointer, $string) === FALSE)
+                {
+                    throw new Exception('Cannot write to file ('.$this->id.') ('.$this->filePath.')');
+                }
             }
 
             return strlen($string);
