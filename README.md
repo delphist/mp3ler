@@ -34,10 +34,10 @@ Mp3ler
 Пример crontab'а:
 
     # Каждый час обнуляем проблемные аккаунты
-    @hourly cd /var/www/mp3ler/public_html/beta.mp3ler.biz/protected && ./yiic vk resetAlive > /var/www/mp3ler/public_html/beta.mp3ler.biz/protected/runtime/resetAlive.log 2>&1
+    @hourly cd /var/www/mp3ler/public_html/mp3ler.biz/protected && ./yiic vk resetAlive > /var/www/mp3ler/public_html/mp3ler.biz/protected/runtime/resetAlive.log 2>&1
 
     # После ребута запускаем демон, следяющий за статусом каптчей
-    @reboot cd /var/www/mp3ler/public_html/beta.mp3ler.biz/protected && ./yiicd antigate solve > /var/www/mp3ler/public_html/beta.mp3ler.biz/protected/runtime/solve.log 2>&1
+    @reboot cd /var/www/mp3ler/public_html/mp3ler.biz/protected && ./yiicd antigate solve > /var/www/mp3ler/public_html/mp3ler.biz/protected/runtime/solve.log 2>&1
 
 
 Таблицы MySQL
