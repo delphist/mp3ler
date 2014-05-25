@@ -76,10 +76,7 @@ class Track extends CActiveRecord
                 mkdir($filedir, 0755, TRUE);
             }
 
-            if( ! file_exists($this->filePath))
-            {
-                $this->_filepointer = fopen($this->filePath, 'wb+');
-            }
+            $this->_filepointer = fopen($this->filePath, 'wb+');
 
             $curl = curl_init();
             curl_setopt_array($curl, array(
@@ -93,19 +90,24 @@ class Track extends CActiveRecord
             ));
 
             $result = curl_exec($curl);
+            $code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
             if($this->_filepointer != NULL)
             {
                 fclose($this->_filepointer);
-                chmod($this->filePath, 0755);
             }
-
-            $code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
             if($code !== 200)
             {
                 throw new Exception('Http code '.$code);
             }
+
+            if( ! is_file($this->filePath))
+            {
+                throw new Exception('File is not saved '.$this->id.' ('.$this->filePath.')');
+            }
+
+            chmod($this->filePath, 0755);
 
             if(is_callable($this->_end_callback))
             {

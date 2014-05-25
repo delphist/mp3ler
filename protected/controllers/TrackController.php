@@ -99,6 +99,11 @@ class TrackController extends Controller
                 $vk_audio->flush_cache = TRUE;
                 $results = $vk_audio->results();
 
+                if(count($results) == 0)
+                {
+                    throw new CHttpException(404, 'No new results for this file');
+                }
+
                 /**
                  * Проверяем все результаты на точное совпадение с именем
                  * трека
