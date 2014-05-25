@@ -134,6 +134,8 @@ class Track extends CActiveRecord
         {
             if(is_file($this->filePath))
             {
+                Yii::log('Deleting wrong file ('.$this->filePath.')', 'warning');
+
                 unlink($this->filePath);
             }
 
@@ -215,6 +217,8 @@ class Track extends CActiveRecord
 
         if( ! is_file($this->filePath))
         {
+            Yii::log('File not exists, redownloading ('.$this->filePath.')', 'warning');
+
             return FALSE;
         }
 
@@ -223,6 +227,8 @@ class Track extends CActiveRecord
          */
         if(filesize($this->filePath) < 1024 * 100)
         {
+            Yii::log('Filesize < 100 KB, redownloading ('.$this->filePath.')', 'warning');
+
             return FALSE;
         }
 
