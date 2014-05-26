@@ -88,7 +88,7 @@ class Track extends CActiveRecord
                 CURLOPT_FOLLOWLOCATION => TRUE,
                 CURLOPT_AUTOREFERER => TRUE,
                 CURLOPT_FAILONERROR => TRUE,
-                CURLOPT_TIMEOUT => 30,
+                CURLOPT_TIMEOUT => 120,
                 CURLOPT_HEADERFUNCTION => array($this, '_download_header_callback'),
                 CURLOPT_WRITEFUNCTION => array($this, '_download_body_callback'),
             ));
@@ -135,6 +135,11 @@ class Track extends CActiveRecord
         }
         catch(Exception $e)
         {
+            if($this->_filepointer != NULL)
+            {
+                @fclose($this->_filepointer);
+            }
+
             if(is_file($this->filePath))
             {
                 Yii::log('Deleting wrong file ('.$this->filePath.') -> filesize ('.@filesize($this->filePath).')', 'warning');

@@ -139,10 +139,6 @@ class TrackController extends Controller
                         $this->redirect($this->createTrackDownloadUrl($found_track));
                     }
                 }
-                else
-                {
-                    $this->track = new Track;
-                }
 
                 /**
                  * Если же такого трека нет в базе, то качаем прямо в этом процессе
