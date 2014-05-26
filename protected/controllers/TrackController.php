@@ -56,7 +56,7 @@ class TrackController extends Controller
             $this->redirectFilename($filename);
         }
 
-        if($this->track->downloadable && ! $this->track->isDownloaded)
+        if(! $this->track->isDownloaded)
         {
             /**
              * Если файл нужно скачивать, но при этом он еще
@@ -179,6 +179,11 @@ class TrackController extends Controller
         }
         else
         {
+            if( ! $this->track->downloadable)
+            {
+                throw new CHttpException(404, 'File is not downloadable');
+
+            }
             $this->_send_headers(filesize($this->track->filePath), $this->track->filename);
 
             /**
@@ -263,7 +268,14 @@ class TrackController extends Controller
         /**
          * При удачной загрузке сохраняем в базу
          */
-        $this->track->save();
+        if($this->track->validate())
+        {
+            $this->track->save();
+        }
+        else
+        {
+            Yii::log('Cannot save track ('.$this->track->id.') ('.print_r($this->track->errors, 1).')', 'warning');
+        }
 
         if( ! $this->streaming)
         {

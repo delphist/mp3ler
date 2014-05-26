@@ -109,20 +109,23 @@ class Track extends CActiveRecord
                 throw new Exception('Http code '.$code);
             }
 
-            if( ! file_exists($this->filePath))
+            if($this->_filepointer != NULL)
             {
-                throw new Exception('File is not saved ('.$this->id.') ('.$this->filePath.')');
-            }
+                if( ! file_exists($this->filePath))
+                {
+                    throw new Exception('File is not saved ('.$this->id.') ('.$this->filePath.')');
+                }
 
-            $fileSize = filesize($this->filePath);
-            if($fileSize != $this->content_length)
-            {
-                throw new Exception('Filesize is not equal content-length from source ('.$this->id.') (filesize '.$fileSize.' != content-length '.$this->content_length.')');
-            }
+                $fileSize = filesize($this->filePath);
+                if($fileSize != $this->content_length)
+                {
+                    throw new Exception('Filesize is not equal content-length from source ('.$this->id.') (filesize '.$fileSize.' != content-length '.$this->content_length.')');
+                }
 
-            if( ! chmod($this->filePath, 0755))
-            {
-                throw new Exception('Cannot chmod file ('.$this->id.') ('.$this->filePath.')');
+                if( ! chmod($this->filePath, 0755))
+                {
+                    throw new Exception('Cannot chmod file ('.$this->id.') ('.$this->filePath.')');
+                }
             }
 
             if(is_callable($this->_end_callback))
