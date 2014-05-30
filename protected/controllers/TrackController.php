@@ -56,13 +56,28 @@ class TrackController extends Controller
             $this->redirectFilename($filename);
         }
 
-        if(! $this->track->isDownloaded)
+        if( ! $this->track->isDownloaded)
         {
             /**
              * Если файл нужно скачивать, но при этом он еще
              * не скачан либо куда-то исчез с диска, то качаем
              * его заново и сразу же отдаем в браузер
              */
+
+            if(isset($this->track->data['server_id']) && (int) $this->track->data['server_id'] > 0)
+            {
+                /**
+                 * Если трек не загружен и имеется информация о сервере, с которого нужно его скачивать, то перенаправляем на него
+                 */
+                $this->checkRedirectServer((int) $this->track->data['server_id']);
+            }
+            else
+            {
+                /**
+                 * Иначе перенаправляем на стандартный сервер
+                 */
+                $this->checkRedirectServer(2);
+            }
 
             $result = FALSE;
             try
@@ -145,6 +160,11 @@ class TrackController extends Controller
                  */
                 $this->track->data = $found_result;
 
+                /**
+                 * Никаких редиректов не проверяем — т.к. мы установили flush_cache,
+                 * то запрос был сделан точно с текущего сервера и качать файл нужно тоже с него
+                 */
+
                 try
                 {
                     $this->track->download(
@@ -178,8 +198,13 @@ class TrackController extends Controller
             if( ! $this->track->downloadable)
             {
                 throw new CHttpException(404, 'File is not downloadable');
-
             }
+
+            /**
+             * Редиректим на текущий сервер
+             */
+            $this->checkRedirectServer(Yii::app()->serverManager->currentServerId);
+
             $this->_send_headers(filesize($this->track->filePath), $this->track->filename);
 
             /**

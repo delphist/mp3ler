@@ -361,6 +361,31 @@ class Controller extends CController
     }
 
     /**
+     * Проверяет, находимся ли мы на хосте определенного сервера, и если нет,
+     * то перенаправляем туда
+     *
+     * @param $id ID сервера
+     */
+    protected function checkRedirectServer($id)
+    {
+        $server = Yii::app()->serverManager->getServer($id);
+
+        if( ! $server)
+        {
+            return FALSE;
+        }
+
+        if( ! Yii::app()->serverManager->isCurrentServerDirectly || $id != Yii::app()->serverManager->currentServerId)
+        {
+            $this->redirect(Yii::app()->serverManager->createUrl($_SERVER['REQUEST_URI'], $id), 302);
+
+            Yii::app()->end();
+        }
+
+        return FALSE;
+    }
+
+    /**
      * @var array данные о графике кликов
      */
     public $transitionChartData;

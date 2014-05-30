@@ -1,4 +1,5 @@
 .DS_Store
+.idea
 protected/config/database.php
 protected/config/cache.php
 protected/config/environment.php

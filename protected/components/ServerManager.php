@@ -42,6 +42,26 @@ class ServerManager extends CApplicationComponent
     }
 
     /**
+     * Возвращает, указан ли другой сервер принудительно (через другой домен)
+     *
+     * @return bool
+     */
+    public function getIsCurrentServerDirectly()
+    {
+        $host = $_SERVER['HTTP_HOST'];
+
+        foreach($this->servers as $server)
+        {
+            if(mb_strtolower($server['host']) == mb_strtolower($host) && $server['id'] == $this->currentServerId)
+            {
+                return TRUE;
+            }
+        }
+
+        return FALSE;
+    }
+
+    /**
      * Ip текущего сервера
      *
      * @return string
@@ -61,5 +81,43 @@ class ServerManager extends CApplicationComponent
         }
 
         return $this->_currentServerIp;
+    }
+
+    /**
+     * Генерирует URL на определенный сервер
+     *
+     * @param string $url сформированный относительный url-адрес
+     * @param int $server_id id сервера
+     * @return string|false абсолютный url либо false в случае если сервер не найден
+     */
+    public function createUrl($url, $server_id = NULL)
+    {
+        $server = $this->getServer($server_id);
+
+        if($server === FALSE)
+        {
+            return FALSE;
+        }
+
+        return 'http://'.$server['host'].$url;
+    }
+
+    /**
+     * Возвращает сервер по его id
+     *
+     * @param $id ID сервера
+     * @return bool|array данные о сервере, либо FALSE если сервер не найден
+     */
+    public function getServer($id)
+    {
+        foreach($this->servers as $server)
+        {
+            if($id == $server['id'])
+            {
+                return $server;
+            }
+        }
+
+        return FALSE;
     }
 }
