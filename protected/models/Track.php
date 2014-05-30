@@ -32,16 +32,10 @@ class Track extends CActiveRecord
             array('artist_title, title, file', 'length', 'max' => 255),
 
             /**
-             * Проверяем уникальность полей artist_title + title
-             * @url http://stackoverflow.com/questions/9670992/yii-how-to-make-a-unique-rule-for-two-attributes
+             * Поле file жестко привязано к artist_title + title,
+             * поэтому уникальность проверяем так
              */
-            array('artist_title', 'unique', 'criteria' => array(
-                    'condition'=>'`title`=:title',
-                    'params' => array(
-                        ':title' => $this->title
-                    )
-                )
-            ),
+            array('file', 'unique'),
         );
     }
 
@@ -352,16 +346,23 @@ class Track extends CActiveRecord
 
     public function findByData($data)
     {
-        if(isset($data['type']))
+        if( ! isset($data['type']))
         {
-            return self::model()->findByAttributes(array(
-                'external_id' => $data['id'],
-                'external_type' => $data['type'],
-            ));
+            return self::model()->findByPk($data['id']);
         }
         else
         {
-            return self::model()->findByPk($data['id']);
+            /**
+             * Хак - ищем по хешу имени файла, который состоит из
+             * названия исполнителя и
+             */
+            $temp_track = new Track;
+            $temp_track->data = $data;
+            $filename = $temp_track->storageFileName;
+
+            return self::model()->findByAttributes(array(
+                'file' => $filename,
+            ));
         }
     }
 
