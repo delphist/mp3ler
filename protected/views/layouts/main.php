@@ -60,19 +60,17 @@
 
     <br />
 
-    <div id="smaatoad" style="padding: 0px"></div>
-    <script id="smaatoAdDisplay" language="javascript" type="text/javascript"
-            src="http://soma.smaato.net/oapi/js/smaatoAdDisplay.js">
-    </script>
-    <script>
-        (function() {
-            var request = new SomaRequest();
-            request.adSpaceID = 65830787;
-            request.publisherID = 923878150;
-            /*insert additional targeting data here */
-            SomaTag.requestAd(request);
-        })();
-    </script>
+    <div id="my-ad-slot">
+        <script type="text/javascript">
+            var inmobi_conf = {
+                siteid : "b05e6609df2544a89ac334b067d7944d",
+                slot : "15",
+                test: false,
+                manual: true
+            };
+        </script>
+        <script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script>
+    </div>
 
     <?php $this->widget('application.components.SearchBar', array(
         'query' => $this->searchQuery,
