@@ -6,7 +6,7 @@ $banners = array(
         'image' => '/images/320x50-game.jpg',
     ),
     array(
-        'link' => 'https://play.google.com/store/apps/details?id=val.fm',
+        'link' => 'http://val.mobi',
         'market' => 'market://details?id=val.fm',
         'image' => '/images/320x50.jpg',
     ),
