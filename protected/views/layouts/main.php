@@ -65,8 +65,7 @@
             var inmobi_conf = {
                 siteid : "b05e6609df2544a89ac334b067d7944d",
                 slot : "15",
-                test: false,
-                manual: true
+                test: false
             };
         </script>
         <script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script>
