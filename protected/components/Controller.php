@@ -427,9 +427,9 @@ class Controller extends CController
         if (!(($detect->isMobile(Yii::app()->request->getUserAgent()) || $detect->isTablet(Yii::app()->request->getUserAgent())) && Yii::app()->request->getHeader('HTTP_HOST') == 'mp3ler.biz' && Yii::app()->request->getHeader('HTTP_X_APP_VERSION') === null
         ))
         {
-            //$filterChain->run();
+            $filterChain->run();
 
-            //return;
+            return;
         }
 
         $ref = substr(Yii::app()->request->getUrlReferrer(), -1, 1) == '/'
