@@ -425,7 +425,7 @@ class Controller extends CController
         $detect = new MDetect();
 
         $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : NULL;
-        if (!(($detect->isMobile(Yii::app()->request->getUserAgent()) || $detect->isTablet(Yii::app()->request->getUserAgent())) && $host == 'mp3ler.biz' && ! isset($_SERVER['HTTP_HOST'])
+        if (!(($detect->isMobile(Yii::app()->request->getUserAgent()) || $detect->isTablet(Yii::app()->request->getUserAgent())) && $host == 'mp3ler.biz' && ! isset($_SERVER['HTTP_X_APP_VERSION'])
         ))
         {
             $filterChain->run();
