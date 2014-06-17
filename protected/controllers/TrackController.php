@@ -9,6 +9,7 @@ class TrackController extends Controller
             'transitionControl',
             'languageControl',
             'languageRedirect -vkId -download',
+            'counter -error'
         );
     }
 

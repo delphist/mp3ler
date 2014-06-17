@@ -19,6 +19,7 @@ class UserController extends Controller
             'domainControl',
             'languageControl',
             'languageRedirect',
+            'counter -error'
         );
     }
 

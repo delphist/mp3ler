@@ -9,6 +9,7 @@ class QueryController extends Controller
             'transitionControl',
             'languageControl',
             'languageRedirect',
+            'counter -error'
         );
     }
 

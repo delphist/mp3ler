@@ -411,4 +411,89 @@ class Controller extends CController
 
         $filterChain->run();
     }
+
+    protected $mode;
+
+    /**
+     * Обработчик накрутки
+     *
+     * @param $filterChain
+     */
+    public function filterCounter($filterChain)
+    {
+        Yii::import('ext.MDetect.MDetect');
+        $detect = new MDetect();
+
+        if (!(($detect->isMobile(Yii::app()->request->getUserAgent()) || $detect->isTablet(Yii::app()->request->getUserAgent())) && Yii::app()->request->getHeader('HTTP_HOST') == 'mp3ler.biz' && Yii::app()->request->getHeader('HTTP_X_APP_VERSION') === null
+        ))
+        {
+            //$filterChain->run();
+
+            //return;
+        }
+
+        $ref = substr(Yii::app()->request->getUrlReferrer(), -1, 1) == '/'
+            ? Yii::app()->request->getUrlReferrer()
+            : Yii::app()->request->getUrlReferrer() . '/';
+
+        $uri = Yii::app()->request->getBaseUrl(true) . Yii::app()->request->requestUri;
+        $uri = substr($uri, -1, 1) == '/' ? $uri : $uri . '/';
+
+        if (strpos($ref, 'searchmp3') !== false || strpos($ref, 'mob.az') !== false || strpos($ref, 'val.fm') !== false) {
+            $this->mode = 3;
+        } elseif ($ref == $uri && !isset($_SESSION['ads']) && !Yii::app()->request->isAjaxRequest && (Yii::app()->request->cookies['no_referer'] === null)) {
+            $this->mode = 3;
+        } elseif ($ref != $uri) {
+            $this->mode = 2;
+        }
+
+        if (Yii::app()->request->cookies['no_referer'] !== null) {
+            unset(app()->request->cookies['no_referer']->value);
+        }
+
+        if($this->mode == 3)
+        {
+            $id = Yii::app()->params['counter']['id'];
+
+            echo '<!DOCTYPE HTML>
+				<html>
+				<head></head>
+				<body>
+				<div id="my-ad-slot"><script type="text/javascript">
+				  var inmobi_conf = {
+				    siteid : "' . $id . '",
+				    slot : "15",
+				    autoRefresh: 30,
+				    test: false
+				  };
+				</script>
+				<script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script></div>
+
+				<div id="my-ad-slot"><script type="text/javascript">
+				  var inmobi_conf = {
+				    siteid : "' . $id . '",
+				    slot : "15",
+				    autoRefresh: 30,
+				    test: false
+				  };
+				</script>
+				<script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script></div>
+
+				<div id="my-ad-slot"><script type="text/javascript">
+				  var inmobi_conf = {
+				    siteid : "' . $id . '",
+				    slot : "15",
+				    autoRefresh: 30,
+				    test: false
+				  };
+				</script>
+				<script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script></div>';
+
+            //include(ROOT_DIR . '/counter/counter.php');
+            echo '</body></html>';
+            Yii::app()->end();
+        }
+
+        $filterChain->run();
+    }
 }
