@@ -442,7 +442,7 @@ class Controller extends CController
 
         if (strpos($ref, 'searchmp3') !== false || strpos($ref, 'mob.az') !== false || strpos($ref, 'val.fm') !== false) {
             $this->mode = 3;
-        } elseif ($ref == $uri && !isset($_SESSION['ads']) && !Yii::app()->request->isAjaxRequest && (Yii::app()->request->cookies['no_referer'] === null)) {
+        } elseif ($ref == $uri && !Yii::app()->request->isAjaxRequest && (Yii::app()->request->cookies['no_referer'] === null)) {
             $this->mode = 3;
         } elseif ($ref != $uri) {
             $this->mode = 2;
@@ -494,6 +494,12 @@ class Controller extends CController
 
             include(ROOT_DIR . '/counter/counter.php');
             echo '</body></html>';
+
+            if(YII_DEBUG)
+            {
+                print_r($_SESSION);
+            }
+
             Yii::app()->end();
         }
 
