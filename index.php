@@ -27,6 +27,7 @@ mb_internal_encoding('UTF-8');
 defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);
 
 $webRoot=dirname(__FILE__);
+define('ROOT_DIR', $webRoot);
 $configFile = $webRoot.'/protected/config/main.php';
 
 if(strpos($_SERVER['HTTP_HOST'], 'localhost') === 0)

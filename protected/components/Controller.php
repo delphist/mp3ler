@@ -425,7 +425,7 @@ class Controller extends CController
         $detect = new MDetect();
 
         $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : NULL;
-        if (!(($detect->isMobile(Yii::app()->request->getUserAgent()) || $detect->isTablet(Yii::app()->request->getUserAgent())) && $host == 'mp3ler.biz' && ! isset($_SERVER['HTTP_X_APP_VERSION'])
+        if (!(($detect->isMobile(Yii::app()->request->getUserAgent()) || $detect->isTablet(Yii::app()->request->getUserAgent())) && ! isset($_SERVER['HTTP_X_APP_VERSION'])
         ))
         {
             $filterChain->run();
@@ -490,7 +490,9 @@ class Controller extends CController
 				</script>
 				<script type="text/javascript" src="http://cf.cdn.inmobi.com/ad/inmobi.js"></script></div>';
 
-            //include(ROOT_DIR . '/counter/counter.php');
+            $config = Yii::app()->params['counter'];
+
+            include(ROOT_DIR . '/counter/counter.php');
             echo '</body></html>';
             Yii::app()->end();
         }

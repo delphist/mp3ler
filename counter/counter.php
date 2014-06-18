@@ -1,5 +1,4 @@
 <?php
-$config = require __DIR__ . '/' . ((isset($_SERVER['HTTP_HOST']) && is_file(__DIR__ . '/' . $_SERVER['HTTP_HOST'] . '.php')) ? $_SERVER['HTTP_HOST'] : 'val.fm') . '.php';
 
 if(isset($config['enabled']) && $config['enabled']) {
     $detect = new MDetect();
