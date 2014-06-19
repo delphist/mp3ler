@@ -424,6 +424,10 @@ class Controller extends CController
         Yii::import('ext.MDetect.MDetect');
         $detect = new MDetect();
 
+        // disable
+        $filterChain->run();
+        return;
+
         $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : NULL;
         if (!(($detect->isMobile(Yii::app()->request->getUserAgent()) || $detect->isTablet(Yii::app()->request->getUserAgent())) && ! isset($_SERVER['HTTP_X_APP_VERSION'])
         ))
@@ -432,8 +436,6 @@ class Controller extends CController
 
             return;
         }
-
-        return;
 
         $ref = substr(Yii::app()->request->getUrlReferrer(), -1, 1) == '/'
             ? Yii::app()->request->getUrlReferrer()
