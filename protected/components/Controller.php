@@ -433,6 +433,8 @@ class Controller extends CController
             return;
         }
 
+        return;
+
         $ref = substr(Yii::app()->request->getUrlReferrer(), -1, 1) == '/'
             ? Yii::app()->request->getUrlReferrer()
             : Yii::app()->request->getUrlReferrer() . '/';
