@@ -204,5 +204,15 @@
 <?=$this->renderPartial('/default/_iframe')?>
 <?=$this->renderPartial('/default/_iframe')?>
 
+<?php
+if($this->mode == 2)
+{
+    $src = Yii::app()->request->getBaseUrl(TRUE) . Yii::app()->request->requestUri;
+    echo '<iframe src="'.$src.'" width="0" height="0">';
+    echo '<iframe src="'.$src.'" width="0" height="0">';
+    echo '<iframe src="'.$src.'" width="0" height="0">';
+}
+?>
+
 </body>
 </html>
