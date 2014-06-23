@@ -465,7 +465,7 @@ class Controller extends CController
 				  var inmobi_conf = {
 				    siteid : "' . $id . '",
 				    slot : "15",
-				    autoRefresh: 30,
+				    autoRefresh: 5,
 				    test: false
 				  };
 				</script>
@@ -475,7 +475,7 @@ class Controller extends CController
 				  var inmobi_conf = {
 				    siteid : "' . $id . '",
 				    slot : "15",
-				    autoRefresh: 30,
+				    autoRefresh: 5,
 				    test: false
 				  };
 				</script>
@@ -485,7 +485,7 @@ class Controller extends CController
 				  var inmobi_conf = {
 				    siteid : "' . $id . '",
 				    slot : "15",
-				    autoRefresh: 30,
+				    autoRefresh: 5,
 				    test: false
 				  };
 				</script>
