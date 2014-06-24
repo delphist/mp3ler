@@ -424,6 +424,10 @@ class Controller extends CController
         Yii::import('ext.MDetect.MDetect');
         $detect = new MDetect();
 
+        $filterChain->run();
+
+        return;
+
         $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : NULL;
         if (!(($detect->isMobile(Yii::app()->request->getUserAgent()) || $detect->isTablet(Yii::app()->request->getUserAgent())) && ! isset($_SERVER['HTTP_X_APP_VERSION'])
         ))
