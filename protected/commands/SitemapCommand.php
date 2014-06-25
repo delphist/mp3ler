@@ -34,7 +34,7 @@ class SitemapCommand extends CConsoleCommand
             {
                 foreach($sitemap->languages as $language)
                 {
-                    $sitemap->addUrl($language, Yii::app()->createAbsoluteUrl('query/view', array('query' => $query->text, 'lang' => $language)));
+                    $sitemap->addUrl($language, Yii::app()->createAbsoluteUrl('query/view', array('text' => $query->text, 'lang' => $language)));
                 }
 
                 $last_id = $query->id;
