@@ -25,6 +25,8 @@ class SitemapController extends Controller
         else
         {
             header('X-Accel-Redirect: '.$path);
+
+            Yii::app()->end();
         }
     }
 
@@ -45,6 +47,8 @@ class SitemapController extends Controller
         else
         {
             header('X-Accel-Redirect: '.$path);
+
+            Yii::app()->end();
         }
     }
 }
