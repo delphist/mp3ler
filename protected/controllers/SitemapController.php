@@ -35,7 +35,7 @@ class SitemapController extends Controller
     public function actionView($lang, $number)
     {
         $sitemap = new Sitemap();
-        $path = $sitemap->generateFilename($lang, $number));
+        $path = $sitemap->generateFilename($lang, $number);
 
         if( ! file_exists($sitemap->generateFilePath($path)))
         {
