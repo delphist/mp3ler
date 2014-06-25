@@ -11,7 +11,7 @@ class Sitemap extends CComponent
     public $limit = 10000;
 
     /**
-     * @var array Массив указателей на файлы сайтмапов дял разных языков
+     * @var array Массив указателей на файлы сайтмапов для разных языков
      */
     protected $filePointers = array();
 
@@ -20,6 +20,9 @@ class Sitemap extends CComponent
      */
     protected $fileUrlCounters = array();
 
+    /**
+     * Инициализация генерации сайтмапов, вызывать до начала генерации
+     */
     public function beginGenerate()
     {
         foreach($this->languages as $language)
@@ -29,6 +32,12 @@ class Sitemap extends CComponent
         }
     }
 
+    /**
+     * Запись определенного урла
+     *
+     * @param $language название языка
+     * @param $url url-адрес
+     */
     public function addUrl($language, $url)
     {
         $this->fileUrlCounters[$language]++;
@@ -46,6 +55,9 @@ class Sitemap extends CComponent
         }
     }
 
+    /**
+     * Финализация генерации сайтмапов, вызывать после добавления всех урлов
+     */
     public function endGenerate()
     {
         foreach($this->languages as $language)
@@ -54,7 +66,50 @@ class Sitemap extends CComponent
             {
                 $this->close($language);
             }
+
+            $file = fopen($this->generateFilePath($this->generateIndexFilename($language)), 'w+');
+            fwrite($file, "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\t<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n");
+            for($i = 1; $i <= ceil($this->fileUrlCounters[$language] / $this->limit); $i++)
+            {
+                fwrite($file, "\t\t<sitemap>\n\t\t\t<loc>".Yii::app()->createAbsoluteUrl('/sitemap/view', array('number' => $i, 'lang' => $language))."</loc>\n\t\t\t<lastmod>".date('r')."</lastmod>\n\t\t</sitemap>\n");
+            }
+            fwrite($file, "\t</sitemapindex>\n");
+            fclose($file);
         }
+    }
+
+    /**
+     * Генерирует имя файла очередного сайтмапа дял определенного языка
+     *
+     * @param $language название языка (ru, en, ...)
+     * @param $number порядковый номер файла
+     * @return string имя файла
+     */
+    public function generateFilename($language, $number)
+    {
+        return 'sitemap-'.$language.'-'.$number.'.xml';
+    }
+
+    /**
+     * Генерирует имя индексного файла сайтмапа для определенного языка
+     *
+     * @param $language название языка (ru, en, ...)
+     * @return string имя файла
+     */
+    public function generateIndexFilename($language)
+    {
+        return 'sitemap-index-'.$language.'.xml';
+    }
+
+    /**
+     * Генерирует полный путь до файла в хранилище сайтмапов
+     *
+     * @param $filename имя файла
+     * @return string полный путь
+     */
+    public function generateFilePath($filename)
+    {
+        return Yii::app()->params['storage_path'].'/sitemaps/'.$filename;
     }
 
     protected function open($language)
@@ -73,16 +128,6 @@ class Sitemap extends CComponent
     protected function currentFilename($language)
     {
         return $this->generateFilename($language, ceil($this->fileUrlCounters[$language] / $this->limit));
-    }
-
-    protected function generateFilename($language, $number)
-    {
-        return 'sitemap-'.$language.'-'.$number.'.xml';
-    }
-
-    protected function generateFilePath($filename)
-    {
-        return Yii::app()->params['storage_path'].'/sitemaps/'.$filename;
     }
 
     protected function getLanguages()

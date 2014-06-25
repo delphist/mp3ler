@@ -76,7 +76,6 @@
     )); ?>
 
     <?=$this->renderPartial('/default/_banner')?>
-    <?=$this->renderPartial('/default/_banner_inmobi')?>
 
     <div role="main" class="ui-content">
         <?php echo $content; ?>

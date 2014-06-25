@@ -61,5 +61,11 @@ return array(
          * Консоль
          */
         'console/<action:\w+>' => 'console/<action>',
+
+        /**
+         * Сайтмапы
+         */
+        'sitemap/<lang>.xml' => 'sitemap/index',
+        'sitemap/<lang>/<number>.xml' => 'sitemap/view',
     ),
 );

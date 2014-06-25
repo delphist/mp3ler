@@ -7,15 +7,42 @@ class SitemapCommand extends CConsoleCommand
      */
     public function actionGenerate()
     {
+        date_default_timezone_set('Europe/Moscow');
+
         $sitemap = new Sitemap;
+        $sitemap->limit = 50000;
         $sitemap->beginGenerate();
 
         foreach($sitemap->languages as $language)
         {
-            $sitemap->addUrl($language, Yii::app()->urlManager->createUrl('site/index', array('lang' => $language)));
-            $sitemap->addUrl($language, Yii::app()->urlManager->createUrl('query/top', array('lang' => $language)));
-            $sitemap->addUrl($language, Yii::app()->urlManager->createUrl('track/top', array('lang' => $language)));
-            $sitemap->addUrl($language, Yii::app()->urlManager->createUrl('site/partnerInfo', array('lang' => $language)));
+            $sitemap->addUrl($language, Yii::app()->createAbsoluteUrl('site/index', array('lang' => $language)));
+            $sitemap->addUrl($language, Yii::app()->createAbsoluteUrl('query/top', array('lang' => $language)));
+            $sitemap->addUrl($language, Yii::app()->createAbsoluteUrl('track/top', array('lang' => $language)));
+            $sitemap->addUrl($language, Yii::app()->createAbsoluteUrl('site/partnerInfo', array('lang' => $language)));
+        }
+
+        $last_id = 0;
+        while(TRUE)
+        {
+            $queries = Query::model()->findAll(array(
+                'condition' => 'id > '.$last_id,
+                'limit' => 1000,
+            ));
+
+            foreach($queries as $query)
+            {
+                foreach($sitemap->languages as $language)
+                {
+                    $sitemap->addUrl($language, Yii::app()->createAbsoluteUrl('query/view', array('query' => $query->text, 'lang' => $language)));
+                }
+
+                $last_id = $query->id;
+            }
+
+            if(count($queries) == 0)
+            {
+                break;
+            }
         }
 
         $sitemap->endGenerate();
