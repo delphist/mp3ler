@@ -12,19 +12,21 @@ class SitemapController extends Controller
     public function actionIndex($lang)
     {
         $sitemap = new Sitemap();
-        $path = $sitemap->generateFilePath($sitemap->generateIndexFilename($lang));
-        if( ! file_exists($path))
+        $path = $sitemap->generateIndexFilename($lang);
+        if( ! file_exists($sitemap->generateFilePath($path)))
         {
             throw new CHttpException(404);
         }
 
+        $url_path = '/storage/sitemaps/'.$path;
+
         if(YII_DEBUG)
         {
-            echo $path;
+            echo $url_path;
         }
         else
         {
-            header('X-Accel-Redirect: '.$path);
+            header('X-Accel-Redirect: '.$url_path);
 
             Yii::app()->end();
         }
@@ -33,20 +35,22 @@ class SitemapController extends Controller
     public function actionView($lang, $number)
     {
         $sitemap = new Sitemap();
-        $path = $sitemap->generateFilePath($sitemap->generateFilename($lang, $number));
+        $path = $sitemap->generateFilename($lang, $number));
 
-        if( ! file_exists($path))
+        if( ! file_exists($sitemap->generateFilePath($path)))
         {
             throw new CHttpException(404);
         }
 
+        $url_path = '/storage/sitemaps/'.$path;
+
         if(YII_DEBUG)
         {
-            echo $path;
+            echo $url_path;
         }
         else
         {
-            header('X-Accel-Redirect: '.$path);
+            header('X-Accel-Redirect: '.$url_path);
 
             Yii::app()->end();
         }
