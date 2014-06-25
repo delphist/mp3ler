@@ -8,7 +8,9 @@ class SitemapCommand extends CConsoleCommand
     public function actionGenerate()
     {
         date_default_timezone_set('Europe/Moscow');
-        $_SERVER['HTTP_HOST'] = Yii::app()->params->domain; // TODO: get from params
+        #$_SERVER['HTTP_HOST'] = Yii::app()->params->domain; // TODO: get from params
+
+        Yii::app()->urlManager->setBaseUrl('http://'.Yii::app()->params->domain);
 
         $sitemap = new Sitemap;
         $sitemap->limit = 50000;
