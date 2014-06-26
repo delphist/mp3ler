@@ -9,7 +9,7 @@ $banners = array(
         'link' => 'https://play.google.com/store/apps/details?id=chess.free&referrer=utm_source%3Dmp3ler',
         'market' => 'market://details?id=chess.free&referrer=utm_source%3Dmp3ler',
         'image' => '/images/turk-chess320x50.jpg'
-    )
+    ),
     array(
         'link' => 'http://val.mobi',
         'market' => 'market://details?id=val.fm',
