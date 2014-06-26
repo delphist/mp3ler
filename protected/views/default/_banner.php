@@ -1,10 +1,15 @@
 <?php
 $banners = array(
-    array(
+    /*array(
         'link' => 'https://play.google.com/store/apps/details?id=com.nutty.nuts&referrer=utm_source%3Dmp3ler',
         'market' => 'market://details?id=com.nutty.nuts&referrer=utm_source%3Dmp3ler',
         'image' => '/images/320x50-game.jpg',
-    ),
+    ),*/
+    array(
+        'link' => 'https://play.google.com/store/apps/details?id=chess.free&referrer=utm_source%3Dmp3ler',
+        'market' => 'market://details?id=chess.free&referrer=utm_source%3Dmp3ler',
+        'image' => '/images/turk-chess320x50.jpg'
+    )
     array(
         'link' => 'http://val.mobi',
         'market' => 'market://details?id=val.fm',
