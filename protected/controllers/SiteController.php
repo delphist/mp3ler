@@ -18,7 +18,7 @@ class SiteController extends Controller
         $criteria = new CDbCriteria(array(
             'order' => 'position ASC',
             'condition' => 'position IS NOT NULL',
-            'limit' => 12,
+            'limit' => 50,
         ));
 
         $tracks = Billboard::model()->cache(60)->findAll($criteria);
