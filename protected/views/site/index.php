@@ -7,7 +7,7 @@ $this->metaAuthor = Yii::t('app', 'Global search mp3 - mp3ler.biz');
 ?>
 <ul class="list" data-role="listview" itemscope itemtype="http://schema.org/MusicGroup">
     <li class="divider" data-role="list-divider"><?=Yii::t('app', 'Last queries:')?></li>
-    <?php foreach($queries as $query) { ?>
-        <li data-icon="false"><a href="<?=$this->createUrl('query/view', array('text' => $this->normalizeQuery($query->text)))?>" title="<?=CHtml::encode($query->text)?> mp3"><?=$query->title?> <span>(<?=number_format((int) $query->results_count, 0, '.', ' ')?>)</span></a></li>
+    <?php foreach($tracks as $track) { ?>
+        <li data-icon="false"><a href="<?=$this->createUrl('query/view', array('text' => $this->normalizeQuery($track->title)))?>" title="<?=CHtml::encode($track->title)?> mp3"><?=$track->title?></a></li>
     <?php } ?>
 </ul>

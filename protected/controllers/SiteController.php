@@ -15,21 +15,16 @@ class SiteController extends Controller
 
 	public function actionIndex()
 	{
-        $queue_ids = Yii::app()->db->cache(3, NULL, 2)
-            ->createCommand()
-            ->selectDistinct('query_id')
-            ->from('query_queue')
-            ->order('id DESC')
-            ->limit(10)
-            ->queryColumn();
-
-        $queries = Query::model()->findAll(array(
-            'condition' => 'id IN ('.implode($queue_ids, ', ').')',
-            'order' => 'FIELD(id, '.implode($queue_ids, ', ').') ASC',
+        $criteria = new CDbCriteria(array(
+            'order' => 'position ASC',
+            'condition' => 'position IS NOT NULL',
+            'limit' => 12,
         ));
 
+        $tracks = Billboard::model()->cache(60)->findAll($criteria);
+
         $this->render('index', array(
-            'queries' => $queries,
+            'tracks' => $tracks,
         ));
 	}
 
