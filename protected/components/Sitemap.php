@@ -53,7 +53,7 @@ class Sitemap extends CComponent
             $this->open($language);
         }
 
-        fwrite($this->filePointers[$language], "\t<url>\n\t\t<loc>$url</loc>\n\t</url>\n");
+        fwrite($this->filePointers[$language], "\t<url>\n\t\t<loc>".$this->url($url)."</loc>\n\t</url>\n");
 
         if($this->fileUrlCounters[$language] % $this->limit == 0)
         {
@@ -77,7 +77,7 @@ class Sitemap extends CComponent
             fwrite($file, "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\t<sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n");
             for($i = 1; $i <= ceil($this->fileUrlCounters[$language] / $this->limit); $i++)
             {
-                fwrite($file, "\t\t<sitemap>\n\t\t\t<loc>".Yii::app()->createAbsoluteUrl('/sitemap/view', array('number' => $i, 'lang' => $language))."</loc>\n\t\t\t<lastmod>".date('r')."</lastmod>\n\t\t</sitemap>\n");
+                fwrite($file, "\t\t<sitemap>\n\t\t\t<loc>".$this->url(Yii::app()->createAbsoluteUrl('/sitemap/view', array('number' => $i, 'lang' => $language)))."</loc>\n\t\t\t<lastmod>".date('r')."</lastmod>\n\t\t</sitemap>\n");
             }
             fwrite($file, "\t</sitemapindex>\n");
             fclose($file);
@@ -141,5 +141,10 @@ class Sitemap extends CComponent
     protected function getLanguages()
     {
         return Yii::app()->params['languages'];
+    }
+
+    protected function url($value)
+    {
+        return str_replace('&', '&amp;', $value);
     }
 }
