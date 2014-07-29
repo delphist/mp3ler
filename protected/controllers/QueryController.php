@@ -48,7 +48,13 @@ class QueryController extends Controller
          * Ищем вконтакте
          */
         $vk_audio = new VkAudio($query->text, $page);
-        $query->results = $vk_audio;
+        #$query->results = $vk_audio;
+
+        if( ! count($query->results))
+        {
+            $gettune_audio = new GettuneAudio($query->text, $page);
+            $query->results = $gettune_audio;
+        }
 
         /**
          * Сверяем найденные результаты с текстовым запросом,

@@ -77,7 +77,7 @@ class TrackController extends Controller
                 /**
                  * Иначе перенаправляем на стандартный сервер
                  */
-                $this->checkRedirectServer(2);
+                //$this->checkRedirectServer(2);
             }
 
             $result = FALSE;
@@ -94,7 +94,7 @@ class TrackController extends Controller
                 if($e->getMessage() == 'Http code 404')
                 {
                     /**
-                     * Если у вк на файл 404 то дальше будем пробовать найти другой трек
+                     * Если на файл 404 то дальше будем пробовать найти другой трек
                      */
                     $result = FALSE;
                 }

@@ -8,7 +8,7 @@ return CMap::mergeArray(
         'sourceLanguage' => 'en',
         'language' => 'en',
         'preload' => array('log'),
-        'import'=>array(
+        'import' => array(
             'application.models.*',
             'application.models.vk.*',
             'application.components.*',

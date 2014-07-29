@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Модель кеша результатов аудио из вконтакте
+ * Модель кеша результатов аудио из get-tune.net
  *
  * @property string $id
  */
-class VkCache extends SourceCache
+class GettuneCache extends SourceCache
 {
     public function tableName()
     {
-        return 'vk_cache';
+        return 'gettune_cache';
     }
 
     public static function model($className = __CLASS__)
