@@ -15,7 +15,7 @@ class QueryUrlRule extends CBaseUrlRule
             unset($params['text'], $params['query']);
 
             return '?'.http_build_query(array_merge(
-                array('query' => $query),
+                array(Yii::app()->params['query_param'] => $query),
                 $params
             ));
         }
@@ -25,9 +25,9 @@ class QueryUrlRule extends CBaseUrlRule
 
     public function parseUrl($manager, $request, $pathInfo, $rawPathInfo)
     {
-        if ($request->getQuery('query') != NULL)
+        if ($request->getQuery(Yii::app()->params['query_param']) != NULL)
         {
-            $_GET['text'] = $request->getQuery('query');
+            $_GET['text'] = $request->getQuery(Yii::app()->params['query_param']);
 
             return 'query/view';
         }

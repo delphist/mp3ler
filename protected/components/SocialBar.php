@@ -24,8 +24,8 @@ class SocialBar extends CWidget
             'icon' => 'google.png',
             'link' => 'https://plus.google.com/share?url={url}',
         ),
-        'surfingburd' => array(
-            'title' => 'Surgingbird',
+        'surfingbird' => array(
+            'title' => 'Surfingbird',
             'icon' => 'surfbird.png',
             'link' => 'http://surfingbird.ru/share?url={url}',
         ),

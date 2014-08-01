@@ -5,7 +5,7 @@ class BillboardCommand extends CConsoleCommand
     const SOURCE_URL = 'http://www.billboard.com/charts/hot-100?page={x}';
 
     /**
-     * Скачивает данные в модель billboard
+     * Скачивает данные в модель Billboard
      */
     public function actionFetch()
     {

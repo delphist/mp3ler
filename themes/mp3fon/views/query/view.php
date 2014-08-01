@@ -1,3 +1,7 @@
+<?php
+$this->searchQuery = $query->text;
+$this->pageTitle = Yii::t('mp3fon', '{text} — Search and download founded fresh mp3 tracks with out paying', array('{text}' => CHtml::encode($query->title)));
+?>
 <div class="container">
     <div class="row">
         <div class="col-md-8">
@@ -33,32 +37,7 @@
                             </div>
                             <div class="col-md-1"></div>
                         </div>
-                        <div class="share-btns">
-                            <a class="" href="">
-                                <img src="<?=Yii::app()->theme->baseUrl?>/images/soc_0007_fb.png" alt=""/>
-                            </a>
-                            <a class="" href="">
-                                <img src="<?=Yii::app()->theme->baseUrl?>/images/soc_0004_twitter.png" alt=""/>
-                            </a>
-                            <a class="" href="">
-                                <img src="<?=Yii::app()->theme->baseUrl?>/images/soc_0006_g+.png" alt=""/>
-                            </a>
-                            <a class="" href="">
-                                <img src="<?=Yii::app()->theme->baseUrl?>/images/soc_0005_vk.png" alt=""/>
-                            </a>
-                            <a class="" href="">
-                                <img src="<?=Yii::app()->theme->baseUrl?>/images/soc_0001_ya.ru.png" alt=""/>
-                            </a>
-                            <a class="" href="">
-                                <img src="<?=Yii::app()->theme->baseUrl?>/images/soc_0002_mail.ru.png" alt=""/>
-                            </a>
-                            <a class="" href="">
-                                <img src="<?=Yii::app()->theme->baseUrl?>/images/soc_0003_ok.png" alt=""/>
-                            </a>
-                            <a class="" href="">
-                                <img src="<?=Yii::app()->theme->baseUrl?>/images/soc_0000_surfingbird.png" alt=""/>
-                            </a>
-                        </div>
+                        <?php $this->widget('application.components.SocialBar'); ?>
                     </div>
                 </article>
             <?php
