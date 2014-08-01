@@ -128,7 +128,7 @@ class Sitemap extends CComponent
 
     protected function close($language)
     {
-        fwrite($this->filePointers[$language], "</sitemap>");
+        fwrite($this->filePointers[$language], "</urlset>");
         fclose($this->filePointers[$language]);
         $this->filePointers[$language] = NULL;
     }
