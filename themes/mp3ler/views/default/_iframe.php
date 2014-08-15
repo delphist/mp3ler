@@ -1,4 +1,5 @@
 <?php
+return false;
 $ua = isset($_SERVER['HTTP_USER_AGENT']) ? strtolower($_SERVER['HTTP_USER_AGENT']) : '';
 $link = 'http://val.mobi';
 $target=" target=\"_blank\"";

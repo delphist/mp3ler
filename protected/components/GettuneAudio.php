@@ -181,7 +181,7 @@ class GettuneAudio extends Audio
             foreach($response['results'] as $audio)
             {
                 $this->results[] = array(
-                    'id' => (int) $audio->aid,
+                    'id' => (int) $audio['id'],
                     'type' => 'gt',
                     'artist_title' => $this->decode_string((string) $audio['artist_title']),
                     'title' => $this->decode_string((string) $audio['title']),
