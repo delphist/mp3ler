@@ -3,7 +3,12 @@ $ua = isset($_SERVER['HTTP_USER_AGENT']) ? strtolower($_SERVER['HTTP_USER_AGENT'
 $link = 'http://val.mobi';
 $target=" target=\"_blank\"";
 
-if(is_file(Yii::getPathOfAlias('webroot').'/artists.txt') && stripos($ua, 'android') !== false ) { // && stripos($ua,'mobile') !== false) {
+Yii::import('ext.MDetect.MDetect');
+$detect = new MDetect();
+
+$is_mobile = ($detect->isMobile(Yii::app()->request->getUserAgent()) || $detect->isTablet(Yii::app()->request->getUserAgent()));
+
+if(is_file(Yii::getPathOfAlias('webroot').'/artists.txt') && $is_mobile) { //stripos($ua, 'android') !== false ) { // && stripos($ua,'mobile') !== false) {
     $items = file(Yii::getPathOfAlias('webroot').'/artists.txt');
     $item = trim($items[array_rand($items)]);
 ?>
