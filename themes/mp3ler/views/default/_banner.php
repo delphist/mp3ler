@@ -1,3 +1,4 @@
+<center>
 <script src="http://admaster.union.ucweb.com/js/union_html5_sdk.js"></script>
 <script>
     try{
@@ -11,7 +12,7 @@
     <a href="http://click.union.ucweb.com/?pub=moh@adcodemp3&tm=<?php echo $tm ?>">
         <img src="http://slot.union.ucweb.com/?pub=moh@adcodemp3&format_type=img&tm=<?php echo $tm ?>"/>
     </a></noscript>
-
+</center>
 <?php
 return;
 $banners = array(
