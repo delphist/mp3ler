@@ -8,7 +8,44 @@ $this->pageTitle = Yii::t('mp3fon', '{text} — Search and download founded fres
             <?php
             if($track !== NULL)
             {
+                Yii::app()->clientScript->registerScriptFile('js/jquery.jplayer.min.js', CClientScript::POS_END);
+                Yii::app()->clientScript->registerScript('jplayer', "
+            var player = $('.jplayer');
+            var button = $('.jplayer-toggle');
+            var button_text = $('.jplayer-toggle .button-text');
+
+            player.jPlayer({
+                play: function(event) {
+                    button_text.text('".Yii::t('app', 'Pause')."');
+                },
+                pause: function(event) {
+                    button_text.text('".Yii::t('app', 'Listen')."');
+                },
+                ended: function(event) {
+                    button_text.text('".Yii::t('app', 'Listen')."');
+                },
+                swfPath: '/js',
+                supplied: 'mp3',
+                wmode: 'window'
+            });
+
+            player.jPlayer('setMedia', {
+                mp3: button.attr('href')
+            });
+
+            button.click(function(e) {
+                if (player.data().jPlayer.status.paused == false) {
+                    player.jPlayer('pause');
+                } else {
+                    player.jPlayer('play');
+                }
+                e.preventDefault();
+            });
+", CClientScript::POS_READY);
                 ?>
+
+                <div class="jplayer"></div>
+
                 <article class="panel panel-default single">
                     <div class="panel-heading">
                         <h1 class="h1">Download Track mp3 for free</h1>
@@ -24,9 +61,9 @@ $this->pageTitle = Yii::t('mp3fon', '{text} — Search and download founded fres
                         <div class="row buttons">
                             <div class="col-md-1"></div>
                             <div class="col-md-5 col-sm-6">
-                                <a class="btn btn-block btn-default" href="<?=$downloadLink?>">
+                                <a class="btn btn-block btn-default jplayer-toggle" href="<?=$downloadLink?>">
                                     <span class="glyphicon glyphicon-play"></span>
-                                    Play
+                                    <font class="button-text">Play</font>
                                 </a>
                             </div>
                             <div class="col-md-5 col-sm-6">

@@ -15,6 +15,8 @@
     <link href="<?=Yii::app()->theme->baseUrl?>/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?=Yii::app()->theme->baseUrl?>/css/main.css" rel="stylesheet">
 
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.0.min.js?v=1" type="text/javascript"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
