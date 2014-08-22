@@ -4,6 +4,7 @@
             <div class="col-md-3">
             <?php
             $count = count($queries);
+            $i = 0;
             ?>
         <?php foreach($queries as $query) { ?>
             <?php
