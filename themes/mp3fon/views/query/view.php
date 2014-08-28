@@ -1,6 +1,7 @@
 <?php
 $this->searchQuery = $query->text;
-$this->pageTitle = Yii::t('mp3fon', '{text} — Search and download founded fresh mp3 tracks with out paying', array('{text}' => CHtml::encode($query->title)));
+$this->pageTitle = Yii::t('mp3fon', 'Download {text} mp3 free', array('{text}' => CHtml::encode($query->title)));
+$this->metaDescription = Yii::t('mp3fon', 'On this page you can download {text} mp3 free of charge and listen before downloading.', array('{text}' => $query->title));
 ?>
 <div class="container">
     <div class="row">

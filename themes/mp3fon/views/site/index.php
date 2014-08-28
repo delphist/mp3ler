@@ -1,5 +1,5 @@
 <?php
-$this->pageTitle = Yii::t('mp3fon', 'Search and download founded fresh mp3 tracks with out paying');
+$this->pageTitle = Yii::t('mp3fon', 'Free Mp3 Download');
 ?>
 <div class="container">
     <div class="row">
