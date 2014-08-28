@@ -19,17 +19,21 @@ div.logo2 {
   float: left; }
 
 div.logo {
-  /* float: left; */
+
   position: absolute;
   top: -20px;
   left: 53px; }
 
 div.search-form {
-  /* float: left; */
+
   margin-left: 140px; }
 
+.mmm div.search-form {
+    margin-left: 0px;
+}
+
 .search-form input.form-control {
-  /* width: 80%; */
+
   border-top: none;
   box-shadow: none;
   border-left: none;

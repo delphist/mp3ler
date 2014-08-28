@@ -30,13 +30,18 @@
 
 <header>
     <div class="container">
-        <div class="inner">
+        <div class="inner hidden-xs">
             <div class="logo2">
                 <a href="<?=$this->createUrl('site/index')?>"><img src="<?=Yii::app()->theme->baseUrl?>/images/mp3fon.png" alt=""/></a>
             </div>
             <div class="logo">
                 <a href="<?=$this->createUrl('site/index')?>"><img src="<?=Yii::app()->theme->baseUrl?>/images/m.png" alt=""/></a>
             </div>
+            <?php $this->widget('application.components.SearchBar', array(
+                'query' => $this->searchQuery,
+            )); ?>
+        </div>
+        <div class="inner mmm hidden-lg hidden-md hidden-sm">
             <?php $this->widget('application.components.SearchBar', array(
                 'query' => $this->searchQuery,
             )); ?>
