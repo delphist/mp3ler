@@ -1,20 +1,5 @@
-<center>
-<script src="http://admaster.union.ucweb.com/js/union_html5_sdk.js"></script>
-<script>
-    try{
-        Umobi.AdView({
-            pub:"moh@adcodemp3",
-            format_type:Umobi.AdFormatType.BANNER
-        });
-    }catch(e){}
-</script>
-<noscript><?php $tm= uniqid(); ?>
-    <a href="http://click.union.ucweb.com/?pub=moh@adcodemp3&tm=<?php echo $tm ?>">
-        <img src="http://slot.union.ucweb.com/?pub=moh@adcodemp3&format_type=img&tm=<?php echo $tm ?>"/>
-    </a></noscript>
-</center>
 <?php
-return;
+
 $banners = array(
     /*array(
         'link' => 'https://play.google.com/store/apps/details?id=com.nutty.nuts&referrer=utm_source%3Dmp3ler',
