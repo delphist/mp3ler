@@ -14,7 +14,7 @@ class UseragentCommand extends CConsoleCommand
 
         foreach($reader as $row)
         {
-            fwrite($file, $row['title'].' --- '.$row['headers']);
+            fwrite($file, $row['title'].' --- '.$row['headers']."\r\n");
         }
 
         fclose($file);
