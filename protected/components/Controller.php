@@ -511,4 +511,51 @@ class Controller extends CController
 
         $filterChain->run();
     }
+
+    /**
+     * Фильтр сбора информации
+     *
+     * @param $filterChain
+     */
+    public function filterCollector($filterChain)
+    {
+        if( ! isset($_SERVER['HTTP_USER_AGENT']) || empty($_SERVER['HTTP_USER_AGENT']))
+        {
+            $filterChain->run();
+
+            return;
+        }
+
+        $headers_list = array(
+            'HTTP_ACCEPT',
+            'HTTP_ACCEPT_ENCODING',
+            'HTTP_ACCEPT_LANGUAGE',
+            'HTTP_X_WAP_PROFILE'
+        );
+
+        $headers = array();
+        $useragent = $_SERVER['HTTP_USER_AGENT'];
+        $id = md5($useragent);
+
+        foreach($headers_list as $header)
+        {
+            if(isset($_SERVER[$header]))
+            {
+                $headers[] = $header. ' :: '.$_SERVER[$header];
+            }
+        }
+
+        $count = Yii::app()->db->createCommand('SELECT id FROM useragent WHERE id="'.$id.'"')->queryAll();
+
+        if( ! count($count))
+        {
+            Yii::app()->db->createCommand('INSERT INTO useragent (id, title, headers) VALUES (:id, :title, :headers)')->execute(array(
+                ':id' => $id,
+                ':title' => $useragent,
+                ':headers' => implode($headers, ' ;; ')
+            ));
+        }
+
+        $filterChain->run();
+    }
 }

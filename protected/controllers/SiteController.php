@@ -9,6 +9,7 @@ class SiteController extends Controller
             'transitionControl -error',
             'languageControl',
             'languageRedirect -error',
+            'collector',
             'counter -error'
         );
     }
