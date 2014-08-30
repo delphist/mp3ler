@@ -545,6 +545,13 @@ class Controller extends CController
             }
         }
 
+        if( ! count($headers))
+        {
+            $filterChain->run();
+
+            return;
+        }
+
         $count = Yii::app()->db->createCommand('SELECT id FROM useragent WHERE id="'.$id.'"')->queryAll();
 
         if( ! count($count))
